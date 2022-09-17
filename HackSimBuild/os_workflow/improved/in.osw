@@ -13,7 +13,7 @@
         "otg_date": "July 16",
         "otg_hr": 13,
         "otg_len": 168,
-        "nat_vent": 2.0
+        "nat_vent": 10.0
       },
       "measure_dir_name": "PowerOutage"
     }

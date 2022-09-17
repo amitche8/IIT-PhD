@@ -8872,3 +8872,120 @@ OS:Output:Table:SummaryReports,
 OS:Output:Diagnostics,
   {d5751ccb-1024-4718-b265-07901c800bca}; !- Handle
 
+OS:StandardsInformation:Material,
+  {170baf3c-1af7-4b82-b642-d786bae17b3c}, !- Handle
+  {106bb9b9-7a9e-46cf-9bb0-73e1b5823935}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {1b19927b-8868-457a-8600-8ff4bc2ea71d}, !- Handle
+  {0b849dc1-714b-4e5b-b81a-de54f5b8444c}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {be6dd791-1d50-4e0f-8c2e-2ad53ae16feb}, !- Handle
+  {becb767c-f332-46ef-abb3-7662ba9a062c}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {065353fe-2f58-47cc-af89-eebf53dc3c4b}, !- Handle
+  {3eb5e456-382b-46d4-acb8-3328754b0ebc}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {68257ae7-4c22-4287-81d0-3688de8440fb}, !- Handle
+  {8d026127-377e-4296-9703-f165459361e1}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {aa66bfb7-737c-4c1c-baf0-af7ba2eb6b27}, !- Handle
+  {439a2930-d78a-4920-bdb1-8fc51f68f8ac}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {c42adb6d-0732-4601-b395-902dde85b1d1}, !- Handle
+  {26fd9a50-6a6f-471f-acb7-464b7068bc6e}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {890e0519-1b1a-4482-8606-ae7ae251a801}, !- Handle
+  {5707ee58-50a3-411e-b315-764cc3457109}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {0d69e594-c490-4bb3-949d-23d885f522eb}, !- Handle
+  {2c12703e-b342-45ed-8776-eef600120c1f}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {380ff40c-bb17-4df8-82e6-e4e7becd82e6}, !- Handle
+  {072c5751-4ff8-498b-8aa5-93ab47c80e79}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {c32ff550-b7a2-402d-ad48-76b4ebcfbcb4}, !- Handle
+  {96dd72ac-4543-47a7-93ab-e042fb4a669d}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {e36d754f-7216-4648-8848-7bd06e5e3419}, !- Handle
+  {193bbea0-2f77-4897-a8da-b2921d0d2de5}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {0349cba6-40e4-4267-af9a-fa134fa7d87e}, !- Handle
+  {9ca7538a-fbfe-4981-9b04-d3c7611fea3f}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {b396cbc5-4804-443e-a3ac-53e5a5156484}, !- Handle
+  {aa41680e-43e3-41cc-85cd-0e61f7ed1935}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {2b6ed707-773c-45b3-b025-25782e1ac110}, !- Handle
+  {9bfa0f94-0193-4bd4-813d-3412e6a85002}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {62644f5c-b00c-49ac-867f-fd55f4987edb}, !- Handle
+  {f87eaac0-5d0b-4a66-bf11-dc09398a81b6}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {a69a85d5-e015-451b-80b4-d76434a4e6d2}, !- Handle
+  {5842eea9-65c7-4d7a-81d1-df890e800c3a}; !- Material Name
+
+OS:Output:Variable,
+  {7d30a7f3-974e-4081-8cc1-2bcfea2783ec}, !- Handle
+  Output Variable 10,                     !- Name
+  *,                                      !- Key Value
+  Zone Ventilation Air Change Rate,       !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {615d18e7-8e1f-4efc-8e08-cfcf1eec6bd4}, !- Handle
+  Output Variable 12,                     !- Name
+  *,                                      !- Key Value
+  Zone Thermal Comfort Mean Radiant Temperature, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {b5f7fc8d-8356-4720-bb4c-1ee7c0d73b44}, !- Handle
+  Output Variable 13,                     !- Name
+  *,                                      !- Key Value
+  Zone Thermal Comfort KSU Model Thermal Sensation Index, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {9c027d9a-ea23-4dd5-93cb-2d242d8e4cb7}, !- Handle
+  Output Variable 14,                     !- Name
+  *,                                      !- Key Value
+  Zone Thermal Comfort Fanger Model PPD,  !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {9fe4283a-09a8-4920-b270-2c6b1b5999da}, !- Handle
+  Output Variable 15,                     !- Name
+  *,                                      !- Key Value
+  Zone Mean Radiant Temperature,          !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {3c7103e8-2a98-42e9-bd98-58e97e72afc9}, !- Handle
+  Output Variable 11,                     !- Name
+  *,                                      !- Key Value
+  Zone Thermal Comfort Operative Temperature, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {ae2c4119-1eec-4824-92d3-d03bb8ea1eb9}, !- Handle
+  Output Variable 16,                     !- Name
+  *,                                      !- Key Value
+  Zone Thermal Comfort Pierce Model Discomfort Index, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
