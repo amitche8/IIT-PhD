@@ -1,5 +1,5 @@
 {
-  "seed_file": "example_model.osm",
+  "seed_file": "two_story_clean.osm",
   "file_paths": [
     "seeds",
     "weather"
