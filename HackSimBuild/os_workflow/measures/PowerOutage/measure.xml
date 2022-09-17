@@ -3,8 +3,8 @@
   <schema_version>3.0</schema_version>
   <name>power_outage</name>
   <uid>6b822ead-80f5-4d8d-9642-25a4e0d74304</uid>
-  <version_id>8f7a6e21-5005-492a-8a00-e0d4bc1f31d5</version_id>
-  <version_modified>20220917T125818Z</version_modified>
+  <version_id>bd84ba89-0319-4baf-acf6-70abcf30abd9</version_id>
+  <version_modified>20220917T185714Z</version_modified>
   <xml_checksum>D8922A73</xml_checksum>
   <class_name>PowerOutage</class_name>
   <display_name>Set Residential Power Outage</display_name>
@@ -48,6 +48,25 @@
       <required>true</required>
       <model_dependent>false</model_dependent>
       <default_value>0</default_value>
+    </argument>
+    <argument>
+      <name>curtain</name>
+      <display_name>Close curtain or thermal blanket when enabled</display_name>
+      <description>Will be used when it is too cold inside with power outages</description>
+      <type>Boolean</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>false</default_value>
+      <choices>
+        <choice>
+          <value>true</value>
+          <display_name>true</display_name>
+        </choice>
+        <choice>
+          <value>false</value>
+          <display_name>false</display_name>
+        </choice>
+      </choices>
     </argument>
   </arguments>
   <outputs />
@@ -273,7 +292,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>843D1CCE</checksum>
+      <checksum>303531F5</checksum>
     </file>
   </files>
 </measure>

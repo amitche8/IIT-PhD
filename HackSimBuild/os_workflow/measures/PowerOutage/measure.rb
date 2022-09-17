@@ -74,11 +74,18 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     arg.setDefaultValue(24)
     args << arg
 
-    # make a double argument for outage duration
+    # make a double argument for natural ventilation ACH
     arg = OpenStudio::Measure::OSArgument::makeDoubleArgument('nat_vent', true)
     arg.setDisplayName('Natural Vent ACH when hot inside and cooler outside')
     arg.setDescription('This checks for delta T as well as min os outside T')
     arg.setDefaultValue(0.0)
+    args << arg
+
+    # make a bool argument curtain or thermal blanket
+    arg = OpenStudio::Measure::OSArgument::makeBoolArgument('curtain', true)
+    arg.setDisplayName('Close curtain or thermal blanket when enabled')
+    arg.setDescription('Will be used when it is too cold inside with power outages')
+    arg.setDefaultValue(false) # later change to true, false for no so doesn't alter osw's that don't have this argument
     args << arg
 
     return args
@@ -111,6 +118,7 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     otg_hr = runner.getIntegerArgumentValue('otg_hr', user_arguments)
     otg_len = runner.getIntegerArgumentValue('otg_len', user_arguments)
     nat_vent = runner.getDoubleArgumentValue('nat_vent', user_arguments)
+    curtain = runner.getBoolArgumentValue('curtain', user_arguments)
 
     # check for valid inputs
     if (otg_hr < 0) || (otg_hr > 23)
@@ -347,6 +355,27 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
         zone_ventilation.setDeltaTemperature(0.0)
         runner.registerInfo("Creating zone ventilation design flow rate object with ventilation for #{zone.name}")
       end
+    end
+
+    # add interior blind for warmth if requested
+    if curtain
+
+      # create blind material
+      shading_material = OpenStudio::Model::Shade.new(model)
+      # todo - add user arg to do this, maybe double in place of bool similar to nat vent
+      # todo - update characterstics (many other things can customize)
+      shading_material.setThermalResistivity(0.1) # 0.1 is same default but I increased thickness 
+      shading_material.setThickness(0.025)
+      shading_material.setVisibleTransmittance(0.1)
+      shading_control = OpenStudio::Model::ShadingControl.new(shading_material)
+      shading_control.setShadingControlType('OnNightIfLowInsideTempAndOffDay')
+
+      model.getSubSurfaces.each do |window|
+        next if ! window.allowShadingControl
+        window.setShadingControl(shading_control)
+        runner.registerInfo("A blind was added to window #{window.name}.")
+      end
+
     end
 
     runner.registerFinalCondition("A power outage has been added, starting on #{otg_date} at hour #{otg_hr.to_i} and lasting for #{otg_len.to_i} hours.")
