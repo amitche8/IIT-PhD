@@ -1,0 +1,22 @@
+{
+  "seed_file": "two_story_clean.osm",
+  "file_paths": [
+    "../seeds",
+    "../weather"
+  ],
+  "measure_paths": [
+    "../measures"
+  ],
+  "steps": [
+    {
+      "arguments": {
+        "otg_date": "January 2",
+        "otg_hr": 1,
+        "otg_len": 168,
+        "nat_vent": 0.0,
+        "curtain": true
+      },
+      "measure_dir_name": "PowerOutage"
+    }
+  ]
+}

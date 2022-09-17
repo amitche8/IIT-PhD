@@ -361,14 +361,15 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     if curtain
 
       # create blind material
-      shading_material = OpenStudio::Model::Shade.new(model)
       # todo - add user arg to do this, maybe double in place of bool similar to nat vent
       # todo - update characterstics (many other things can customize)
-      shading_material.setThermalResistivity(0.1) # 0.1 is same default but I increased thickness 
-      shading_material.setThickness(0.025)
+      shading_material = OpenStudio::Model::Shade.new(model)
+      shading_material.setConductivity(0.01)
+      shading_material.setThickness(0.0075)
       shading_material.setVisibleTransmittance(0.1)
       shading_control = OpenStudio::Model::ShadingControl.new(shading_material)
       shading_control.setShadingControlType('OnNightIfLowInsideTempAndOffDay')
+      shading_control.setSetpoint(17.0) # with deadband window will never be open while blind is closed
 
       model.getSubSurfaces.each do |window|
         next if ! window.allowShadingControl
