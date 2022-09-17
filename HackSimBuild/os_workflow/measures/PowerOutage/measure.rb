@@ -82,6 +82,19 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
       return false
     end
 
+    # gather people schedules so they can be left alone
+    people_schedules = []
+    model.getPeoples.each do |people|
+      sch = people.numberofPeopleSchedule
+      if sch.is_initialized
+        people_schedules << sch.get
+      end
+      sch = people.activityLevelSchedule
+      if sch.is_initialized
+        people_schedules << sch.get
+      end      
+    end
+
     # assign the user inputs to variables
     otg_date = runner.getStringArgumentValue('otg_date', user_arguments)
     otg_hr = runner.getIntegerArgumentValue('otg_hr', user_arguments)
@@ -142,8 +155,20 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     otg_start_date = OpenStudio::Date.new(OpenStudio::MonthOfYear.new(otg_period_start.month), otg_period_start.day, otg_period_start.year)
     otg_end_date = OpenStudio::Date.new(OpenStudio::MonthOfYear.new(otg_period_end.month), otg_period_end.day, otg_period_end.year)
 
+    # todo - before I loop throuoth always ruleset schedules change always on schedules to rulset schedules, at least for HVAC availability
+    model.getScheduleConstants.each do |const|
+      # how do I reasily hook it up to objects?
+    end
+
     model.getScheduleRulesets.each do |schedule_ruleset|
       #next if schedule_ruleset.name.to_s.include?('shading') || schedule_ruleset.name.to_s.include?('Schedule Ruleset') || schedule_ruleset.name.to_s.include?(Constants.ObjectNameOccupants) || schedule_ruleset.name.to_s.include?(Constants.ObjectNameHeatingSetpoint) || schedule_ruleset.name.to_s.include?(Constants.ObjectNameCoolingSetpoint)
+
+      # leave schedule alone if used for people
+      next if people_schedules.include?(schedule_ruleset)
+
+      # todo - don't leave infil alone but set to min value in year
+
+      # todo - also change for shading surfaces
 
       otg_val = 0
       if otg_period_num_days <= 1 # occurs within one calendar day

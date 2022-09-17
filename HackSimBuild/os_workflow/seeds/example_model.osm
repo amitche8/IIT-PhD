@@ -9083,7 +9083,7 @@ OS:AirLoopHVAC,
   {943ab869-1eb5-47b9-a5d8-68d164a9b5d7}, !- Handle
   Packaged Rooftop VAV with PFP Boxes and Reheat, !- Name
   ,                                       !- Controller List Name
-  {605f52e9-1a12-47fb-a3e8-93130c8e9e4b}, !- Availability Schedule
+  {c4b344ae-9330-4447-a4fe-89667c871570}, !- Availability Schedule
   {a86c7939-69d5-4a9d-864a-f275977fb9d8}, !- Availability Manager List Name
   autosize,                               !- Design Supply Air Flow Rate {m3/s}
   1,                                      !- Design Return Air Flow Fraction of Supply Air Flow
@@ -10074,8 +10074,186 @@ OS:Output:Variable,
   Zone Mean Radiant Temperature,          !- Variable Name
   Hourly;                                 !- Reporting Frequency
 
+OS:ScheduleTypeLimits,
+  {f17a84d5-4c9d-40fe-8de5-30f4bc9b82be}, !- Handle
+  Dimensionless,                          !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {d31ba58f-ca6f-4780-8edf-751a8177acc6}, !- Handle
+  Dimensionless 1,                        !- Name
+  -1,                                     !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {3eb62f10-e38c-4596-b3be-9446199e8e84}, !- Handle
+  Dimensionless 2,                        !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {84038223-c3ed-47fa-ad41-6e4304dd5cbb}, !- Handle
+  Integer,                                !- Name
+  0,                                      !- Lower Limit Value
+  4,                                      !- Upper Limit Value
+  Discrete;                               !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {e7fe10d4-8be7-4803-a6a0-33295b063182}, !- Handle
+  Dimensionless 3,                        !- Name
+  0.1,                                    !- Lower Limit Value
+  1000,                                   !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {07f157f2-f71e-4c32-8396-888ccdcf821c}, !- Handle
+  OnOff,                                  !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Discrete,                               !- Numeric Type
+  Availability;                           !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {239adc93-9740-4c76-a3c1-24ccc08af40e}, !- Handle
+  Capacity,                               !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Capacity;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {99e17087-afbe-40b3-8c81-9475a7dd6dba}, !- Handle
+  ClothingInsulation,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  ClothingInsulation;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {c0fcf558-731b-42cb-8f52-302394942750}, !- Handle
+  ControlMode,                            !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Discrete,                               !- Numeric Type
+  ControlMode;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {2833a0fd-19d1-46ea-bcfc-69387cb06f02}, !- Handle
+  DeltaTemperature,                       !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  DeltaTemperature;                       !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {8cd59489-1c90-4cec-9403-d4169f1031af}, !- Handle
+  Dimensionless 4,                        !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Dimensionless;                          !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {85d7312d-e095-4e30-80fe-ce2dd9460b86}, !- Handle
+  LinearPowerDensity,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  LinearPowerDensity;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {31f7d3de-ab74-450e-88fb-dd401a2ce168}, !- Handle
+  MassFlowRate,                           !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  MassFlowRate;                           !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {367af01a-b842-4073-a3cb-61066506910e}, !- Handle
+  Percent,                                !- Name
+  0,                                      !- Lower Limit Value
+  100,                                    !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Percent;                                !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {6f0af756-2e4f-4f89-adc1-a1f362029409}, !- Handle
+  Pressure,                               !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Pressure;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {081e09f1-1b1a-4e46-b074-538ca2bb244e}, !- Handle
+  RotationsPerMinute,                     !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  RotationsPerMinute;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {d7b332c8-9ed5-4802-ae38-52c3c64ebaef}, !- Handle
+  Temperature,                            !- Name
+  ,                                       !- Lower Limit Value
+  0,                                      !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Temperature;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {99f86085-e137-4253-9f42-9332bbf41ddd}, !- Handle
+  Temperature 38,                         !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Temperature;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {8c3d987a-56e2-49b4-b44e-dce5f7d4af9b}, !- Handle
+  Temperature 39,                         !- Name
+  0,                                      !- Lower Limit Value
+  100,                                    !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Temperature;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {184dddd1-ba73-4182-8af0-b8d18f4d2855}, !- Handle
+  Velocity,                               !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Velocity;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {d83a9316-34cb-483f-a81a-eb90b22e0335}, !- Handle
+  VolumetricFlowRate,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  VolumetricFlowRate;                     !- Unit Type
+
+OS:Schedule:Ruleset,
+  {c4b344ae-9330-4447-a4fe-89667c871570}, !- Handle
+  AlwaysOnRuleset,                        !- Name
+  {f17a84d5-4c9d-40fe-8de5-30f4bc9b82be}, !- Schedule Type Limits Name
+  {6374e039-23f6-4e09-9e55-56459c42d89b}; !- Default Day Schedule Name
+
+OS:Schedule:Day,
+  {6374e039-23f6-4e09-9e55-56459c42d89b}, !- Handle
+  Schedule Day 1,                         !- Name
+  {f17a84d5-4c9d-40fe-8de5-30f4bc9b82be}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  24,                                     !- Hour 1
+  0,                                      !- Minute 1
+  1;                                      !- Value Until Time 1
+
 OS:WeatherFile,
-  {5fe49163-62dd-4ed9-8e57-4b191a62c1a5}, !- Handle
+  {36c25f89-d792-424d-8fb0-d8cff3efcaee}, !- Handle
   Chicago Ohare Intl Ap,                  !- City
   IL,                                     !- State Province Region
   USA,                                    !- Country
@@ -10089,4 +10267,80 @@ OS:WeatherFile,
   C254B53F,                               !- Checksum
   ,                                       !- Start Date Actual Year
   Sunday;                                 !- Start Day of Week
+
+OS:RadianceParameters,
+  {71172816-06fc-4e4a-893e-7f6f4718ae5a}, !- Handle
+  1,                                      !- Accumulated Rays per Record
+  0,                                      !- Direct Threshold
+  1,                                      !- Direct Certainty
+  1,                                      !- Direct Jitter
+  1,                                      !- Direct Pretest
+  6,                                      !- Ambient Bounces VMX
+  2,                                      !- Ambient Bounces DMX
+  4050,                                   !- Ambient Divisions VMX
+  512,                                    !- Ambient Divisions DMX
+  256,                                    !- Ambient Supersamples
+  0.001,                                  !- Limit Weight VMX
+  0.001,                                  !- Limit Weight DMX
+  500,                                    !- Klems Sampling Density
+  146;                                    !- Sky Discretization Resolution
+
+OS:ProgramControl,
+  {16db8849-89e8-4c86-b9ed-1c7f083bdcd0}; !- Handle
+
+OS:OutputControl:ReportingTolerances,
+  {d1663444-c6f6-4dad-98a3-243266f2d988}; !- Handle
+
+OS:ConvergenceLimits,
+  {7bcbd590-081f-4672-9851-d940463c9cd9}, !- Handle
+  1;                                      !- Minimum System Timestep {minutes}
+
+OS:SurfaceConvectionAlgorithm:Inside,
+  {96fd6e25-fa5b-41d3-975b-898dac1ea7f1}, !- Handle
+  TARP;                                   !- Algorithm
+
+OS:SurfaceConvectionAlgorithm:Outside,
+  {9722238d-8f85-44fe-8ca7-398b95a80d62}, !- Handle
+  DOE-2;                                  !- Algorithm
+
+OS:ZoneAirHeatBalanceAlgorithm,
+  {f64afcf3-7250-4e24-a39b-b054c1083f50}, !- Handle
+  ThirdOrderBackwardDifference;           !- Algorithm
+
+OS:ZoneAirContaminantBalance,
+  {8edbed43-94c0-4404-8646-b1004101fd45}; !- Handle
+
+OS:ZoneCapacitanceMultiplier:ResearchSpecial,
+  {78f76ffc-9ed4-4caa-b5f9-3dd7e916621a}, !- Handle
+  ,                                       !- Temperature Capacity Multiplier
+  ,                                       !- Humidity Capacity Multiplier
+  ;                                       !- Carbon Dioxide Capacity Multiplier
+
+OS:Output:JSON,
+  {7bcc63d8-047e-4730-91de-eba923f6ba69}, !- Handle
+  TimeSeriesAndTabular,                   !- Option Type
+  No,                                     !- Output JSON
+  No,                                     !- Output CBOR
+  No;                                     !- Output MessagePack
+
+OS:Output:Table:SummaryReports,
+  {25598a56-5f56-4a4b-bd4d-d0b0390d17d5}, !- Handle
+  AllSummary;                             !- Report Name 1
+
+OS:Output:Diagnostics,
+  {e940e361-f241-4777-a7e2-ef9015ff2677}; !- Handle
+
+OS:Output:Variable,
+  {0b3f66ea-4c41-4b4c-a073-2c11daa7f282}, !- Handle
+  Output Variable 8,                      !- Name
+  *,                                      !- Key Value
+  Cooling Coil Electricity Rate,          !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {4026c0f0-a2a5-408e-ab3e-242f39ef0ef9}, !- Handle
+  Output Variable 10,                     !- Name
+  *,                                      !- Key Value
+  Electric Equipment Total Heating Rate,  !- Variable Name
+  Hourly;                                 !- Reporting Frequency
 

@@ -12,7 +12,7 @@
       "arguments": {
         "otg_date": "July 1",
         "otg_hr": 13,
-        "otg_len": 72
+        "otg_len": 168
       },
       "measure_dir_name": "PowerOutage"
     }
