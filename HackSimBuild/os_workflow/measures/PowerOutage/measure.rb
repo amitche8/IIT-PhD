@@ -27,6 +27,10 @@ require File.join(resources_path, 'hvac')
 # DFG adding local copies of resources used for this measure
 Dir[File.dirname(__FILE__) + '/resources/*.rb'].each { |file| require file }
 
+# load OpenStudio measure libraries from openstudio-extension gem
+require 'openstudio-extension'
+require 'openstudio/extension/core/os_lib_schedules'
+
 # start the measure
 class PowerOutage < OpenStudio::Measure::ModelMeasure
   # define the name that a user will see, this method may be deprecated as
@@ -156,8 +160,19 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     otg_end_date = OpenStudio::Date.new(OpenStudio::MonthOfYear.new(otg_period_end.month), otg_period_end.day, otg_period_end.year)
 
     # todo - before I loop throuoth always ruleset schedules change always on schedules to rulset schedules, at least for HVAC availability
+    # for now I just changed the seed model
     model.getScheduleConstants.each do |const|
       # how do I reasily hook it up to objects?
+    end
+
+    # store infil schedules
+    # todo - add more types of infil
+    infil_schs = []
+    model.getSpaceInfiltrationDesignFlowRates.each do |infil|
+      sch = infil.schedule
+      if sch.is_initialized
+        infil_schs << sch.get
+      end
     end
 
     model.getScheduleRulesets.each do |schedule_ruleset|
@@ -167,10 +182,14 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
       next if people_schedules.include?(schedule_ruleset)
 
       # todo - don't leave infil alone but set to min value in year
+      if infil_schs.include?(schedule_ruleset)
+        otg_val = OsLib_Schedules.getMinMaxAnnualProfileValue(model, schedule_ruleset)['max']
+      else
+        otg_val = 0
+      end
 
       # todo - also change for shading surfaces
 
-      otg_val = 0
       if otg_period_num_days <= 1 # occurs within one calendar day
         otg_rule = OpenStudio::Model::ScheduleRule.new(schedule_ruleset)
         otg_rule.setName("#{schedule_ruleset.name} Outage Day #{otg_start_date_day}")

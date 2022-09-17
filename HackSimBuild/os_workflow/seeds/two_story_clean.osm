@@ -9252,3 +9252,52 @@ OS:Schedule:Day,
   0,                                      ! Minute 3
   15.6;                                   ! Value Until Time 3
 
+OS:Output:Variable,
+  {1164c864-04ba-4da4-b83d-6d4a1774f6fc}, !- Handle
+  Output Variable 1,                      !- Name
+  *,                                      !- Key Value
+  Zone Thermostat Heating Setpoint Temperature, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {0372cbc7-5273-4df7-9a3e-26d126fc0cca}, !- Handle
+  Output Variable 2,                      !- Name
+  *,                                      !- Key Value
+  Zone Thermostat Cooling Setpoint Temperature, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {a7b08a7e-dc2c-41cc-87bc-1372ba8b9eb4}, !- Handle
+  Output Variable 3,                      !- Name
+  *,                                      !- Key Value
+  Zone People Total Heating Rate,         !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {be82d174-2264-4f45-9e4b-112c145bb31f}, !- Handle
+  Output Variable 4,                      !- Name
+  *,                                      !- Key Value
+  Zone Lights Electricity Rate,           !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {decb33eb-8fc1-4101-9315-938b6cbab0e6}, !- Handle
+  Output Variable 5,                      !- Name
+  *,                                      !- Key Value
+  Zone Infiltration Mass Flow Rate,       !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {6f1b6ac3-795b-48b8-bc3a-f4919ef355f4}, !- Handle
+  Output Variable 6,                      !- Name
+  *,                                      !- Key Value
+  Zone Electric Equipment Total Heating Rate, !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {b510ba42-b764-46ea-bf94-20ea97a783b1}, !- Handle
+  Output Variable 7,                      !- Name
+  *,                                      !- Key Value
+  Zone Air Temperature,                   !- Variable Name
+  Hourly;                                 !- Reporting Frequency
+
