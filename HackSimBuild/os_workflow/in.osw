@@ -1,0 +1,20 @@
+{
+  "seed_file": "example_model.osm",
+  "file_paths": [
+    "seeds",
+    "weather"
+  ],
+  "measure_paths": [
+    "measures"
+  ],
+  "steps": [
+    {
+      "arguments": {
+        "otg_date": "July 1",
+        "otg_hr": 13,
+        "otg_len": 72
+      },
+      "measure_dir_name": "PowerOutage"
+    }
+  ]
+}
