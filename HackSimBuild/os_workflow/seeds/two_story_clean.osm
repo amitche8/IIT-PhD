@@ -8989,3 +8989,31 @@ OS:Output:Variable,
   Zone Thermal Comfort Pierce Model Discomfort Index, !- Variable Name
   Hourly;                                 !- Reporting Frequency
 
+OS:Schedule:Rule,
+  {c386e6a4-2ed7-4fff-862c-61b972460596}, !- Handle
+  Schedule Rule 2,                        !- Name
+  {0bcb50cc-b507-41bc-8cc0-7c8d7b5f277d}, !- Schedule Ruleset Name
+  0,                                      !- Rule Order
+  {5974d776-ad88-4faf-81cb-8ee4ebdd5057}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  7,                                      !- Start Month
+  1,                                      !- Start Day
+  8,                                      !- End Month
+  31;                                     !- End Day
+
+OS:Schedule:Day,
+  {5974d776-ad88-4faf-81cb-8ee4ebdd5057}, !- Handle
+  Schedule Day 2,                         !- Name
+  {c50de33e-2a31-403b-929e-8d1c42a993ef}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  24,                                     !- Hour 1
+  0,                                      !- Minute 1
+  1;                                      !- Value Until Time 1
+
