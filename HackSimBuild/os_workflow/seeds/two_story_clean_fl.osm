@@ -1415,7 +1415,7 @@ OS:Building,
   ,                                       !- North Axis {deg}
   ,                                       !- Nominal Floor to Floor Height {m}
   {3e49cf0e-a18d-44a4-aa61-b77b0f92b043}, !- Space Type Name
-  {048d6132-e433-4dee-897d-56221ff3c1ea}, !- Default Construction Set Name
+  {d9052b29-fd04-462a-a174-bce41c8b8cad}, !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
   ,                                       !- Standards Number of Stories
   ,                                       !- Standards Number of Above Ground Stories
@@ -5696,11 +5696,11 @@ OS:Construction,
 
 OS:Site,
   {67954095-e568-4057-a467-6d726fa7832a}, !- Handle
-  Chicago Ohare Intl Ap,                  !- Name
-  41.98,                                  !- Latitude {deg}
-  -87.92,                                 !- Longitude {deg}
-  -6,                                     !- Time Zone {hr}
-  201,                                    !- Elevation {m}
+  Orlando Intl Arpt,                      !- Name
+  28.43,                                  !- Latitude {deg}
+  -81.33,                                 !- Longitude {deg}
+  -5,                                     !- Time Zone {hr}
+  29,                                     !- Elevation {m}
   ;                                       !- Terrain
 
 OS:YearDescription,
@@ -6320,190 +6320,6 @@ OS:RunPeriod,
 OS:StandardsInformation:Material,
   {508484b7-fafe-441f-b2e5-2dbedc811ec5}, !- Handle
   {57a656b0-06ef-4771-ad1b-2a27d4d72bbc}; !- Material Name
-
-OS:SizingPeriod:DesignDay,
-  {cbc4e26b-c97a-4df7-a63e-217c4b60d40b}, !- Handle
-  Chicago Ohare Intl Ap Ann Clg .4% Condns Enth=>MDB, !- Name
-  31.4,                                   !- Maximum Dry-Bulb Temperature {C}
-  10.5,                                   !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  5.2,                                    !- Wind Speed {m/s}
-  230,                                    !- Wind Direction {deg}
-  ,                                       !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  7,                                      !- Month
-  SummerDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Enthalpy,                               !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  23,                                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  79200,                                  !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAETau,                              !- Solar Model Indicator
-  ,                                       !- Beam Solar Day Schedule Name
-  ,                                       !- Diffuse Solar Day Schedule Name
-  0.455,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
-  2.05;                                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
-
-OS:SizingPeriod:DesignDay,
-  {32361b2d-dd2f-4d86-84e9-b44ede7cd814}, !- Handle
-  Chicago Ohare Intl Ap Ann Clg .4% Condns DP=>MDB, !- Name
-  28.9,                                   !- Maximum Dry-Bulb Temperature {C}
-  10.5,                                   !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  5.2,                                    !- Wind Speed {m/s}
-  230,                                    !- Wind Direction {deg}
-  ,                                       !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  7,                                      !- Month
-  SummerDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Dewpoint,                               !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  23.8,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAETau,                              !- Solar Model Indicator
-  ,                                       !- Beam Solar Day Schedule Name
-  ,                                       !- Diffuse Solar Day Schedule Name
-  0.455,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
-  2.05;                                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
-
-OS:SizingPeriod:DesignDay,
-  {5087c353-ac14-4b62-b1b5-4fa4910fe9ea}, !- Handle
-  Chicago Ohare Intl Ap Ann Clg .4% Condns WB=>MDB, !- Name
-  31.2,                                   !- Maximum Dry-Bulb Temperature {C}
-  10.5,                                   !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  5.2,                                    !- Wind Speed {m/s}
-  230,                                    !- Wind Direction {deg}
-  ,                                       !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  7,                                      !- Month
-  SummerDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Wetbulb,                                !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  25.5,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAETau,                              !- Solar Model Indicator
-  ,                                       !- Beam Solar Day Schedule Name
-  ,                                       !- Diffuse Solar Day Schedule Name
-  0.455,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
-  2.05;                                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
-
-OS:SizingPeriod:DesignDay,
-  {2c23f291-ee9b-43ef-82df-c80b28df5872}, !- Handle
-  Chicago Ohare Intl Ap Ann Clg .4% Condns DB=>MWB, !- Name
-  33.3,                                   !- Maximum Dry-Bulb Temperature {C}
-  10.5,                                   !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  5.2,                                    !- Wind Speed {m/s}
-  230,                                    !- Wind Direction {deg}
-  ,                                       !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  7,                                      !- Month
-  SummerDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Wetbulb,                                !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  23.7,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAETau,                              !- Solar Model Indicator
-  ,                                       !- Beam Solar Day Schedule Name
-  ,                                       !- Diffuse Solar Day Schedule Name
-  0.455,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
-  2.05;                                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
-
-OS:SizingPeriod:DesignDay,
-  {04cb698f-e493-4972-8660-a900c963b1af}, !- Handle
-  Chicago Ohare Intl Ap Ann Htg Wind 99.6% Condns WS=>MCDB, !- Name
-  -3.5,                                   !- Maximum Dry-Bulb Temperature {C}
-  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  12.4,                                   !- Wind Speed {m/s}
-  270,                                    !- Wind Direction {deg}
-  0,                                      !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  1,                                      !- Month
-  WinterDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Wetbulb,                                !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  -3.5,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAEClearSky;                         !- Solar Model Indicator
-
-OS:SizingPeriod:DesignDay,
-  {51772c78-e976-48dd-ae00-e0c9d4216fc3}, !- Handle
-  Chicago Ohare Intl Ap Ann Hum_n 99.6% Condns DP=>MCDB, !- Name
-  -19.2,                                  !- Maximum Dry-Bulb Temperature {C}
-  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  4.9,                                    !- Wind Speed {m/s}
-  270,                                    !- Wind Direction {deg}
-  0,                                      !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  1,                                      !- Month
-  WinterDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Dewpoint,                               !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  -25.7,                                  !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAEClearSky;                         !- Solar Model Indicator
-
-OS:SizingPeriod:DesignDay,
-  {0fd51884-5307-416e-82d4-beb94c0c869c}, !- Handle
-  Chicago Ohare Intl Ap Ann Htg 99.6% Condns DB, !- Name
-  -20,                                    !- Maximum Dry-Bulb Temperature {C}
-  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
-  98934,                                  !- Barometric Pressure {Pa}
-  4.9,                                    !- Wind Speed {m/s}
-  270,                                    !- Wind Direction {deg}
-  0,                                      !- Sky Clearness
-  No,                                     !- Rain Indicator
-  No,                                     !- Snow Indicator
-  21,                                     !- Day of Month
-  1,                                      !- Month
-  WinterDesignDay,                        !- Day Type
-  No,                                     !- Daylight Saving Time Indicator
-  Wetbulb,                                !- Humidity Condition Type
-  ,                                       !- Humidity Condition Day Schedule Name
-  -20,                                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
-  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
-  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
-  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
-  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
-  ASHRAEClearSky;                         !- Solar Model Indicator
 
 OS:ThermalZone,
   {d4ea1711-445a-471d-9899-359d2ac3ece2}, !- Handle
@@ -7549,22 +7365,6 @@ OS:Output:Variable,
   *,                                      !- Key Value
   Site Outdoor Air Wetbulb Temperature,   !- Variable Name
   Hourly;                                 !- Reporting Frequency
-
-OS:WeatherFile,
-  {50c7276d-fd6b-413b-b2a8-8c0de0d7846d}, !- Handle
-  Chicago Ohare Intl Ap,                  !- City
-  IL,                                     !- State Province Region
-  USA,                                    !- Country
-  TMY3,                                   !- Data Source
-  725300,                                 !- WMO Number
-  41.98,                                  !- Latitude {deg}
-  -87.92,                                 !- Longitude {deg}
-  -6,                                     !- Time Zone {hr}
-  201,                                    !- Elevation {m}
-  USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw, !- Url
-  C254B53F,                               !- Checksum
-  ,                                       !- Start Date Actual Year
-  Sunday;                                 !- Start Day of Week
 
 OS:DefaultConstructionSet,
   {048d6132-e433-4dee-897d-56221ff3c1ea}, !- Handle
@@ -9037,4 +8837,355 @@ OS:Output:Variable,
   *,                                      !- Key Value
   Zone Air Relative Humidity,             !- Variable Name
   Hourly;                                 !- Reporting Frequency
+
+OS:DefaultConstructionSet,
+  {d9052b29-fd04-462a-a174-bce41c8b8cad}, !- Handle
+  DOE Ref Pre-1980 - MidApt - ASHRAE 169-2013-2A, !- Name
+  {59b79b01-cd29-4126-ba60-e50b2bdb09d4}, !- Default Exterior Surface Constructions Name
+  {d4fd7185-fd67-477e-9014-5513406d549f}, !- Default Interior Surface Constructions Name
+  {2644ae54-0631-47d2-9db9-c24882a53205}, !- Default Ground Contact Surface Constructions Name
+  {d8cf91ce-8d7d-441e-8a33-58c987a2bbae}, !- Default Exterior SubSurface Constructions Name
+  {c093a796-d149-497a-99cf-123345afb596}, !- Default Interior SubSurface Constructions Name
+  {f9b158ae-9648-4513-abb9-5b8b94f00be1}, !- Interior Partition Construction Name
+  ,                                       !- Space Shading Construction Name
+  ,                                       !- Building Shading Construction Name
+  ,                                       !- Site Shading Construction Name
+  ;                                       !- Adiabatic Surface Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {59b79b01-cd29-4126-ba60-e50b2bdb09d4}, !- Handle
+  Default Surface Constructions 748,      !- Name
+  {17c68be8-c2bb-462c-8f15-67f03a198c04}, !- Floor Construction Name
+  {842fa2d7-0176-4c3a-801f-39dd8b53c142}, !- Wall Construction Name
+  {8a7e4713-39f9-4fc3-a2be-ed6e3afbbda6}; !- Roof Ceiling Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {d4fd7185-fd67-477e-9014-5513406d549f}, !- Handle
+  Default Surface Constructions 749,      !- Name
+  {2223ef12-ee27-4395-abf0-c52712c8806c}, !- Floor Construction Name
+  {57b1cf07-db90-4970-835e-8dc051ee02b7}, !- Wall Construction Name
+  {b47e1ee7-e178-4ca8-8e79-e6564ed2a28a}; !- Roof Ceiling Construction Name
+
+OS:DefaultSurfaceConstructions,
+  {2644ae54-0631-47d2-9db9-c24882a53205}, !- Handle
+  Default Surface Constructions 750,      !- Name
+  {87055867-5ef8-47a2-874a-51e1ea9bd7e8}, !- Floor Construction Name
+  {66c95e9a-77a1-4b6f-820b-19b0b41bd0dd}, !- Wall Construction Name
+  ;                                       !- Roof Ceiling Construction Name
+
+OS:DefaultSubSurfaceConstructions,
+  {d8cf91ce-8d7d-441e-8a33-58c987a2bbae}, !- Handle
+  Default Sub Surface Constructions 499,  !- Name
+  {3e042a10-480e-4d59-bee4-669f4ad68875}, !- Fixed Window Construction Name
+  {4612dbe0-3df5-47e0-baf7-876131bc5184}, !- Operable Window Construction Name
+  {370f8104-39de-4001-ae82-200810ac14ba}, !- Door Construction Name
+  {0ee358a4-6c68-4ae4-9e65-76f66fa7422f}, !- Glass Door Construction Name
+  {ff5069d3-8b90-4714-9bd3-8fb5c5d359b2}, !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  {706059e6-84bc-4638-9007-d3f662f8a7a7}, !- Tubular Daylight Dome Construction Name
+  {706059e6-84bc-4638-9007-d3f662f8a7a7}; !- Tubular Daylight Diffuser Construction Name
+
+OS:DefaultSubSurfaceConstructions,
+  {c093a796-d149-497a-99cf-123345afb596}, !- Handle
+  Default Sub Surface Constructions 500,  !- Name
+  {706059e6-84bc-4638-9007-d3f662f8a7a7}, !- Fixed Window Construction Name
+  {706059e6-84bc-4638-9007-d3f662f8a7a7}, !- Operable Window Construction Name
+  {0b522566-a962-4bdf-9a44-37dda483ef0b}, !- Door Construction Name
+  ,                                       !- Glass Door Construction Name
+  ,                                       !- Overhead Door Construction Name
+  ,                                       !- Skylight Construction Name
+  ,                                       !- Tubular Daylight Dome Construction Name
+  ;                                       !- Tubular Daylight Diffuser Construction Name
+
+OS:Construction,
+  {842fa2d7-0176-4c3a-801f-39dd8b53c142}, !- Handle
+  Typical Insulated Steel Framed Exterior Wall R-4.35 22, !- Name
+  ,                                       !- Surface Rendering Name
+  {aa41680e-43e3-41cc-85cd-0e61f7ed1935}, !- Layer 1
+  {9ca7538a-fbfe-4981-9b04-d3c7611fea3f}, !- Layer 2
+  {1359d507-b6d7-4112-8f7b-86402d60a245}, !- Layer 3
+  {9ca7538a-fbfe-4981-9b04-d3c7611fea3f}; !- Layer 4
+
+OS:StandardsInformation:Construction,
+  {47e2b831-c309-4b3e-9d13-06843437e92d}, !- Handle
+  {842fa2d7-0176-4c3a-801f-39dd8b53c142}, !- Construction Name
+  ExteriorWall,                           !- Intended Surface Type
+  SteelFramed;                            !- Standards Construction Type
+
+OS:Construction,
+  {3e042a10-480e-4d59-bee4-669f4ad68875}, !- Handle
+  U 1.22 SHGC 0.54 Simple Glazing Window SHGC 0.54 224, !- Name
+  ,                                       !- Surface Rendering Name
+  {d02f9bf5-9e3e-4856-bf45-79064594667a}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {c585be16-5a73-4cee-b818-6863eb22cfdb}, !- Handle
+  {3e042a10-480e-4d59-bee4-669f4ad68875}, !- Construction Name
+  ExteriorWindow,                         !- Intended Surface Type
+  Metal framing (all other),              !- Standards Construction Type
+  ,                                       !- Perturbable Layer
+  ,                                       !- Perturbable Layer Type
+  ,                                       !- Other Perturbable Layer Type
+  ,                                       !- Construction Standard
+  ,                                       !- Construction Standard Source
+  ,                                       !- Fenestration Type
+  ,                                       !- Fenestration Assembly Context
+  ,                                       !- Fenestration Number of Panes
+  Metal Framing;                          !- Fenestration Frame Type
+
+OS:Construction,
+  {4612dbe0-3df5-47e0-baf7-876131bc5184}, !- Handle
+  U 1.22 SHGC 0.54 Simple Glazing Window SHGC 0.54 225, !- Name
+  ,                                       !- Surface Rendering Name
+  {183a0f04-8654-47cb-842a-b80a7765a975}; !- Layer 1
+
+OS:StandardsInformation:Construction,
+  {ef6ae8cb-0a53-4e1a-8ada-f5ae784d7df2}, !- Handle
+  {4612dbe0-3df5-47e0-baf7-876131bc5184}, !- Construction Name
+  ExteriorWindow,                         !- Intended Surface Type
+  Metal framing (all other),              !- Standards Construction Type
+  ,                                       !- Perturbable Layer
+  ,                                       !- Perturbable Layer Type
+  ,                                       !- Other Perturbable Layer Type
+  ,                                       !- Construction Standard
+  ,                                       !- Construction Standard Source
+  ,                                       !- Fenestration Type
+  ,                                       !- Fenestration Assembly Context
+  ,                                       !- Fenestration Number of Panes
+  Metal Framing;                          !- Fenestration Frame Type
+
+OS:Material:NoMass,
+  {1359d507-b6d7-4112-8f7b-86402d60a245}, !- Handle
+  Typical Insulation R-2.17 22,           !- Name
+  Smooth,                                 !- Roughness
+  0.381975016884895,                      !- Thermal Resistance {m2-K/W}
+  0.9,                                    !- Thermal Absorptance
+  0.7,                                    !- Solar Absorptance
+  0.7;                                    !- Visible Absorptance
+
+OS:WindowMaterial:SimpleGlazingSystem,
+  {d02f9bf5-9e3e-4856-bf45-79064594667a}, !- Handle
+  U 1.22 SHGC 0.54 Simple Glazing SHGC 0.54 224, !- Name
+  6.92748127615845,                       !- U-Factor {W/m2-K}
+  0.54,                                   !- Solar Heat Gain Coefficient
+  0.38;                                   !- Visible Transmittance
+
+OS:WindowMaterial:SimpleGlazingSystem,
+  {183a0f04-8654-47cb-842a-b80a7765a975}, !- Handle
+  U 1.22 SHGC 0.54 Simple Glazing SHGC 0.54 225, !- Name
+  6.92748127615845,                       !- U-Factor {W/m2-K}
+  0.54,                                   !- Solar Heat Gain Coefficient
+  0.38;                                   !- Visible Transmittance
+
+OS:SizingPeriod:DesignDay,
+  {0ee64484-9486-41b4-9c29-e2c33f64acda}, !- Handle
+  Orlando Intl Arpt Ann Clg .4% Condns Enth=>MDB, !- Name
+  31,                                     !- Maximum Dry-Bulb Temperature {C}
+  9.4,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.7,                                    !- Wind Speed {m/s}
+  290,                                    !- Wind Direction {deg}
+  ,                                       !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Enthalpy,                               !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  23,                                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  82100,                                  !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.514,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
+  1.928;                                  !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
+
+OS:SizingPeriod:DesignDay,
+  {61aead79-c1f7-4f31-9d02-9be566d8851d}, !- Handle
+  Orlando Intl Arpt Ann Clg .4% Condns DP=>MDB, !- Name
+  27.7,                                   !- Maximum Dry-Bulb Temperature {C}
+  9.4,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.7,                                    !- Wind Speed {m/s}
+  290,                                    !- Wind Direction {deg}
+  ,                                       !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Dewpoint,                               !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  25.3,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.514,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
+  1.928;                                  !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
+
+OS:SizingPeriod:DesignDay,
+  {c0d25b13-f81c-42a8-adb5-4c6179724d7f}, !- Handle
+  Orlando Intl Arpt Ann Clg .4% Condns WB=>MDB, !- Name
+  30.9,                                   !- Maximum Dry-Bulb Temperature {C}
+  9.4,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.7,                                    !- Wind Speed {m/s}
+  290,                                    !- Wind Direction {deg}
+  ,                                       !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Wetbulb,                                !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  26.4,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.514,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
+  1.928;                                  !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
+
+OS:SizingPeriod:DesignDay,
+  {be37c63e-fe1a-47c2-b9c2-08c79afb04f6}, !- Handle
+  Orlando Intl Arpt Ann Clg .4% Condns DB=>MWB, !- Name
+  34.3,                                   !- Maximum Dry-Bulb Temperature {C}
+  9.4,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.7,                                    !- Wind Speed {m/s}
+  290,                                    !- Wind Direction {deg}
+  ,                                       !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Wetbulb,                                !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  24.7,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.514,                                  !- ASHRAE Clear Sky Optical Depth for Beam Irradiance {dimensionless}
+  1.928;                                  !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance {dimensionless}
+
+OS:SizingPeriod:DesignDay,
+  {453b1d45-a009-433a-bbd5-d52258c68028}, !- Handle
+  Orlando Intl Arpt Ann Htg Wind 99.6% Condns WS=>MCDB, !- Name
+  17.9,                                   !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  10.7,                                   !- Wind Speed {m/s}
+  340,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  1,                                      !- Month
+  WinterDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Wetbulb,                                !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  17.9,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAEClearSky;                         !- Solar Model Indicator
+
+OS:SizingPeriod:DesignDay,
+  {d1472814-d909-4d26-8056-92fa24a52d50}, !- Handle
+  Orlando Intl Arpt Ann Hum_n 99.6% Condns DP=>MCDB, !- Name
+  8.3,                                    !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.4,                                    !- Wind Speed {m/s}
+  340,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  1,                                      !- Month
+  WinterDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Dewpoint,                               !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  -5.9,                                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAEClearSky;                         !- Solar Model Indicator
+
+OS:SizingPeriod:DesignDay,
+  {d05cf13d-5728-499f-a7fa-0dcc8ae6e587}, !- Handle
+  Orlando Intl Arpt Ann Htg 99.6% Condns DB, !- Name
+  3.2,                                    !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  100977,                                 !- Barometric Pressure {Pa}
+  3.4,                                    !- Wind Speed {m/s}
+  340,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  No,                                     !- Rain Indicator
+  No,                                     !- Snow Indicator
+  21,                                     !- Day of Month
+  1,                                      !- Month
+  WinterDesignDay,                        !- Day Type
+  No,                                     !- Daylight Saving Time Indicator
+  Wetbulb,                                !- Humidity Condition Type
+  ,                                       !- Humidity Condition Day Schedule Name
+  3.2,                                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+  ,                                       !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,                                       !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+  ASHRAEClearSky;                         !- Solar Model Indicator
+
+OS:StandardsInformation:Material,
+  {6084581e-cbe6-4eec-81f2-bf9702734884}, !- Handle
+  {183a0f04-8654-47cb-842a-b80a7765a975}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {df91444b-cd92-4999-94ce-2f31cbf78e8e}, !- Handle
+  {d02f9bf5-9e3e-4856-bf45-79064594667a}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {703ee5e2-eccd-4991-88a4-53aa4ec0be46}, !- Handle
+  {1359d507-b6d7-4112-8f7b-86402d60a245}; !- Material Name
+
+OS:WeatherFile,
+  {351dc499-7033-404b-9364-78cb4dbe0f4d}, !- Handle
+  Orlando Intl Arpt,                      !- City
+  FL,                                     !- State Province Region
+  USA,                                    !- Country
+  TMY3,                                   !- Data Source
+  722050,                                 !- WMO Number
+  28.43,                                  !- Latitude {deg}
+  -81.33,                                 !- Longitude {deg}
+  -5,                                     !- Time Zone {hr}
+  29,                                     !- Elevation {m}
+  USA_FL_Orlando.Intl.AP.722050_TMY3.epw, !- Url
+  87EB9DFA,                               !- Checksum
+  ,                                       !- Start Date Actual Year
+  Sunday;                                 !- Start Day of Week
 

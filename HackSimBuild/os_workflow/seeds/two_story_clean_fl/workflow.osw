@@ -1,0 +1,7 @@
+{
+   "created_at" : "20220917T151541Z",
+   "seed_file" : "../two_story_clean_fl.osm",
+   "steps" : [],
+   "updated_at" : "20220917T151554Z",
+   "weather_file" : "USA_FL_Orlando.Intl.AP.722050_TMY3.epw"
+}

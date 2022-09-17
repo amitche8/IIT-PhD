@@ -344,7 +344,7 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
         zone_ventilation.setAirChangesperHour(nat_vent)
         zone_ventilation.setSchedule(model.alwaysOnDiscreteSchedule)
         zone_ventilation.setMinimumOutdoorTemperature(18.0)
-        zone_ventilation.setDeltaTemperature(2.0)
+        zone_ventilation.setDeltaTemperature(0.0)
         runner.registerInfo("Creating zone ventilation design flow rate object with ventilation for #{zone.name}")
       end
     end

@@ -1,3 +1,2 @@
-/HackSimBuild/os_workflow/baseline/run
-/HackSimBuild/os_workflow/improved/run
+/HackSimBuild/os_workflow/*/run
 .DS_Store
