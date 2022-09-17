@@ -24,20 +24,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {bd248468-2b4d-4fda-84f6-16603de1c13b}, !- Handle
-  189.1-2009 - Office - BreakRoom - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {6b77b5a5-0094-4c17-83c3-7caa815065cc}, !- Handle
   189.1-2009 - Office - BreakRoom - CZ1-3 Lights Definition, !- Name
@@ -46,139 +32,12 @@ OS:Lights:Definition,
   11.6250232500465,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
 
-OS:Schedule:Ruleset,
-  {2c940045-acb3-429d-974e-30a7a792c982}, ! Handle
-  Office Bldg Light,                      ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {f527ce9d-9816-4782-9799-67e4e81510db}, ! Default Day Schedule Name
-  {1e5fadd7-0f69-4049-94f9-be070e42cd9b}, ! Summer Design Day Schedule Name
-  {f1d6d84f-b3ca-4a56-9fb6-be0771a24ee7}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Handle
   Fraction,                               ! Name
   0,                                      ! Lower Limit Value
   1,                                      ! Upper Limit Value
   CONTINUOUS;                             ! Numeric Type
-
-OS:Schedule:Day,
-  {f527ce9d-9816-4782-9799-67e4e81510db}, ! Handle
-  Office Bldg Light Default Schedule,     ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  5,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.05,                                   !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.1,                                    !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.3,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.7,                                    !- Value Until Time 5
-  20,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.5,                                    !- Value Until Time 6
-  22,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.3,                                    !- Value Until Time 7
-  23,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.1,                                    !- Value Until Time 8
-  24,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.05;                                   !- Value Until Time 9
-
-OS:Schedule:Day,
-  {1e5fadd7-0f69-4049-94f9-be070e42cd9b}, ! Handle
-  Office Bldg Light Summer Design Day,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {f1d6d84f-b3ca-4a56-9fb6-be0771a24ee7}, ! Handle
-  Office Bldg Light Winter Design Day,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {908b277a-17ad-43e5-8ca0-e1d276873fc0}, !- Handle
-  Office Bldg Light Rule 1,               !- Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {f781a329-5fd9-4e85-a1ef-b4bef14b48ef}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {f781a329-5fd9-4e85-a1ef-b4bef14b48ef}, ! Handle
-  Office Bldg Light Rule 1 Day Schedule,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.050000000000000003;                   ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {58f59580-2b1c-4b49-8761-6e97b4f06a41}, !- Handle
-  Office Bldg Light Rule 2,               !- Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {d19a64b1-fd5a-4540-b6d8-57bf21de3b30}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {d19a64b1-fd5a-4540-b6d8-57bf21de3b30}, ! Handle
-  Office Bldg Light Rule 2 Day Schedule,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.050000000000000003,                   ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.10000000000000001,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.14999999999999999,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.050000000000000003;                   ! Value Until Time 5
 
 OS:DesignSpecification:OutdoorAir,
   {275b2507-2551-4c6b-9576-0694f401735c}, !- Handle
@@ -199,138 +58,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:Schedule:Ruleset,
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, ! Handle
-  Office Misc Occ,                        ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {889bfb8a-8061-48b2-bcb4-c05c2404845f}, ! Default Day Schedule Name
-  {0e24e94b-015e-4feb-a85b-f76842862d1e}, ! Summer Design Day Schedule Name
-  {1a8a0f65-267d-4ea9-8175-002bf3fdd780}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {889bfb8a-8061-48b2-bcb4-c05c2404845f}, ! Handle
-  Office Bldg Occ Default Schedule 1,     ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.100000001490116,                      !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.200000002980232,                      !- Value Until Time 3
-  20,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.400000005960464,                      !- Value Until Time 4
-  22,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.100000001490116,                      !- Value Until Time 5
-  24,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.0500000007450581;                     !- Value Until Time 6
-
-OS:Schedule:Day,
-  {0e24e94b-015e-4feb-a85b-f76842862d1e}, ! Handle
-  Office Bldg Occ Summer Design Day 1,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  1,                                      ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.050000000000000003;                   ! Value Until Time 3
-
-OS:Schedule:Day,
-  {1a8a0f65-267d-4ea9-8175-002bf3fdd780}, ! Handle
-  Office Bldg Occ Winter Design Day 1,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {a97798e8-5429-4f50-b44e-dfb58ab1171e}, !- Handle
-  Office Misc Occ Rule 1,                 !- Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {67399e18-2529-4b87-8ea4-2dc28aff6617}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {67399e18-2529-4b87-8ea4-2dc28aff6617}, ! Handle
-  Office Bldg Occ Rule 1 Day Schedule 1,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {6b831ffb-ef84-4a8a-a32f-d7d10b547a0e}, !- Handle
-  Office Misc Occ Rule 2,                 !- Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {ee72aee8-eeaf-433a-9e3e-619a532596a3}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {ee72aee8-eeaf-433a-9e3e-619a532596a3}, ! Handle
-  Office Bldg Occ Rule 2 Day Schedule 1,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  8,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.100000001490116,                      !- Value Until Time 2
-  14,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.25,                                   !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.100000001490116,                      !- Value Until Time 4
-  24,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0;                                      !- Value Until Time 5
-
-OS:Schedule:Ruleset,
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, ! Handle
-  Office Activity,                        ! Name
-  {115aba64-18e9-477b-9f56-bc49f71a3d65}, ! Schedule Type Limits Name
-  {2a936091-d303-4d47-b907-3f9308de0f26}, ! Default Day Schedule Name
-  {17322361-6930-4b2c-8780-26df8535ea54}, ! Summer Design Day Schedule Name
-  {a7fce132-c6ca-41e8-aa21-8e49d328f410}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {115aba64-18e9-477b-9f56-bc49f71a3d65}, !- Handle
   ActivityLevel,                          !- Name
@@ -339,148 +66,6 @@ OS:ScheduleTypeLimits,
   Continuous,                             !- Numeric Type
   ActivityLevel;                          !- Unit Type
 
-OS:Schedule:Day,
-  {2a936091-d303-4d47-b907-3f9308de0f26}, ! Handle
-  Office Activity Default Schedule,       ! Name
-  {115aba64-18e9-477b-9f56-bc49f71a3d65}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  132;                                    !- Value Until Time 1
-
-OS:Schedule:Day,
-  {17322361-6930-4b2c-8780-26df8535ea54}, ! Handle
-  Office Activity Summer Design Day,      ! Name
-  {115aba64-18e9-477b-9f56-bc49f71a3d65}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  132;                                    !- Value Until Time 1
-
-OS:Schedule:Day,
-  {a7fce132-c6ca-41e8-aa21-8e49d328f410}, ! Handle
-  Office Activity Winter Design Day,      ! Name
-  {115aba64-18e9-477b-9f56-bc49f71a3d65}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  132;                                    !- Value Until Time 1
-
-OS:Schedule:Ruleset,
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, ! Handle
-  Office Infil Quarter On,                ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {0f0a4c58-d61a-4fe2-b785-c13d80aeae72}, ! Default Day Schedule Name
-  {495fb1a4-73fa-4a01-9390-dc96865b0e10}, ! Summer Design Day Schedule Name
-  {bf393fb4-114d-42cb-8f1a-062a9f6e9af6}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {0f0a4c58-d61a-4fe2-b785-c13d80aeae72}, ! Handle
-  Office Infil Quarter On Default Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  22,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.25,                                   !- Value Until Time 2
-  24,                                     !- Hour 3
-  0,                                      !- Minute 3
-  1;                                      !- Value Until Time 3
-
-OS:Schedule:Day,
-  {495fb1a4-73fa-4a01-9390-dc96865b0e10}, ! Handle
-  Office Infil Quarter On Summer Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Day,
-  {bf393fb4-114d-42cb-8f1a-062a9f6e9af6}, ! Handle
-  Office Infil Quarter On Winter Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Rule,
-  {669f6450-48fd-4c9f-aa54-cb0a65aaaea4}, !- Handle
-  Office Infil Quarter On Rule 1,         !- Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {a70ff7aa-e531-409d-9b14-d76d8b3d2fcd}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {a70ff7aa-e531-409d-9b14-d76d8b3d2fcd}, ! Handle
-  Office Infil Quarter On Rule 1 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {0754978c-410e-49ee-a9fb-78c434aa0747}, !- Handle
-  Office Infil Quarter On Rule 2,         !- Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {e0f7388a-c254-4ec7-be7c-4baf001742a7}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {e0f7388a-c254-4ec7-be7c-4baf001742a7}, ! Handle
-  Office Infil Quarter On Rule 2 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
 OS:ElectricEquipment:Definition,
   {7b738bdd-2763-406d-995b-25758a6d1018}, !- Handle
   189.1-2009 - Office - BreakRoom - CZ1-3 Electric Equipment Definition, !- Name
@@ -488,130 +73,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   48.0070404585254,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:Schedule:Ruleset,
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, ! Handle
-  Office Bldg Equip,                      ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {482623b1-c0bb-4a7b-844e-be61c3db495e}, ! Default Day Schedule Name
-  {f3fed466-0fe5-4cd4-85d1-9a6851de4f45}, ! Summer Design Day Schedule Name
-  {c07620c6-9e60-4460-8226-4ae184c20265}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {482623b1-c0bb-4a7b-844e-be61c3db495e}, ! Handle
-  Office Bldg Equip Default Schedule,     ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  8,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.4,                                    !- Value Until Time 1
-  12,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.9,                                    !- Value Until Time 2
-  13,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.8,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.8,                                    !- Value Until Time 5
-  20,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.6,                                    !- Value Until Time 6
-  22,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.5,                                    !- Value Until Time 7
-  24,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.4;                                    !- Value Until Time 8
-
-OS:Schedule:Day,
-  {f3fed466-0fe5-4cd4-85d1-9a6851de4f45}, ! Handle
-  Office Bldg Equip Summer Design Day,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {c07620c6-9e60-4460-8226-4ae184c20265}, ! Handle
-  Office Bldg Equip Winter Design Day,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {ef64122e-df93-4108-bfcf-d1233b552ebc}, !- Handle
-  Office Bldg Equip Rule 1,               !- Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {d3ee3a96-7374-4f52-a6f1-5d5d9202b8aa}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {d3ee3a96-7374-4f52-a6f1-5d5d9202b8aa}, ! Handle
-  Office Bldg Equip Rule 1 Day Schedule,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999;                    ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {148ecf7d-381b-405a-83e5-4dda8df23254}, !- Handle
-  Office Bldg Equip Rule 2,               !- Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {16910aad-aa54-450e-ad27-3d490c451dcb}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {16910aad-aa54-450e-ad27-3d490c451dcb}, ! Handle
-  Office Bldg Equip Rule 2 Day Schedule,  ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999,                    ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.40000000000000002,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.34999999999999998,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.29999999999999999;                    ! Value Until Time 5
 
 OS:ThermostatSetpoint:DualSetpoint,
   {4c10e941-222f-4ce6-97c2-167d512784bb}, !- Handle
@@ -854,20 +315,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {5d322b6b-cb8d-45a5-926d-f9c72152fa67}, !- Handle
-  189.1-2009 - Office - ClosedOffice - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {41457983-c160-47a9-95d8-f0bd22f90cd5}, !- Handle
   189.1-2009 - Office - ClosedOffice - CZ1-3 Lights Definition, !- Name
@@ -895,142 +342,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:Schedule:Ruleset,
-  {163effd1-65ed-44c0-a206-60c4b6812644}, ! Handle
-  Office Work Occ,                        ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {76902b2d-24eb-486d-9797-42d4b43e98a6}, ! Default Day Schedule Name
-  {f1ee8ec8-3e77-4e46-9b20-c5fbbab102c5}, ! Summer Design Day Schedule Name
-  {a212beaa-cb04-4f02-865c-c5535967ba76}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {76902b2d-24eb-486d-9797-42d4b43e98a6}, ! Handle
-  Office Bldg Occ Default Schedule,       ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.100000001490116,                      !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.200000002980232,                      !- Value Until Time 3
-  12,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.850000023841858,                      !- Value Until Time 4
-  13,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.5,                                    !- Value Until Time 5
-  17,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.850000023841858,                      !- Value Until Time 6
-  18,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.699999988079071,                      !- Value Until Time 7
-  20,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.400000005960464,                      !- Value Until Time 8
-  22,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.100000001490116,                      !- Value Until Time 9
-  24,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.0500000007450581;                     !- Value Until Time 10
-
-OS:Schedule:Day,
-  {f1ee8ec8-3e77-4e46-9b20-c5fbbab102c5}, ! Handle
-  Office Bldg Occ Summer Design Day,      ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  1,                                      ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.050000000000000003;                   ! Value Until Time 3
-
-OS:Schedule:Day,
-  {a212beaa-cb04-4f02-865c-c5535967ba76}, ! Handle
-  Office Bldg Occ Winter Design Day,      ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {b8161167-4161-4e02-8f47-36bd863088fc}, !- Handle
-  Office Work Occ Rule 1,                 !- Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {1ead174b-87ef-4841-aa88-529f1393689b}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {1ead174b-87ef-4841-aa88-529f1393689b}, ! Handle
-  Office Bldg Occ Rule 1 Day Schedule,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {fbf97f6c-3df4-4a6b-8446-999a24edf3bc}, !- Handle
-  Office Work Occ Rule 2,                 !- Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {6976aee5-609c-4442-ad06-6ae5468617e3}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {6976aee5-609c-4442-ad06-6ae5468617e3}, ! Handle
-  Office Bldg Occ Rule 2 Day Schedule,    ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  8,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.100000001490116,                      !- Value Until Time 2
-  14,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.400000005960464,                      !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.100000001490116,                      !- Value Until Time 4
-  24,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0;                                      !- Value Until Time 5
-
 OS:ElectricEquipment:Definition,
   {76dd79c7-3e16-4add-9fcd-d58e3f4eb0b0}, !- Handle
   189.1-2009 - Office - ClosedOffice - CZ1-3 Electric Equipment Definition, !- Name
@@ -1051,20 +362,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Red Value
   196,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {3e0b0dad-0c6c-44d2-adc1-f951602a0e11}, !- Handle
-  189.1-2009 - Office - Conference - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {60eaba92-a4a7-4556-b900-28264995134e}, !- Handle
@@ -1114,20 +411,6 @@ OS:Rendering:Color,
   31,                                     !- Rendering Green Value
   31;                                     !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {93b960b9-288d-4e3e-9dbf-401e526d7881}, !- Handle
-  189.1-2009 - Office - Corridor - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {5cfd67b5-9f61-444a-82e6-5eb49bd2067a}, !- Handle
   189.1-2009 - Office - Corridor - CZ1-3 Lights Definition, !- Name
@@ -1176,20 +459,6 @@ OS:Rendering:Color,
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {d0496fd5-d8fa-48c2-a08b-ee1a622b5531}, !- Handle
-  189.1-2009 - Office - Elec/MechRoom - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {301c279a-dea0-4774-b91d-cf67fdb795dd}, !- Handle
   189.1-2009 - Office - Elec/MechRoom - CZ1-3 Lights Definition, !- Name
@@ -1228,20 +497,6 @@ OS:Rendering:Color,
   41,                                     !- Rendering Red Value
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {5622bbb1-9a77-45dc-a18f-dc497a8a33f2}, !- Handle
-  189.1-2009 - Office - IT_Room - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {7be7bbc7-40ac-4f36-a70b-854f360947fa}, !- Handle
@@ -1291,20 +546,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {ccdf5295-f0d4-4f6c-bf0b-ec05e68ff062}, !- Handle
-  189.1-2009 - Office - Lobby - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {1957c863-db51-4299-824a-a6fa5efa61d2}, !- Handle
   189.1-2009 - Office - Lobby - CZ1-3 Lights Definition, !- Name
@@ -1352,20 +593,6 @@ OS:Rendering:Color,
   120,                                    !- Rendering Red Value
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {099b25e9-1f86-4748-926f-b2984180c55b}, !- Handle
-  189.1-2009 - Office - OpenOffice - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {fd67ef29-ad38-4da2-a7ee-ccc333568103}, !- Handle
@@ -1432,20 +659,6 @@ OS:Rendering:Color,
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {4c0775f5-9288-426b-9158-ad3b65f7b409}, !- Handle
-  189.1-2009 - Office - PrintRoom - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {337f608c-2383-4d09-a7d1-408a1b4e96c8}, !- Handle
   189.1-2009 - Office - PrintRoom - CZ1-3 Lights Definition, !- Name
@@ -1493,20 +706,6 @@ OS:Rendering:Color,
   169,                                    !- Rendering Red Value
   169,                                    !- Rendering Green Value
   31;                                     !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {3236b5e2-ab04-499e-83ff-49911d42d0b9}, !- Handle
-  189.1-2009 - Office - Restroom - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {999ec759-6d28-4f7c-a7ad-9345a6a2fb13}, !- Handle
@@ -1556,20 +755,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {f57f9d59-d62c-4160-a1c2-840b96adae39}, !- Handle
-  189.1-2009 - Office - Stair - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  ,                                       !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {0d4e581c-e0c4-44fc-8f5d-95c980b0c923}, !- Handle
   189.1-2009 - Office - Stair - CZ1-3 Lights Definition, !- Name
@@ -1601,20 +786,6 @@ OS:Rendering:Color,
   149,                                    !- Rendering Green Value
   230;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {345f6ea5-c8b7-4c3e-9b1d-60fc7281be1e}, !- Handle
-  189.1-2009 - Office - Storage - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  ,                                       !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {750674c4-8a0a-42e6-9296-3a9888975fc8}, !- Handle
   189.1-2009 - Office - Storage - CZ1-3 Lights Definition, !- Name
@@ -1645,20 +816,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Red Value
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {0838572c-132f-4843-8fd9-83b4d866683f}, !- Handle
-  189.1-2009 - Office - Vending - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {23b38a17-da96-4059-b455-7203e631952a}, !- Handle
@@ -1708,20 +865,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {2d5b1b79-6a62-4d22-8d3d-c44b0032433a}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Lg Office - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {3809a7de-fc37-4d8a-9225-159a2dfb2aaa}, !- Number of People Schedule Name
-  {33614f86-0df7-4712-b581-d943d0995157}, !- People Activity Level Schedule Name
-  {887b2604-862e-444b-89ad-50e2dc4d71e9}, !- Lighting Schedule Name
-  {ebe8d780-87ee-4f15-bff7-d4f18dba8a4a}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {db7f073b-9c2d-43a5-b827-b5b8d6adcaa3}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {a1566ecf-9382-4c1b-969a-c465410b19c9}, !- Handle
   189.1-2009 - Office - WholeBuilding - Lg Office - CZ1-3 Lights Definition, !- Name
@@ -1730,139 +873,12 @@ OS:Lights:Definition,
   9.68751937503875,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
 
-OS:Schedule:Ruleset,
-  {887b2604-862e-444b-89ad-50e2dc4d71e9}, ! Handle
-  Large Office Bldg Light,                ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {52c25c37-8b87-4ba0-a348-2f135c716cff}, ! Default Day Schedule Name
-  {6752b800-caef-41d7-ab5f-0ee8fe2bcb7d}, ! Summer Design Day Schedule Name
-  {a1f28c2b-f74f-4c67-978b-37ad2a67a17b}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {c50de33e-2a31-403b-929e-8d1c42a993ef}, !- Handle
   Fractional,                             !- Name
   0,                                      !- Lower Limit Value
   1,                                      !- Upper Limit Value
   Continuous;                             !- Numeric Type
-
-OS:Schedule:Day,
-  {52c25c37-8b87-4ba0-a348-2f135c716cff}, ! Handle
-  Large Office Bldg Light Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  5,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.05,                                   !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.1,                                    !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.3,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.7,                                    !- Value Until Time 5
-  20,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.5,                                    !- Value Until Time 6
-  22,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.3,                                    !- Value Until Time 7
-  23,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.1,                                    !- Value Until Time 8
-  24,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.05;                                   !- Value Until Time 9
-
-OS:Schedule:Day,
-  {6752b800-caef-41d7-ab5f-0ee8fe2bcb7d}, ! Handle
-  Large Office Bldg Light Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {a1f28c2b-f74f-4c67-978b-37ad2a67a17b}, ! Handle
-  Large Office Bldg Light Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {e993fcdd-4bf2-4620-80da-3cefd388470a}, !- Handle
-  Large Office Bldg Light Rule 1,         !- Name
-  {887b2604-862e-444b-89ad-50e2dc4d71e9}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {075c555a-61c2-4dc0-b42a-4c76eeab2975}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {075c555a-61c2-4dc0-b42a-4c76eeab2975}, ! Handle
-  Large Office Bldg Light Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.050000000000000003;                   ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {1822b24d-5ca6-4da7-94ae-0b2fcd5c329a}, !- Handle
-  Large Office Bldg Light Rule 2,         !- Name
-  {887b2604-862e-444b-89ad-50e2dc4d71e9}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {0e53450b-3329-4a77-b402-c64e9577d303}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {0e53450b-3329-4a77-b402-c64e9577d303}, ! Handle
-  Large Office Bldg Light Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.050000000000000003,                   ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.10000000000000001,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.14999999999999999,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.050000000000000003;                   ! Value Until Time 5
 
 OS:DesignSpecification:OutdoorAir,
   {b212614e-35f5-4376-9ba6-f2029aa777a8}, !- Handle
@@ -1883,150 +899,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:Schedule:Ruleset,
-  {3809a7de-fc37-4d8a-9225-159a2dfb2aaa}, ! Handle
-  Large Office Bldg Occ,                  ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {5a487fe3-835b-4774-8366-f85dde074bf0}, ! Default Day Schedule Name
-  {520d6cb9-b0b1-407f-83c2-96d15c1054e7}, ! Summer Design Day Schedule Name
-  {a1253a97-66bf-41f7-b016-76862722d571}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {5a487fe3-835b-4774-8366-f85dde074bf0}, ! Handle
-  Large Office Bldg Occ Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.1,                                    !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.2,                                    !- Value Until Time 3
-  12,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.95,                                   !- Value Until Time 4
-  13,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.5,                                    !- Value Until Time 5
-  17,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.95,                                   !- Value Until Time 6
-  18,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.7,                                    !- Value Until Time 7
-  20,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.4,                                    !- Value Until Time 8
-  22,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.1,                                    !- Value Until Time 9
-  24,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.05;                                   !- Value Until Time 10
-
-OS:Schedule:Day,
-  {520d6cb9-b0b1-407f-83c2-96d15c1054e7}, ! Handle
-  Large Office Bldg Occ Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  1,                                      ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.050000000000000003;                   ! Value Until Time 3
-
-OS:Schedule:Day,
-  {a1253a97-66bf-41f7-b016-76862722d571}, ! Handle
-  Large Office Bldg Occ Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {6b2290e6-83e6-4257-8bbf-21541e13acc8}, !- Handle
-  Large Office Bldg Occ Rule 1,           !- Name
-  {3809a7de-fc37-4d8a-9225-159a2dfb2aaa}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {1c83a61e-98a0-4a84-b2fb-c90b7714176a}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {1c83a61e-98a0-4a84-b2fb-c90b7714176a}, ! Handle
-  Large Office Bldg Occ Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {8209eb3a-736d-4a18-ac0a-24109a77fb15}, !- Handle
-  Large Office Bldg Occ Rule 2,           !- Name
-  {3809a7de-fc37-4d8a-9225-159a2dfb2aaa}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {ac99d433-bc10-4b25-b41e-394e8732c645}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {ac99d433-bc10-4b25-b41e-394e8732c645}, ! Handle
-  Large Office Bldg Occ Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.10000000000000001,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.10000000000000001,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0;                                      ! Value Until Time 5
-
-OS:Schedule:Ruleset,
-  {33614f86-0df7-4712-b581-d943d0995157}, ! Handle
-  Large Office Activity,                  ! Name
-  {db77c810-6d42-49c7-966e-9a928067165f}, ! Schedule Type Limits Name
-  {18794ae1-df92-44fa-a422-0682e6a94c40}, ! Default Day Schedule Name
-  {574bf851-001c-49c8-b9a8-2bb7cb2e11e5}, ! Summer Design Day Schedule Name
-  {e170f2b9-8f2d-478c-ab86-a3148c69208f}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {db77c810-6d42-49c7-966e-9a928067165f}, !- Handle
   ActivityLevel 5,                        !- Name
@@ -2035,148 +907,6 @@ OS:ScheduleTypeLimits,
   Continuous,                             !- Numeric Type
   ActivityLevel;                          !- Unit Type
 
-OS:Schedule:Day,
-  {18794ae1-df92-44fa-a422-0682e6a94c40}, ! Handle
-  Large Office Activity Default Schedule, ! Name
-  {db77c810-6d42-49c7-966e-9a928067165f}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  120;                                    !- Value Until Time 1
-
-OS:Schedule:Day,
-  {574bf851-001c-49c8-b9a8-2bb7cb2e11e5}, ! Handle
-  Large Office Activity Summer Design Day, ! Name
-  {db77c810-6d42-49c7-966e-9a928067165f}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Day,
-  {e170f2b9-8f2d-478c-ab86-a3148c69208f}, ! Handle
-  Large Office Activity Winter Design Day, ! Name
-  {db77c810-6d42-49c7-966e-9a928067165f}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Ruleset,
-  {db7f073b-9c2d-43a5-b827-b5b8d6adcaa3}, ! Handle
-  Large Office Infil Quarter On,          ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {e5ae59a7-8042-44fe-8fb5-4ae1705d3e21}, ! Default Day Schedule Name
-  {3b0f6422-289c-4100-9539-13fe9d4c39bf}, ! Summer Design Day Schedule Name
-  {04216b2f-0705-4b18-85bc-faab894e900d}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {e5ae59a7-8042-44fe-8fb5-4ae1705d3e21}, ! Handle
-  Large Office Infil Quarter On Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  22,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.25,                                   !- Value Until Time 2
-  24,                                     !- Hour 3
-  0,                                      !- Minute 3
-  1;                                      !- Value Until Time 3
-
-OS:Schedule:Day,
-  {3b0f6422-289c-4100-9539-13fe9d4c39bf}, ! Handle
-  Large Office Infil Quarter On Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Day,
-  {04216b2f-0705-4b18-85bc-faab894e900d}, ! Handle
-  Large Office Infil Quarter On Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Rule,
-  {c3c5ea47-8a11-4dd0-a525-11253766908b}, !- Handle
-  Large Office Infil Quarter On Rule 1,   !- Name
-  {db7f073b-9c2d-43a5-b827-b5b8d6adcaa3}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {bf38162e-0fc0-4bd8-9fee-f15555eb9377}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {bf38162e-0fc0-4bd8-9fee-f15555eb9377}, ! Handle
-  Large Office Infil Quarter On Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {3fe5f1f7-922f-44d9-9b56-cb70366a5183}, !- Handle
-  Large Office Infil Quarter On Rule 2,   !- Name
-  {db7f073b-9c2d-43a5-b827-b5b8d6adcaa3}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {a51d47b7-d9e6-450b-818c-71e2d734461a}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {a51d47b7-d9e6-450b-818c-71e2d734461a}, ! Handle
-  Large Office Infil Quarter On Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
 OS:ElectricEquipment:Definition,
   {ab0065c9-7378-4aac-b981-6c37402b65b0}, !- Handle
   189.1-2009 - Office - WholeBuilding - Lg Office - CZ1-3 Electric Equipment Definition, !- Name
@@ -2184,130 +914,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   5.81251412763851,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:Schedule:Ruleset,
-  {ebe8d780-87ee-4f15-bff7-d4f18dba8a4a}, ! Handle
-  Large Office Bldg Equip,                ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {c8387f07-2456-475c-823f-d939ee1a0b67}, ! Default Day Schedule Name
-  {86969a5e-39eb-447c-9fab-401eebe3e71c}, ! Summer Design Day Schedule Name
-  {a60373be-49af-4ced-91b1-01fed41074e4}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {c8387f07-2456-475c-823f-d939ee1a0b67}, ! Handle
-  Large Office Bldg Equip Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  8,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.4,                                    !- Value Until Time 1
-  12,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.9,                                    !- Value Until Time 2
-  13,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.8,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.8,                                    !- Value Until Time 5
-  20,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.6,                                    !- Value Until Time 6
-  22,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.5,                                    !- Value Until Time 7
-  24,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.4;                                    !- Value Until Time 8
-
-OS:Schedule:Day,
-  {86969a5e-39eb-447c-9fab-401eebe3e71c}, ! Handle
-  Large Office Bldg Equip Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {a60373be-49af-4ced-91b1-01fed41074e4}, ! Handle
-  Large Office Bldg Equip Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {7149bcfb-5097-4839-8a6a-ae6b0566da96}, !- Handle
-  Large Office Bldg Equip Rule 1,         !- Name
-  {ebe8d780-87ee-4f15-bff7-d4f18dba8a4a}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {458917f7-6665-4186-b3ec-363f21da5d0a}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {458917f7-6665-4186-b3ec-363f21da5d0a}, ! Handle
-  Large Office Bldg Equip Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999;                    ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {368172ef-1ae0-4e6c-96b9-b0ce19029e0a}, !- Handle
-  Large Office Bldg Equip Rule 2,         !- Name
-  {ebe8d780-87ee-4f15-bff7-d4f18dba8a4a}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {8c75aa08-6e3e-478e-aeb4-72ed71fe4a56}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {8c75aa08-6e3e-478e-aeb4-72ed71fe4a56}, ! Handle
-  Large Office Bldg Equip Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999,                    ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.40000000000000002,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.34999999999999998,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.29999999999999999;                    ! Value Until Time 5
 
 OS:ThermostatSetpoint:DualSetpoint,
   {2e0d8e87-f663-4cc4-95e5-e3450e3ad2f7}, !- Handle
@@ -2550,20 +1156,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {4a553eaa-0607-4c0f-82d7-679fd2cefe0e}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Md Office - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {e07d3266-bbf4-4110-98ab-fa7a311efd8a}, !- Number of People Schedule Name
-  {7651bffc-0582-49f0-bef8-c342bde3ae49}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {a07a8dd7-c4c7-4b5c-8731-bf52277c2daa}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {b2069f4f-b25a-42e8-badd-8d1d6c35c9c1}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {c6c38ed5-6ac0-40fe-a0b6-d2b29886d364}, !- Handle
   189.1-2009 - Office - WholeBuilding - Md Office - CZ1-3 Lights Definition, !- Name
@@ -2591,150 +1183,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:Schedule:Ruleset,
-  {e07d3266-bbf4-4110-98ab-fa7a311efd8a}, ! Handle
-  Medium Office Bldg Occ,                 ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {9f032ce4-a117-4819-b533-5369271ed22d}, ! Default Day Schedule Name
-  {6607e8b9-080f-4d5a-bf8c-012b229b3390}, ! Summer Design Day Schedule Name
-  {46b09b73-6cc8-4edd-9517-bd39c9f77511}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {9f032ce4-a117-4819-b533-5369271ed22d}, ! Handle
-  Medium Office Bldg Occ Default Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.1,                                    !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.2,                                    !- Value Until Time 3
-  12,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.95,                                   !- Value Until Time 4
-  13,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.5,                                    !- Value Until Time 5
-  17,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.95,                                   !- Value Until Time 6
-  18,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.7,                                    !- Value Until Time 7
-  20,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.4,                                    !- Value Until Time 8
-  22,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.1,                                    !- Value Until Time 9
-  24,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.05;                                   !- Value Until Time 10
-
-OS:Schedule:Day,
-  {6607e8b9-080f-4d5a-bf8c-012b229b3390}, ! Handle
-  Medium Office Bldg Occ Summer Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  1,                                      ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.050000000000000003;                   ! Value Until Time 3
-
-OS:Schedule:Day,
-  {46b09b73-6cc8-4edd-9517-bd39c9f77511}, ! Handle
-  Medium Office Bldg Occ Winter Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {93f3fbaf-3bcc-4d46-aa12-29f75ede5812}, !- Handle
-  Medium Office Bldg Occ Rule 1,          !- Name
-  {e07d3266-bbf4-4110-98ab-fa7a311efd8a}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {41d016c8-0dad-4e7b-bc98-ac9d99fc871b}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {41d016c8-0dad-4e7b-bc98-ac9d99fc871b}, ! Handle
-  Medium Office Bldg Occ Rule 1 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {531b6f84-a9f6-4451-b459-a3fba4568642}, !- Handle
-  Medium Office Bldg Occ Rule 2,          !- Name
-  {e07d3266-bbf4-4110-98ab-fa7a311efd8a}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {5f0e50da-131f-4b5b-a8c4-dec84d5df3f0}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {5f0e50da-131f-4b5b-a8c4-dec84d5df3f0}, ! Handle
-  Medium Office Bldg Occ Rule 2 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.10000000000000001,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.10000000000000001,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0;                                      ! Value Until Time 5
-
-OS:Schedule:Ruleset,
-  {7651bffc-0582-49f0-bef8-c342bde3ae49}, ! Handle
-  Medium Office Activity,                 ! Name
-  {724e0a25-cd51-4aef-b8ed-bd0074db9d88}, ! Schedule Type Limits Name
-  {93a750b7-5b84-4924-99f6-fe36368706b2}, ! Default Day Schedule Name
-  {5a6b4477-b695-4554-94fc-e4b473bc19bc}, ! Summer Design Day Schedule Name
-  {2c143c62-301b-4ecd-8702-5869ab99278b}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {724e0a25-cd51-4aef-b8ed-bd0074db9d88}, !- Handle
   ActivityLevel 13,                       !- Name
@@ -2743,148 +1191,6 @@ OS:ScheduleTypeLimits,
   Continuous,                             !- Numeric Type
   ActivityLevel;                          !- Unit Type
 
-OS:Schedule:Day,
-  {93a750b7-5b84-4924-99f6-fe36368706b2}, ! Handle
-  Medium Office Activity Default Schedule, ! Name
-  {724e0a25-cd51-4aef-b8ed-bd0074db9d88}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  120;                                    !- Value Until Time 1
-
-OS:Schedule:Day,
-  {5a6b4477-b695-4554-94fc-e4b473bc19bc}, ! Handle
-  Medium Office Activity Summer Design Day, ! Name
-  {724e0a25-cd51-4aef-b8ed-bd0074db9d88}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Day,
-  {2c143c62-301b-4ecd-8702-5869ab99278b}, ! Handle
-  Medium Office Activity Winter Design Day, ! Name
-  {724e0a25-cd51-4aef-b8ed-bd0074db9d88}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Ruleset,
-  {b2069f4f-b25a-42e8-badd-8d1d6c35c9c1}, ! Handle
-  Medium Office Infil Quarter On,         ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {10f7b19d-4452-4337-b587-b2d99069ea67}, ! Default Day Schedule Name
-  {c34926d6-7436-4f8f-9727-dea6c3aae8c9}, ! Summer Design Day Schedule Name
-  {ad77c9a4-86ed-4a05-937d-4719846cb585}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {10f7b19d-4452-4337-b587-b2d99069ea67}, ! Handle
-  Medium Office Infil Quarter On Default Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  22,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.25,                                   !- Value Until Time 2
-  24,                                     !- Hour 3
-  0,                                      !- Minute 3
-  1;                                      !- Value Until Time 3
-
-OS:Schedule:Day,
-  {c34926d6-7436-4f8f-9727-dea6c3aae8c9}, ! Handle
-  Medium Office Infil Quarter On Summer Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Day,
-  {ad77c9a4-86ed-4a05-937d-4719846cb585}, ! Handle
-  Medium Office Infil Quarter On Winter Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Rule,
-  {efccc2eb-56fd-412a-b63b-91e6e93f2f76}, !- Handle
-  Medium Office Infil Quarter On Rule 1,  !- Name
-  {b2069f4f-b25a-42e8-badd-8d1d6c35c9c1}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {704bfc92-0704-49f0-a832-ddb0869765de}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {704bfc92-0704-49f0-a832-ddb0869765de}, ! Handle
-  Medium Office Infil Quarter On Rule 1 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {148c0532-bdb0-42d5-bfcc-d099b0354456}, !- Handle
-  Medium Office Infil Quarter On Rule 2,  !- Name
-  {b2069f4f-b25a-42e8-badd-8d1d6c35c9c1}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {33628b24-7929-42bc-a7af-063332bd3b03}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {33628b24-7929-42bc-a7af-063332bd3b03}, ! Handle
-  Medium Office Infil Quarter On Rule 2 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
 OS:ElectricEquipment:Definition,
   {cbe742e9-158d-4107-a571-99725288afb4}, !- Handle
   189.1-2009 - Office - WholeBuilding - Md Office - CZ1-3 Electric Equipment Definition, !- Name
@@ -2892,130 +1198,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   5.81251162502325,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:Schedule:Ruleset,
-  {a07a8dd7-c4c7-4b5c-8731-bf52277c2daa}, ! Handle
-  Medium Office Bldg Equip,               ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  {bf704b7a-9297-4a96-9dfb-8bab054c5cb5}, ! Default Day Schedule Name
-  {5ccb85f3-3573-41c1-ab0e-dc464fa8369a}, ! Summer Design Day Schedule Name
-  {f57c41fc-c559-4c4f-8adb-4b392bfaf028}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {bf704b7a-9297-4a96-9dfb-8bab054c5cb5}, ! Handle
-  Medium Office Bldg Equip Default Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  8,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.4,                                    !- Value Until Time 1
-  12,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.9,                                    !- Value Until Time 2
-  13,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.8,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.8,                                    !- Value Until Time 5
-  20,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.6,                                    !- Value Until Time 6
-  22,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.5,                                    !- Value Until Time 7
-  24,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.4;                                    !- Value Until Time 8
-
-OS:Schedule:Day,
-  {5ccb85f3-3573-41c1-ab0e-dc464fa8369a}, ! Handle
-  Medium Office Bldg Equip Summer Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {f57c41fc-c559-4c4f-8adb-4b392bfaf028}, ! Handle
-  Medium Office Bldg Equip Winter Design Day, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {d6cb0cf6-da77-4422-91ed-f9b16f4a074b}, !- Handle
-  Medium Office Bldg Equip Rule 1,        !- Name
-  {a07a8dd7-c4c7-4b5c-8731-bf52277c2daa}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {dd0aea7f-20ff-4725-9c38-bf26b08baafd}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {dd0aea7f-20ff-4725-9c38-bf26b08baafd}, ! Handle
-  Medium Office Bldg Equip Rule 1 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999;                    ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {fc5b8baf-c101-48ac-baff-dd26b6be21b3}, !- Handle
-  Medium Office Bldg Equip Rule 2,        !- Name
-  {a07a8dd7-c4c7-4b5c-8731-bf52277c2daa}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {f3eac8f6-f536-402a-84ad-ee7462d7d6a1}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {f3eac8f6-f536-402a-84ad-ee7462d7d6a1}, ! Handle
-  Medium Office Bldg Equip Rule 2 Day Schedule, ! Name
-  {46639c15-3d9e-445e-bf44-62058e5636d7}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999,                    ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.40000000000000002,                    ! Value Until Time 2
-  14,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.34999999999999998,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.29999999999999999;                    ! Value Until Time 5
 
 OS:ThermostatSetpoint:DualSetpoint,
   {6f2426c5-ac93-4ed3-8290-6cba3d44eb04}, !- Handle
@@ -3029,20 +1211,6 @@ OS:Rendering:Color,
   120,                                    !- Rendering Red Value
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {64f79cfb-a26b-4691-bf55-eb2661e53843}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Sm Office - CZ1-3 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {9f1aa367-d1f3-4c90-95ae-249558baece7}, !- Number of People Schedule Name
-  {1b9044e6-e6f8-4202-8332-ec7a44ffc25f}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {a7dafb11-496a-41f5-9c5e-7e72d0f956b6}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {ad2bb55c-c030-4caf-910a-5432d42cb8e3}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {8a7cefef-9754-4d19-ab97-201b694ce98b}, !- Handle
@@ -3071,147 +1239,6 @@ OS:People:Definition,
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
 
-OS:Schedule:Ruleset,
-  {9f1aa367-d1f3-4c90-95ae-249558baece7}, ! Handle
-  Small Office Bldg Occ,                  ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {27db2fc7-985b-405f-b217-c61f871fde68}, ! Default Day Schedule Name
-  {7a2a4335-8017-4278-8d87-5dae03ef442a}, ! Summer Design Day Schedule Name
-  {8666649e-ef84-4fa3-9d27-31e462680c94}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {27db2fc7-985b-405f-b217-c61f871fde68}, ! Handle
-  Small Office Bldg Occ Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  7,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.1,                                    !- Value Until Time 2
-  8,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.2,                                    !- Value Until Time 3
-  12,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.95,                                   !- Value Until Time 4
-  13,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.5,                                    !- Value Until Time 5
-  17,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.95,                                   !- Value Until Time 6
-  18,                                     !- Hour 7
-  0,                                      !- Minute 7
-  0.3,                                    !- Value Until Time 7
-  20,                                     !- Hour 8
-  0,                                      !- Minute 8
-  0.1,                                    !- Value Until Time 8
-  24,                                     !- Hour 9
-  0,                                      !- Minute 9
-  0.05;                                   !- Value Until Time 9
-
-OS:Schedule:Day,
-  {7a2a4335-8017-4278-8d87-5dae03ef442a}, ! Handle
-  Small Office Bldg Occ Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  1,                                      ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.050000000000000003;                   ! Value Until Time 3
-
-OS:Schedule:Day,
-  {8666649e-ef84-4fa3-9d27-31e462680c94}, ! Handle
-  Small Office Bldg Occ Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {1ec6e3e7-82b4-49e6-8e40-d62233fc0746}, !- Handle
-  Small Office Bldg Occ Rule 1,           !- Name
-  {9f1aa367-d1f3-4c90-95ae-249558baece7}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {19df3478-1363-4984-ab4c-55527060e1df}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {19df3478-1363-4984-ab4c-55527060e1df}, ! Handle
-  Small Office Bldg Occ Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {c2299737-2fd3-4274-97d6-b3a72f5c6d13}, !- Handle
-  Small Office Bldg Occ Rule 2,           !- Name
-  {9f1aa367-d1f3-4c90-95ae-249558baece7}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {174c0756-607e-45cd-a3b3-7ae2e78824dc}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {174c0756-607e-45cd-a3b3-7ae2e78824dc}, ! Handle
-  Small Office Bldg Occ Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0,                                      ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.10000000000000001,                    ! Value Until Time 2
-  12,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.29999999999999999,                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.10000000000000001,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0;                                      ! Value Until Time 5
-
-OS:Schedule:Ruleset,
-  {1b9044e6-e6f8-4202-8332-ec7a44ffc25f}, ! Handle
-  Small Office Activity,                  ! Name
-  {914fb107-53c7-4ce8-8b3f-d09fe122736e}, ! Schedule Type Limits Name
-  {fd75c8bf-f34d-4069-aa95-b2f8cbe5f263}, ! Default Day Schedule Name
-  {4d39a59f-f101-43c2-b72d-376915ff3813}, ! Summer Design Day Schedule Name
-  {c2a9eb51-e714-44b9-8895-be4ded0c623b}; ! Winter Design Day Schedule Name
-
 OS:ScheduleTypeLimits,
   {914fb107-53c7-4ce8-8b3f-d09fe122736e}, !- Handle
   ActivityLevel 12,                       !- Name
@@ -3220,148 +1247,6 @@ OS:ScheduleTypeLimits,
   Continuous,                             !- Numeric Type
   ActivityLevel;                          !- Unit Type
 
-OS:Schedule:Day,
-  {fd75c8bf-f34d-4069-aa95-b2f8cbe5f263}, ! Handle
-  Small Office Activity Default Schedule, ! Name
-  {914fb107-53c7-4ce8-8b3f-d09fe122736e}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     !- Hour 1
-  0,                                      !- Minute 1
-  120;                                    !- Value Until Time 1
-
-OS:Schedule:Day,
-  {4d39a59f-f101-43c2-b72d-376915ff3813}, ! Handle
-  Small Office Activity Summer Design Day, ! Name
-  {914fb107-53c7-4ce8-8b3f-d09fe122736e}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Day,
-  {c2a9eb51-e714-44b9-8895-be4ded0c623b}, ! Handle
-  Small Office Activity Winter Design Day, ! Name
-  {914fb107-53c7-4ce8-8b3f-d09fe122736e}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  120;                                    ! Value Until Time 1
-
-OS:Schedule:Ruleset,
-  {ad2bb55c-c030-4caf-910a-5432d42cb8e3}, ! Handle
-  Small Office Infil Quarter On,          ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {85b20cd5-89d6-4fb3-8769-658a7d3320d9}, ! Default Day Schedule Name
-  {be94ff78-1a17-4ceb-ad07-e1207299036d}, ! Summer Design Day Schedule Name
-  {0cdb6e4e-5756-4f55-81c9-df6360a5015a}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {85b20cd5-89d6-4fb3-8769-658a7d3320d9}, ! Handle
-  Small Office Infil Quarter On Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  22,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.25,                                   !- Value Until Time 2
-  24,                                     !- Hour 3
-  0,                                      !- Minute 3
-  1;                                      !- Value Until Time 3
-
-OS:Schedule:Day,
-  {be94ff78-1a17-4ceb-ad07-e1207299036d}, ! Handle
-  Small Office Infil Quarter On Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  22,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Day,
-  {0cdb6e4e-5756-4f55-81c9-df6360a5015a}, ! Handle
-  Small Office Infil Quarter On Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
-OS:Schedule:Rule,
-  {5deeb2a0-d918-4a10-aed0-e23a586fea7a}, !- Handle
-  Small Office Infil Quarter On Rule 1,   !- Name
-  {ad2bb55c-c030-4caf-910a-5432d42cb8e3}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {fb9a701c-7378-479d-8a7a-6355f1415c37}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {fb9a701c-7378-479d-8a7a-6355f1415c37}, ! Handle
-  Small Office Infil Quarter On Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {a4516d3b-a74d-4b7d-aad5-0330cc643492}, !- Handle
-  Small Office Infil Quarter On Rule 2,   !- Name
-  {ad2bb55c-c030-4caf-910a-5432d42cb8e3}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {f5f91d52-1d0d-41ec-a00c-4b4e680a7528}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {f5f91d52-1d0d-41ec-a00c-4b4e680a7528}, ! Handle
-  Small Office Infil Quarter On Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  1,                                      ! Value Until Time 1
-  18,                                     ! Hour 2
-  0,                                      ! Minute 2
-  0.25,                                   ! Value Until Time 2
-  24,                                     ! Hour 3
-  0,                                      ! Minute 3
-  1;                                      ! Value Until Time 3
-
 OS:ElectricEquipment:Definition,
   {b8b8ed7d-507c-4df3-b72a-3240a935b07b}, !- Handle
   189.1-2009 - Office - WholeBuilding - Sm Office - CZ1-3 Electric Equipment Definition, !- Name
@@ -3369,124 +1254,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   5.81251162502325,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:Schedule:Ruleset,
-  {a7dafb11-496a-41f5-9c5e-7e72d0f956b6}, ! Handle
-  Small Office Bldg Equip,                ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  {9659dece-4a8b-46aa-b94a-efbe6534b6e7}, ! Default Day Schedule Name
-  {11efabd5-0ab5-4285-b017-593d1d4ba320}, ! Summer Design Day Schedule Name
-  {88c90b58-8ddb-4972-883e-a290c36af0c4}; ! Winter Design Day Schedule Name
-
-OS:Schedule:Day,
-  {9659dece-4a8b-46aa-b94a-efbe6534b6e7}, ! Handle
-  Small Office Bldg Equip Default Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  8,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.4,                                    !- Value Until Time 1
-  12,                                     !- Hour 2
-  0,                                      !- Minute 2
-  0.9,                                    !- Value Until Time 2
-  13,                                     !- Hour 3
-  0,                                      !- Minute 3
-  0.8,                                    !- Value Until Time 3
-  17,                                     !- Hour 4
-  0,                                      !- Minute 4
-  0.9,                                    !- Value Until Time 4
-  18,                                     !- Hour 5
-  0,                                      !- Minute 5
-  0.5,                                    !- Value Until Time 5
-  24,                                     !- Hour 6
-  0,                                      !- Minute 6
-  0.4;                                    !- Value Until Time 6
-
-OS:Schedule:Day,
-  {11efabd5-0ab5-4285-b017-593d1d4ba320}, ! Handle
-  Small Office Bldg Equip Summer Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  1;                                      ! Value Until Time 1
-
-OS:Schedule:Day,
-  {88c90b58-8ddb-4972-883e-a290c36af0c4}, ! Handle
-  Small Office Bldg Equip Winter Design Day, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0;                                      ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {10be943f-7e03-430c-bc8a-27e75bd212a0}, !- Handle
-  Small Office Bldg Equip Rule 1,         !- Name
-  {a7dafb11-496a-41f5-9c5e-7e72d0f956b6}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {16eab646-a742-47ec-a5ba-4a4f77d2f9af}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  No,                                     !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {16eab646-a742-47ec-a5ba-4a4f77d2f9af}, ! Handle
-  Small Office Bldg Equip Rule 1 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  24,                                     ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999;                    ! Value Until Time 1
-
-OS:Schedule:Rule,
-  {05df7d2e-cd48-42f6-8b14-8fe684fabc7d}, !- Handle
-  Small Office Bldg Equip Rule 2,         !- Name
-  {a7dafb11-496a-41f5-9c5e-7e72d0f956b6}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {b02be6a4-e029-4e6a-87d2-7ba289724c20}, !- Day Schedule Name
-  No,                                     !- Apply Sunday
-  No,                                     !- Apply Monday
-  No,                                     !- Apply Tuesday
-  No,                                     !- Apply Wednesday
-  No,                                     !- Apply Thursday
-  No,                                     !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  12,                                     !- End Month
-  31;                                     !- End Day
-
-OS:Schedule:Day,
-  {b02be6a4-e029-4e6a-87d2-7ba289724c20}, ! Handle
-  Small Office Bldg Equip Rule 2 Day Schedule, ! Name
-  {c50de33e-2a31-403b-929e-8d1c42a993ef}, ! Schedule Type Limits Name
-  ,                                       ! Interpolate to Timestep
-  6,                                      ! Hour 1
-  0,                                      ! Minute 1
-  0.29999999999999999,                    ! Value Until Time 1
-  8,                                      ! Hour 2
-  0,                                      ! Minute 2
-  0.40000000000000002,                    ! Value Until Time 2
-  12,                                     ! Hour 3
-  0,                                      ! Minute 3
-  0.5,                                    ! Value Until Time 3
-  17,                                     ! Hour 4
-  0,                                      ! Minute 4
-  0.34999999999999998,                    ! Value Until Time 4
-  24,                                     ! Hour 5
-  0,                                      ! Minute 5
-  0.29999999999999999;                    ! Value Until Time 5
 
 OS:ThermostatSetpoint:DualSetpoint,
   {e106c6fa-6132-4f38-a43a-32fb3807df79}, !- Handle
@@ -3729,20 +1496,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {3d2883f3-fbdc-415a-b765-cd09d718eca9}, !- Handle
-  189.1-2009 - Office - BreakRoom - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {889408a4-720d-4e9f-9237-0ad782961ad9}, !- Handle
   189.1-2009 - Office - BreakRoom - CZ4-8 Lights Definition, !- Name
@@ -3790,20 +1543,6 @@ OS:Rendering:Color,
   120,                                    !- Rendering Red Value
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {a300eb3d-86b2-4fd6-bc37-e7119c532048}, !- Handle
-  189.1-2009 - Office - ClosedOffice - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {ef70e39d-f993-4955-9a0c-8bff5e6cc117}, !- Handle
@@ -3853,20 +1592,6 @@ OS:Rendering:Color,
   196,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {7ea93f09-5fbf-44b1-893b-6050d3bc380b}, !- Handle
-  189.1-2009 - Office - Conference - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {2407094e-b192-4e4e-bf48-bb4d44e67c33}, !- Handle
   189.1-2009 - Office - Conference - CZ4-8 Lights Definition, !- Name
@@ -3914,20 +1639,6 @@ OS:Rendering:Color,
   169,                                    !- Rendering Red Value
   31,                                     !- Rendering Green Value
   31;                                     !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {273643f4-d2c4-447c-a8e2-6bfece7170d9}, !- Handle
-  189.1-2009 - Office - Corridor - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {22506379-e54e-4b52-ab76-efd50d87c058}, !- Handle
@@ -3977,20 +1688,6 @@ OS:Rendering:Color,
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {341faeb6-1972-4002-bff6-c38270a2132b}, !- Handle
-  189.1-2009 - Office - Elec/MechRoom - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {cd36d465-f9a9-43de-91e0-2f716f8bd0ad}, !- Handle
   189.1-2009 - Office - Elec/MechRoom - CZ4-8 Lights Definition, !- Name
@@ -4029,20 +1726,6 @@ OS:Rendering:Color,
   41,                                     !- Rendering Red Value
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {32ca4412-a520-49f5-94da-e0ab4f00e2da}, !- Handle
-  189.1-2009 - Office - IT_Room - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {6d44cfb4-9408-419e-b2c1-87f0e0f06c2a}, !- Handle
@@ -4092,20 +1775,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {28993f87-bc77-46fe-b7fe-bf3872e7b108}, !- Handle
-  189.1-2009 - Office - Lobby - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {02ab1bd2-d5bd-4e09-80bf-bdbadcb66ed0}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Lights Definition, !- Name
@@ -4153,20 +1822,6 @@ OS:Rendering:Color,
   120,                                    !- Rendering Red Value
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {ba53edd6-5b2b-478b-a905-cda25e2ad585}, !- Handle
-  189.1-2009 - Office - OpenOffice - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {163effd1-65ed-44c0-a206-60c4b6812644}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {e1ffda63-4158-4ea6-9762-f28ae36fc302}, !- Handle
@@ -4216,20 +1871,6 @@ OS:Rendering:Color,
   31,                                     !- Rendering Green Value
   169;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {e251b654-04f7-4aef-a135-05e65bb14d8d}, !- Handle
-  189.1-2009 - Office - PrintRoom - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {f21171ea-dcf9-428a-8618-ce0d6572d957}, !- Handle
   189.1-2009 - Office - PrintRoom - CZ4-8 Lights Definition, !- Name
@@ -4277,20 +1918,6 @@ OS:Rendering:Color,
   169,                                    !- Rendering Red Value
   169,                                    !- Rendering Green Value
   31;                                     !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {f67d2cb8-ba88-4246-8424-0d81e10a8a40}, !- Handle
-  189.1-2009 - Office - Restroom - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {c77b2d14-c551-435e-bf0b-e27f25653123}, !- Handle
@@ -4340,20 +1967,6 @@ OS:Rendering:Color,
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {133bf7d1-f409-4ed6-9745-c3c0bc3b41ba}, !- Handle
-  189.1-2009 - Office - Stair - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  ,                                       !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {3a7c0968-bfe1-4512-ae37-95a7502485e8}, !- Handle
   189.1-2009 - Office - Stair - CZ4-8 Lights Definition, !- Name
@@ -4385,20 +1998,6 @@ OS:Rendering:Color,
   149,                                    !- Rendering Green Value
   230;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {38eab2ae-9f8a-4f40-9f5f-832f45c0b2a0}, !- Handle
-  189.1-2009 - Office - Storage - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  ,                                       !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {bc0d0450-0eb1-49a3-a0c3-e81257d0ed74}, !- Handle
   189.1-2009 - Office - Storage - CZ4-8 Lights Definition, !- Name
@@ -4429,20 +2028,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Red Value
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {f6ba3801-3553-4d04-8ce7-07c424f52662}, !- Handle
-  189.1-2009 - Office - Vending - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {57e1c24d-9d92-4abf-b5da-f09ece9870d2}, !- Number of People Schedule Name
-  {ae4a6595-dac3-4e90-8bc9-f95853fc6d37}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {88b4ac91-159f-4214-9ba7-aac28ba70021}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {f3007024-d8b2-4f63-80eb-68d25b3f311b}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {add79377-2a7e-4ec0-b78a-95d24d8cc9ce}, !- Handle
@@ -4492,20 +2077,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {380bd50a-3e07-40f8-b894-f554e86b3ed7}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Lg Office - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {3809a7de-fc37-4d8a-9225-159a2dfb2aaa}, !- Number of People Schedule Name
-  {33614f86-0df7-4712-b581-d943d0995157}, !- People Activity Level Schedule Name
-  {887b2604-862e-444b-89ad-50e2dc4d71e9}, !- Lighting Schedule Name
-  {ebe8d780-87ee-4f15-bff7-d4f18dba8a4a}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {db7f073b-9c2d-43a5-b827-b5b8d6adcaa3}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {760d75f8-bfda-40b6-aa35-d3391cd0c635}, !- Handle
   189.1-2009 - Office - WholeBuilding - Lg Office - CZ4-8 Lights Definition, !- Name
@@ -4554,20 +2125,6 @@ OS:Rendering:Color,
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
 
-OS:DefaultScheduleSet,
-  {59290883-ecb6-4345-b17f-8a5a15e8c430}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Md Office - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {e07d3266-bbf4-4110-98ab-fa7a311efd8a}, !- Number of People Schedule Name
-  {7651bffc-0582-49f0-bef8-c342bde3ae49}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {a07a8dd7-c4c7-4b5c-8731-bf52277c2daa}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {b2069f4f-b25a-42e8-badd-8d1d6c35c9c1}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
-
 OS:Lights:Definition,
   {412e0cd3-9929-4ec0-aadc-1a2e20bf20ba}, !- Handle
   189.1-2009 - Office - WholeBuilding - Md Office - CZ4-8 Lights Definition, !- Name
@@ -4615,20 +2172,6 @@ OS:Rendering:Color,
   120,                                    !- Rendering Red Value
   230,                                    !- Rendering Green Value
   199;                                    !- Rendering Blue Value
-
-OS:DefaultScheduleSet,
-  {b7236350-3bd7-433c-9ac4-cc40866152bd}, !- Handle
-  189.1-2009 - Office - WholeBuilding - Sm Office - CZ4-8 Schedule Set, !- Name
-  ,                                       !- Hours of Operation Schedule Name
-  {9f1aa367-d1f3-4c90-95ae-249558baece7}, !- Number of People Schedule Name
-  {1b9044e6-e6f8-4202-8332-ec7a44ffc25f}, !- People Activity Level Schedule Name
-  {2c940045-acb3-429d-974e-30a7a792c982}, !- Lighting Schedule Name
-  {a7dafb11-496a-41f5-9c5e-7e72d0f956b6}, !- Electric Equipment Schedule Name
-  ,                                       !- Gas Equipment Schedule Name
-  ,                                       !- Hot Water Equipment Schedule Name
-  {ad2bb55c-c030-4caf-910a-5432d42cb8e3}, !- Infiltration Schedule Name
-  ,                                       !- Steam Equipment Schedule Name
-  ;                                       !- Other Equipment Schedule Name
 
 OS:Lights:Definition,
   {178b7807-f7c0-4022-8f6b-47411e4bd72f}, !- Handle
@@ -6310,7 +3853,7 @@ OS:RunPeriod,
   1,                                      !- Begin Day of Month
   12,                                     !- End Month
   31,                                     !- End Day of Month
-  ,                                       !- Use Weather File Holidays and Special Days
+  No,                                     !- Use Weather File Holidays and Special Days
   ,                                       !- Use Weather File Daylight Saving Period
   ,                                       !- Apply Weekend Holiday Rule
   ,                                       !- Use Weather File Rain Indicators
