@@ -1,0 +1,7 @@
+{
+   "created_at" : "20220917T151541Z",
+   "seed_file" : "../two_story_clean_ny.osm",
+   "steps" : [],
+   "updated_at" : "20220917T160750Z",
+   "weather_file" : "USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw"
+}

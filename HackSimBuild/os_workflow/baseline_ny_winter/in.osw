@@ -1,5 +1,5 @@
 {
-  "seed_file": "two_story_clean.osm",
+  "seed_file": "two_story_clean_ny.osm",
   "file_paths": [
     "../seeds",
     "../weather"
@@ -10,7 +10,7 @@
   "steps": [
     {
       "arguments": {
-        "otg_date": "December 20",
+        "otg_date": "January 2",
         "otg_hr": 1,
         "otg_len": 168,
         "nat_vent": 0.0
