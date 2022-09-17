@@ -1,11 +1,11 @@
 {
   "seed_file": "two_story_clean.osm",
   "file_paths": [
-    "seeds",
-    "weather"
+    "../seeds",
+    "../weather"
   ],
   "measure_paths": [
-    "measures"
+    "../measures"
   ],
   "steps": [
     {
@@ -13,7 +13,7 @@
         "otg_date": "July 16",
         "otg_hr": 13,
         "otg_len": 168,
-        "nat_vent": 1.5
+        "nat_vent": 0.0
       },
       "measure_dir_name": "PowerOutage"
     }
