@@ -74,6 +74,13 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     arg.setDefaultValue(24)
     args << arg
 
+    # make a double argument for outage duration
+    arg = OpenStudio::Measure::OSArgument::makeDoubleArgument('nat_vent', true)
+    arg.setDisplayName('Natural Vent ACH when hot inside and cooler outside')
+    arg.setDescription('This checks for delta T as well as min os outside T')
+    arg.setDefaultValue(0.0)
+    args << arg
+
     return args
   end # end the arguments method
 
@@ -103,6 +110,7 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     otg_date = runner.getStringArgumentValue('otg_date', user_arguments)
     otg_hr = runner.getIntegerArgumentValue('otg_hr', user_arguments)
     otg_len = runner.getIntegerArgumentValue('otg_len', user_arguments)
+    nat_vent = runner.getDoubleArgumentValue('nat_vent', user_arguments)
 
     # check for valid inputs
     if (otg_hr < 0) || (otg_hr > 23)
@@ -181,7 +189,7 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
       # leave schedule alone if used for people
       next if people_schedules.include?(schedule_ruleset)
 
-      # todo - don't leave infil alone but set to min value in year
+      # don't leave infil alone but set to min value in year
       if infil_schs.include?(schedule_ruleset)
         otg_val = OsLib_Schedules.getMinMaxAnnualProfileValue(model, schedule_ruleset)['max']
       else
@@ -325,6 +333,21 @@ class PowerOutage < OpenStudio::Measure::ModelMeasure
     additional_properties.setFeature('PowerOutageStartDate', otg_date)
     additional_properties.setFeature('PowerOutageStartHour', otg_hr)
     additional_properties.setFeature('PowerOutageDuration', otg_len)
+
+    # add design vent design flow rate
+    if nat_vent > 0.0
+      model.getThermalZones.each do |zone|
+        zone_ventilation = OpenStudio::Model::ZoneVentilationDesignFlowRate.new(model)
+        zone_ventilation.addToThermalZone(zone)
+        zone_ventilation.setVentilationType('Natural')
+        zone_ventilation.setDesignFlowRateCalculationMethod('AirChanges/Hour')
+        zone_ventilation.setAirChangesperHour(nat_vent)
+        zone_ventilation.setSchedule(model.alwaysOnDiscreteSchedule)
+        zone_ventilation.setMinimumOutdoorTemperature(18.0)
+        zone_ventilation.setDeltaTemperature(2.0)
+        runner.registerInfo("Creating zone ventilation design flow rate object with ventilation for #{zone.name}")
+      end
+    end
 
     runner.registerFinalCondition("A power outage has been added, starting on #{otg_date} at hour #{otg_hr.to_i} and lasting for #{otg_len.to_i} hours.")
 

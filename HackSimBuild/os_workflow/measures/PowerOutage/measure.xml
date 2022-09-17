@@ -3,8 +3,8 @@
   <schema_version>3.0</schema_version>
   <name>power_outage</name>
   <uid>6b822ead-80f5-4d8d-9642-25a4e0d74304</uid>
-  <version_id>0fec7d0c-fc0c-496c-9d5a-f7af8ba42045</version_id>
-  <version_modified>20220916T232246Z</version_modified>
+  <version_id>8f7a6e21-5005-492a-8a00-e0d4bc1f31d5</version_id>
+  <version_modified>20220917T125818Z</version_modified>
   <xml_checksum>D8922A73</xml_checksum>
   <class_name>PowerOutage</class_name>
   <display_name>Set Residential Power Outage</display_name>
@@ -40,6 +40,15 @@
       <model_dependent>false</model_dependent>
       <default_value>24</default_value>
     </argument>
+    <argument>
+      <name>nat_vent</name>
+      <display_name>Natural Vent ACH when hot inside and cooler outside</display_name>
+      <description>This checks for delta T as well as min os outside T</description>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>0</default_value>
+    </argument>
   </arguments>
   <outputs />
   <provenances />
@@ -69,17 +78,6 @@
     </attribute>
   </attributes>
   <files>
-    <file>
-      <version>
-        <software_program>OpenStudio</software_program>
-        <identifier>1.11.5</identifier>
-        <min_compatible>2.1.2</min_compatible>
-      </version>
-      <filename>measure.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>script</usage_type>
-      <checksum>49ACDF5E</checksum>
-    </file>
     <file>
       <filename>power_outage_test.rb</filename>
       <filetype>rb</filetype>
@@ -265,6 +263,17 @@
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
       <checksum>D5B3FA75</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.11.5</identifier>
+        <min_compatible>2.1.2</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>843D1CCE</checksum>
     </file>
   </files>
 </measure>

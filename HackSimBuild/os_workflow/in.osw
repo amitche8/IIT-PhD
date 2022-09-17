@@ -10,9 +10,10 @@
   "steps": [
     {
       "arguments": {
-        "otg_date": "July 1",
+        "otg_date": "July 16",
         "otg_hr": 13,
-        "otg_len": 168
+        "otg_len": 168,
+        "nat_vent": 1.5
       },
       "measure_dir_name": "PowerOutage"
     }

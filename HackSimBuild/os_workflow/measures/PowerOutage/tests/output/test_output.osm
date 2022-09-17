@@ -1,16 +1,16 @@
 
 OS:Version,
-  {fb7bd97d-a5cc-4b31-9324-4c964f98fe0c}, !- Handle
+  {c42aa6c5-0577-4a3b-a4be-44bcb3391d2a}, !- Handle
   3.4.0;                                  !- Version Identifier
 
 OS:Schedule:Constant,
-  {52e784a6-8fd1-446a-ac1d-47d75bc811bf}, !- Handle
+  {e18f6570-7cef-4834-ae82-7d8216354f9d}, !- Handle
   Always On Discrete,                     !- Name
-  {6897eba3-dd5e-4d18-9ede-9a786d87922d}, !- Schedule Type Limits Name
+  {ed358747-543e-44c4-83fb-11103bbc5eda}, !- Schedule Type Limits Name
   1;                                      !- Value
 
 OS:ScheduleTypeLimits,
-  {6897eba3-dd5e-4d18-9ede-9a786d87922d}, !- Handle
+  {ed358747-543e-44c4-83fb-11103bbc5eda}, !- Handle
   Always On Discrete Limits,              !- Name
   0,                                      !- Lower Limit Value
   1,                                      !- Upper Limit Value
@@ -8086,210 +8086,16 @@ OS:LifeCycleCost:Parameters,
   ;                                       !- Length of Study Period in Years
 
 OS:RunPeriodControl:DaylightSavingTime,
-  {7df6d06a-eed5-4b19-b4ac-d3474b87b2ea}, !- Handle
+  {8b5cdba0-d260-4803-872b-4e020ea7c66e}, !- Handle
   2nd Sunday in March,                    !- Start Date
   1st Sunday in November;                 !- End Date
 
 OS:Schedule:Rule,
-  {adc57a6a-8448-46ab-9031-be4c1f35d2b4}, !- Handle
-  Small Office Activity Outage Day 1,     !- Name
-  {67a55331-2096-4c9b-981a-b63f113d0dd9}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {4dd554fa-4c94-48fb-9747-4d16a7a3adbf}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {4dd554fa-4c94-48fb-9747-4d16a7a3adbf}, !- Handle
-  Schedule Day 1,                         !- Name
-  {ab8bd902-d0dc-41a0-936a-32afa4684057}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {1d7b9a06-b40a-4892-9f5b-8a5fa5f48b9b}, !- Handle
-  Small Office Activity Outage Day 2,     !- Name
-  {67a55331-2096-4c9b-981a-b63f113d0dd9}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {b6c1ca29-2af0-43cf-bb20-e119c0d68d59}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {b6c1ca29-2af0-43cf-bb20-e119c0d68d59}, !- Handle
-  Schedule Day 2,                         !- Name
-  {ab8bd902-d0dc-41a0-936a-32afa4684057}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  120,                                    !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  120,                                    !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  120,                                    !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  120,                                    !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  120,                                    !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  120,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  120,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  120,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  120,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  120,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  120,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  120,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  120,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  120,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  120,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  120,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  120,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  120,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  120,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  120,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  120,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  120,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  120,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  120;                                    !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {cbcc482b-a993-4c11-8c8a-e292d2eb3b3b}, !- Handle
+  {7d07ecbf-da99-4ab0-8192-93dd97365d6e}, !- Handle
   Small Office HtgSetp Outage Day 1,      !- Name
   {a8fc5971-56bf-485f-a8b6-fc00357a220a}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {f57b68f2-ab63-4366-8393-6423b044cbf4}, !- Day Schedule Name
+  {84d5dccb-cccf-4926-ae6f-7682e795de67}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8304,8 +8110,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {f57b68f2-ab63-4366-8393-6423b044cbf4}, !- Handle
-  Schedule Day 3,                         !- Name
+  {84d5dccb-cccf-4926-ae6f-7682e795de67}, !- Handle
+  Schedule Day 1,                         !- Name
   {0e9a66b1-0d84-4b86-b6d1-08ec793ba821}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8382,11 +8188,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {9d9a1293-365f-46cb-bec7-0a086a6ef03f}, !- Handle
+  {767d4b28-13bf-4658-b6a0-34345debba55}, !- Handle
   Small Office HtgSetp Outage Day 2,      !- Name
   {a8fc5971-56bf-485f-a8b6-fc00357a220a}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {07314ad8-6158-44bc-9556-f42221181656}, !- Day Schedule Name
+  {fe91a8dc-8ea1-4c63-9871-6d1ba04d43ae}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8401,8 +8207,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {07314ad8-6158-44bc-9556-f42221181656}, !- Handle
-  Schedule Day 4,                         !- Name
+  {fe91a8dc-8ea1-4c63-9871-6d1ba04d43ae}, !- Handle
+  Schedule Day 2,                         !- Name
   {0e9a66b1-0d84-4b86-b6d1-08ec793ba821}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8479,11 +8285,11 @@ OS:Schedule:Day,
   15.6;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {46deeb49-488d-4c66-9097-92e0779fdae9}, !- Handle
+  {10a1b5f8-6590-4ec7-b869-7f5c328ea87b}, !- Handle
   Medium Office Infil Quarter On Outage Day 1, !- Name
   {4b35ab56-cec3-45c0-bd82-7c7c88e72873}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {1808e1e0-31fe-40d7-a5bb-d5d355049fcb}, !- Day Schedule Name
+  {f2d614e4-16ab-434b-ab81-716803714c64}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8498,89 +8304,89 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {1808e1e0-31fe-40d7-a5bb-d5d355049fcb}, !- Handle
-  Schedule Day 5,                         !- Name
+  {f2d614e4-16ab-434b-ab81-716803714c64}, !- Handle
+  Schedule Day 3,                         !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
   0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
+  1,                                      !- Value Until Time 1
   2,                                      !- Hour 2
   0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
+  1,                                      !- Value Until Time 2
   3,                                      !- Hour 3
   0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
+  1,                                      !- Value Until Time 3
   4,                                      !- Hour 4
   0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
+  1,                                      !- Value Until Time 4
   5,                                      !- Hour 5
   0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
+  1,                                      !- Value Until Time 5
   6,                                      !- Hour 6
   0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
+  1,                                      !- Value Until Time 6
   7,                                      !- Hour 7
   0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
+  1,                                      !- Value Until Time 7
   8,                                      !- Hour 8
   0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
+  1,                                      !- Value Until Time 8
   9,                                      !- Hour 9
   0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
+  1,                                      !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
+  1,                                      !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
+  1,                                      !- Value Until Time 11
   12,                                     !- Hour 12
   0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
+  1,                                      !- Value Until Time 12
   13,                                     !- Hour 13
   0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
+  1,                                      !- Value Until Time 13
   14,                                     !- Hour 14
   0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
+  1,                                      !- Value Until Time 14
   15,                                     !- Hour 15
   0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
+  1,                                      !- Value Until Time 15
   16,                                     !- Hour 16
   0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
+  1,                                      !- Value Until Time 16
   17,                                     !- Hour 17
   0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
+  1,                                      !- Value Until Time 17
   18,                                     !- Hour 18
   0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
+  1,                                      !- Value Until Time 18
   19,                                     !- Hour 19
   0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
+  1,                                      !- Value Until Time 19
   20,                                     !- Hour 20
   0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
+  1,                                      !- Value Until Time 20
   21,                                     !- Hour 21
   0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
+  1,                                      !- Value Until Time 21
   22,                                     !- Hour 22
   0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
+  1,                                      !- Value Until Time 22
   23,                                     !- Hour 23
   0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
+  1,                                      !- Value Until Time 23
   24,                                     !- Hour 24
   0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
+  1;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {f4fd7c07-8b3d-4839-81ea-e03bd61beddd}, !- Handle
+  {042e58b2-a7f9-4c41-a11e-4579d0f0b271}, !- Handle
   Medium Office Infil Quarter On Outage Day 2, !- Name
   {4b35ab56-cec3-45c0-bd82-7c7c88e72873}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {b03a53f8-8354-4cd6-9211-47e2cb4f16ca}, !- Day Schedule Name
+  {fa004738-7752-4e51-b9b0-3f765cf9b7e7}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8595,8 +8401,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {b03a53f8-8354-4cd6-9211-47e2cb4f16ca}, !- Handle
-  Schedule Day 6,                         !- Name
+  {fa004738-7752-4e51-b9b0-3f765cf9b7e7}, !- Handle
+  Schedule Day 4,                         !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8673,11 +8479,11 @@ OS:Schedule:Day,
   1;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {d68122dc-7d55-4300-9e09-88fc90223429}, !- Handle
+  {4d552a70-c5d2-4798-9335-6bf394d8f743}, !- Handle
   Large Office ClgSetp Outage Day 1,      !- Name
   {205b7ba7-36bf-4caa-b304-f7da82550d15}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {dfa4c445-178b-4188-a49d-7cb2974a3819}, !- Day Schedule Name
+  {8b5b1d15-3f5a-4ae3-9088-b10229d728c0}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8692,8 +8498,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {dfa4c445-178b-4188-a49d-7cb2974a3819}, !- Handle
-  Schedule Day 7,                         !- Name
+  {8b5b1d15-3f5a-4ae3-9088-b10229d728c0}, !- Handle
+  Schedule Day 5,                         !- Name
   {088565a9-dd39-48f6-99d3-bfe5073149c2}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8770,11 +8576,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {2d8370d9-d493-47f9-b0a7-210da528269a}, !- Handle
+  {d237a989-f013-43af-8a40-a5e2b9abf9e7}, !- Handle
   Large Office ClgSetp Outage Day 2,      !- Name
   {205b7ba7-36bf-4caa-b304-f7da82550d15}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {26d4d2cd-4707-4538-b620-9464e62e7881}, !- Day Schedule Name
+  {f0cd7749-9e4d-4f93-bb7d-476e212788e3}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8789,8 +8595,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {26d4d2cd-4707-4538-b620-9464e62e7881}, !- Handle
-  Schedule Day 8,                         !- Name
+  {f0cd7749-9e4d-4f93-bb7d-476e212788e3}, !- Handle
+  Schedule Day 6,                         !- Name
   {088565a9-dd39-48f6-99d3-bfe5073149c2}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8867,11 +8673,11 @@ OS:Schedule:Day,
   26.7;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {d95c4f45-5037-468b-ba86-fb9da231af91}, !- Handle
+  {53824730-8a9f-4009-a545-aaeca242d74d}, !- Handle
   Large Office Bldg Equip Outage Day 1,   !- Name
   {6197bef3-80c6-4043-b8a4-b9cd96652248}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {6c7ae07c-cbbe-4aed-850f-fbef0dc377c4}, !- Day Schedule Name
+  {d777df61-e75a-4334-a22c-e1fd9660eaf4}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8886,8 +8692,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {6c7ae07c-cbbe-4aed-850f-fbef0dc377c4}, !- Handle
-  Schedule Day 9,                         !- Name
+  {d777df61-e75a-4334-a22c-e1fd9660eaf4}, !- Handle
+  Schedule Day 7,                         !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -8964,11 +8770,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {cc7fb605-8a75-4c44-9557-535e46f74c8a}, !- Handle
+  {146ee22f-cfa5-40d8-920b-9446046dc1c1}, !- Handle
   Large Office Bldg Equip Outage Day 2,   !- Name
   {6197bef3-80c6-4043-b8a4-b9cd96652248}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {3aa921ef-09df-4e6e-9fea-862c8a50c71a}, !- Day Schedule Name
+  {d27eba5e-8bc4-42d5-b758-7b6dc754e98a}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -8983,8 +8789,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {3aa921ef-09df-4e6e-9fea-862c8a50c71a}, !- Handle
-  Schedule Day 10,                        !- Name
+  {d27eba5e-8bc4-42d5-b758-7b6dc754e98a}, !- Handle
+  Schedule Day 8,                         !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9061,11 +8867,11 @@ OS:Schedule:Day,
   0.4;                                    !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {e6525104-9379-481c-97b9-a7c0d1dc0663}, !- Handle
+  {82fde27b-52da-42f4-a25b-c68035870b4f}, !- Handle
   Medium Office Bldg Equip Outage Day 1,  !- Name
   {e7df833e-4db6-469d-ad96-14b52ff0ceef}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {03f9b6d7-7e2e-4362-b6eb-de808ef7f82e}, !- Day Schedule Name
+  {deef57cc-1d3e-47a2-b4db-614da6a70c20}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9080,8 +8886,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {03f9b6d7-7e2e-4362-b6eb-de808ef7f82e}, !- Handle
-  Schedule Day 11,                        !- Name
+  {deef57cc-1d3e-47a2-b4db-614da6a70c20}, !- Handle
+  Schedule Day 9,                         !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9158,11 +8964,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {d7d8222e-e040-4f7d-9e34-58556d3bb6ac}, !- Handle
+  {b5d2ac9f-d632-4abf-8799-00ab468dcdb4}, !- Handle
   Medium Office Bldg Equip Outage Day 2,  !- Name
   {e7df833e-4db6-469d-ad96-14b52ff0ceef}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {32e98c5d-6607-4d37-bef0-96ffb0eb4838}, !- Day Schedule Name
+  {e07f41b7-d2ca-41a0-99ef-6ba1f7636922}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9177,8 +8983,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {32e98c5d-6607-4d37-bef0-96ffb0eb4838}, !- Handle
-  Schedule Day 12,                        !- Name
+  {e07f41b7-d2ca-41a0-99ef-6ba1f7636922}, !- Handle
+  Schedule Day 10,                        !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9255,11 +9061,11 @@ OS:Schedule:Day,
   0.4;                                    !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {9d760551-2cbc-410a-b36e-e408fb2ef445}, !- Handle
+  {8cf34310-d300-4ea9-860c-493831380f25}, !- Handle
   Large Office Infil Quarter On Outage Day 1, !- Name
   {e0eb0ae2-9b39-46b2-b9f9-f7879620c44e}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {298e4a3a-2d17-452c-a057-c267cc4c34f1}, !- Day Schedule Name
+  {4a6c896b-8002-49fa-bed5-f0ecd5b16bc5}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9274,89 +9080,89 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {298e4a3a-2d17-452c-a057-c267cc4c34f1}, !- Handle
-  Schedule Day 13,                        !- Name
+  {4a6c896b-8002-49fa-bed5-f0ecd5b16bc5}, !- Handle
+  Schedule Day 11,                        !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
   0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
+  1,                                      !- Value Until Time 1
   2,                                      !- Hour 2
   0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
+  1,                                      !- Value Until Time 2
   3,                                      !- Hour 3
   0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
+  1,                                      !- Value Until Time 3
   4,                                      !- Hour 4
   0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
+  1,                                      !- Value Until Time 4
   5,                                      !- Hour 5
   0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
+  1,                                      !- Value Until Time 5
   6,                                      !- Hour 6
   0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
+  1,                                      !- Value Until Time 6
   7,                                      !- Hour 7
   0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
+  1,                                      !- Value Until Time 7
   8,                                      !- Hour 8
   0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
+  1,                                      !- Value Until Time 8
   9,                                      !- Hour 9
   0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
+  1,                                      !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
+  1,                                      !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
+  1,                                      !- Value Until Time 11
   12,                                     !- Hour 12
   0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
+  1,                                      !- Value Until Time 12
   13,                                     !- Hour 13
   0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
+  1,                                      !- Value Until Time 13
   14,                                     !- Hour 14
   0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
+  1,                                      !- Value Until Time 14
   15,                                     !- Hour 15
   0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
+  1,                                      !- Value Until Time 15
   16,                                     !- Hour 16
   0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
+  1,                                      !- Value Until Time 16
   17,                                     !- Hour 17
   0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
+  1,                                      !- Value Until Time 17
   18,                                     !- Hour 18
   0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
+  1,                                      !- Value Until Time 18
   19,                                     !- Hour 19
   0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
+  1,                                      !- Value Until Time 19
   20,                                     !- Hour 20
   0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
+  1,                                      !- Value Until Time 20
   21,                                     !- Hour 21
   0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
+  1,                                      !- Value Until Time 21
   22,                                     !- Hour 22
   0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
+  1,                                      !- Value Until Time 22
   23,                                     !- Hour 23
   0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
+  1,                                      !- Value Until Time 23
   24,                                     !- Hour 24
   0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
+  1;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {62a7a638-a206-42fb-9c40-6be9508cdfac}, !- Handle
+  {167b9a64-4817-4f2c-8cbc-0d681f9908f5}, !- Handle
   Large Office Infil Quarter On Outage Day 2, !- Name
   {e0eb0ae2-9b39-46b2-b9f9-f7879620c44e}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {a1d81840-be2a-4c34-9c29-b3bd0d4e7ff1}, !- Day Schedule Name
+  {2d9aae90-72bf-42b5-863e-a64a221f306e}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9371,8 +9177,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {a1d81840-be2a-4c34-9c29-b3bd0d4e7ff1}, !- Handle
-  Schedule Day 14,                        !- Name
+  {2d9aae90-72bf-42b5-863e-a64a221f306e}, !- Handle
+  Schedule Day 12,                        !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9449,11 +9255,11 @@ OS:Schedule:Day,
   1;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {2b3a37ae-9c07-4d30-8e58-a59be100f501}, !- Handle
+  {600d1c94-2f22-4f4e-aa33-8faf2916dcf9}, !- Handle
   Medium Office ClgSetp Outage Day 1,     !- Name
   {e9bd9cb4-1124-4ccf-bf18-c5ad994faa55}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {490b0388-a22c-489f-911a-9a4c5b760e54}, !- Day Schedule Name
+  {0ab86b7c-ea02-4dec-bb8a-58a33a5670d0}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9468,8 +9274,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {490b0388-a22c-489f-911a-9a4c5b760e54}, !- Handle
-  Schedule Day 15,                        !- Name
+  {0ab86b7c-ea02-4dec-bb8a-58a33a5670d0}, !- Handle
+  Schedule Day 13,                        !- Name
   {7e87320c-a0b8-49c9-bbc8-d0b2f472ac54}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9546,11 +9352,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {135ea7a4-100d-4794-85c5-7a88fa4bbccd}, !- Handle
+  {d4de04a9-5ee1-498f-bc94-2e3b73da3f2d}, !- Handle
   Medium Office ClgSetp Outage Day 2,     !- Name
   {e9bd9cb4-1124-4ccf-bf18-c5ad994faa55}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {01513194-9a8b-4103-b629-fd05d8c40f47}, !- Day Schedule Name
+  {2c884a27-a06a-4824-88ae-d79bdc72470b}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9565,8 +9371,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {01513194-9a8b-4103-b629-fd05d8c40f47}, !- Handle
-  Schedule Day 16,                        !- Name
+  {2c884a27-a06a-4824-88ae-d79bdc72470b}, !- Handle
+  Schedule Day 14,                        !- Name
   {7e87320c-a0b8-49c9-bbc8-d0b2f472ac54}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -9643,11 +9449,11 @@ OS:Schedule:Day,
   26.7;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {1eb59e60-328e-490a-8cf9-1ff42ddd30db}, !- Handle
+  {a87390e3-4f37-40a9-b814-e8dadd139742}, !- Handle
   Small Office Infil Quarter On Outage Day 1, !- Name
   {cb7cb752-a33a-400e-97f3-836bf023796e}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {acd3de3a-012f-46f1-a158-f2dde721de68}, !- Day Schedule Name
+  {e8d4d612-365d-4746-b13b-13792ae7a0fd}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9662,7 +9468,201 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {acd3de3a-012f-46f1-a158-f2dde721de68}, !- Handle
+  {e8d4d612-365d-4746-b13b-13792ae7a0fd}, !- Handle
+  Schedule Day 15,                        !- Name
+  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  1,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  1,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  1,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  1,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  1,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  1,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  1,                                      !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  1,                                      !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  1,                                      !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  1,                                      !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  1,                                      !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  1,                                      !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  1,                                      !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  1,                                      !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  1,                                      !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  1,                                      !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  1,                                      !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  1,                                      !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  1,                                      !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  1,                                      !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  1,                                      !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  1,                                      !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  1,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  1;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {c61044ba-3928-4d74-985c-e8bce2d284e7}, !- Handle
+  Small Office Infil Quarter On Outage Day 2, !- Name
+  {cb7cb752-a33a-400e-97f3-836bf023796e}, !- Schedule Ruleset Name
+  0,                                      !- Rule Order
+  {e1773c9f-2615-4601-ab45-642458e1cc4d}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  2,                                      !- Start Day
+  1,                                      !- End Month
+  2;                                      !- End Day
+
+OS:Schedule:Day,
+  {e1773c9f-2615-4601-ab45-642458e1cc4d}, !- Handle
+  Schedule Day 16,                        !- Name
+  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  1,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  1,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  1,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  1,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  1,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  1,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0.25,                                   !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0.25,                                   !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0.25,                                   !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0.25,                                   !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0.25,                                   !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0.25,                                   !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0.25,                                   !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0.25,                                   !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0.25,                                   !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0.25,                                   !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0.25,                                   !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0.25,                                   !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0.25,                                   !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0.25,                                   !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0.25,                                   !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0.25,                                   !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  1,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  1;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {9fdd9a77-e51c-42b7-a53b-5569d0a873a9}, !- Handle
+  Small Office Bldg Equip Outage Day 1,   !- Name
+  {a51b8fe3-0466-410b-a880-21be07500a52}, !- Schedule Ruleset Name
+  1,                                      !- Rule Order
+  {27873301-b024-4497-a4d7-c5d07546f577}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  1,                                      !- Start Day
+  1,                                      !- End Month
+  1;                                      !- End Day
+
+OS:Schedule:Day,
+  {27873301-b024-4497-a4d7-c5d07546f577}, !- Handle
   Schedule Day 17,                        !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
@@ -9740,205 +9740,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {5b50ad32-d429-46e5-8517-541cb89d9a79}, !- Handle
-  Small Office Infil Quarter On Outage Day 2, !- Name
-  {cb7cb752-a33a-400e-97f3-836bf023796e}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {9212542c-e3cf-4421-9458-7a8172b28ede}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {9212542c-e3cf-4421-9458-7a8172b28ede}, !- Handle
-  Schedule Day 18,                        !- Name
-  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  1,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  1,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  1,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  1,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  1,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0.25,                                   !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0.25,                                   !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0.25,                                   !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.25,                                   !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0.25,                                   !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0.25,                                   !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0.25,                                   !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0.25,                                   !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0.25,                                   !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0.25,                                   !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0.25,                                   !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0.25,                                   !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0.25,                                   !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0.25,                                   !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0.25,                                   !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0.25,                                   !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  1,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  1;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {52415056-8f52-44e3-bea4-183a08575971}, !- Handle
-  Small Office Bldg Equip Outage Day 1,   !- Name
-  {a51b8fe3-0466-410b-a880-21be07500a52}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {02c9c4bd-e01b-400f-bed4-22edd31070c5}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {02c9c4bd-e01b-400f-bed4-22edd31070c5}, !- Handle
-  Schedule Day 19,                        !- Name
-  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {9b4887ab-5c12-453c-95c5-2232efc96197}, !- Handle
+  {bad01a37-5579-434d-af46-6ee3d8a677ce}, !- Handle
   Small Office Bldg Equip Outage Day 2,   !- Name
   {a51b8fe3-0466-410b-a880-21be07500a52}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {4d82d2ab-bc6b-49f1-9f85-9785652a1f58}, !- Day Schedule Name
+  {b959bc09-eb5c-4e8d-9920-6c6d09a1d16f}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -9953,8 +9759,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {4d82d2ab-bc6b-49f1-9f85-9785652a1f58}, !- Handle
-  Schedule Day 20,                        !- Name
+  {b959bc09-eb5c-4e8d-9920-6c6d09a1d16f}, !- Handle
+  Schedule Day 18,                        !- Name
   {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10031,205 +9837,11 @@ OS:Schedule:Day,
   0.4;                                    !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {66142fdd-9b9a-40ab-a393-4cee623645e4}, !- Handle
-  Medium Office Activity Outage Day 1,    !- Name
-  {4401923f-7369-4704-af97-5f02eccc07c4}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {e6d926e3-7756-4130-9106-46e7c262d114}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {e6d926e3-7756-4130-9106-46e7c262d114}, !- Handle
-  Schedule Day 21,                        !- Name
-  {95269861-8fab-46f9-aa04-a6e9bad28f6a}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {f9979e3e-5727-437b-be85-79bfb0ebedcc}, !- Handle
-  Medium Office Activity Outage Day 2,    !- Name
-  {4401923f-7369-4704-af97-5f02eccc07c4}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {ccbad07a-5725-4708-8744-f69d9339fa7d}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {ccbad07a-5725-4708-8744-f69d9339fa7d}, !- Handle
-  Schedule Day 22,                        !- Name
-  {95269861-8fab-46f9-aa04-a6e9bad28f6a}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  120,                                    !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  120,                                    !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  120,                                    !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  120,                                    !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  120,                                    !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  120,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  120,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  120,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  120,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  120,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  120,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  120,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  120,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  120,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  120,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  120,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  120,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  120,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  120,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  120,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  120,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  120,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  120,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  120;                                    !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {452acfd6-f5cc-4676-8553-7568472eb4c6}, !- Handle
+  {6d787270-9423-4094-8f3f-c04dc27e3039}, !- Handle
   Large Office HtgSetp Outage Day 1,      !- Name
   {e1c00ef5-f530-4453-a67b-ca54f0ae084f}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {3976b89e-5288-4266-98a8-28114c80eb41}, !- Day Schedule Name
+  {e499decc-4b86-49e2-9b2f-1979d465ff0f}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10244,8 +9856,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {3976b89e-5288-4266-98a8-28114c80eb41}, !- Handle
-  Schedule Day 23,                        !- Name
+  {e499decc-4b86-49e2-9b2f-1979d465ff0f}, !- Handle
+  Schedule Day 19,                        !- Name
   {81589aa3-85f3-4555-b92c-d10e45fa9ee1}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10322,11 +9934,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {eb69204d-470f-4ee3-8556-fa2137f13341}, !- Handle
+  {c0f3e00b-9054-4049-b342-c4aabba96042}, !- Handle
   Large Office HtgSetp Outage Day 2,      !- Name
   {e1c00ef5-f530-4453-a67b-ca54f0ae084f}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {2716e72f-4572-45f8-b6ba-4cbd27e21ea9}, !- Day Schedule Name
+  {d4bf90b9-4656-4c80-a82e-3433b762ab47}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10341,8 +9953,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {2716e72f-4572-45f8-b6ba-4cbd27e21ea9}, !- Handle
-  Schedule Day 24,                        !- Name
+  {d4bf90b9-4656-4c80-a82e-3433b762ab47}, !- Handle
+  Schedule Day 20,                        !- Name
   {81589aa3-85f3-4555-b92c-d10e45fa9ee1}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10419,11 +10031,11 @@ OS:Schedule:Day,
   15.6;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {87832914-cf9e-4b71-bab8-56ef3305dde3}, !- Handle
+  {6481406a-0a5d-4d77-9dbf-a017a20dfacd}, !- Handle
   Medium Office HtgSetp Outage Day 1,     !- Name
   {de733bb4-ab71-44d2-ab3a-a9b7c2a54774}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {e6edfadc-a595-4a11-9476-b45fc2104280}, !- Day Schedule Name
+  {10a04f02-4c45-4ac9-9445-bfd903cc8f45}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10438,8 +10050,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {e6edfadc-a595-4a11-9476-b45fc2104280}, !- Handle
-  Schedule Day 25,                        !- Name
+  {10a04f02-4c45-4ac9-9445-bfd903cc8f45}, !- Handle
+  Schedule Day 21,                        !- Name
   {12c61fd1-4fe2-4b95-9432-26b57b327856}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10516,11 +10128,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {e7d1f978-1c76-405f-a595-6bca9d32f316}, !- Handle
+  {3bfd770f-f8a5-4569-afbc-45e24a5c83b0}, !- Handle
   Medium Office HtgSetp Outage Day 2,     !- Name
   {de733bb4-ab71-44d2-ab3a-a9b7c2a54774}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {44c7e58d-21ab-476e-aaa1-1c878c8600e1}, !- Day Schedule Name
+  {de3bd095-ad96-43ce-9e02-576b4d0a3109}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10535,8 +10147,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {44c7e58d-21ab-476e-aaa1-1c878c8600e1}, !- Handle
-  Schedule Day 26,                        !- Name
+  {de3bd095-ad96-43ce-9e02-576b4d0a3109}, !- Handle
+  Schedule Day 22,                        !- Name
   {12c61fd1-4fe2-4b95-9432-26b57b327856}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10613,205 +10225,11 @@ OS:Schedule:Day,
   15.6;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {d536d449-5cea-40f5-8e44-d4d060f44eb2}, !- Handle
-  Office Activity Outage Day 1,           !- Name
-  {2eaafb36-c8d9-471a-8f30-6e2188bd0fdb}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {e8cc7a96-f0e1-472f-ba48-76237570c5c6}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {e8cc7a96-f0e1-472f-ba48-76237570c5c6}, !- Handle
-  Schedule Day 27,                        !- Name
-  {65bf6a03-1758-4903-8383-db583a09d8f8}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {bae5ad58-fe20-433f-af53-ade829416b0c}, !- Handle
-  Office Activity Outage Day 2,           !- Name
-  {2eaafb36-c8d9-471a-8f30-6e2188bd0fdb}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {e3063afd-d3eb-40bd-93ad-b2a9e1f06c36}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {e3063afd-d3eb-40bd-93ad-b2a9e1f06c36}, !- Handle
-  Schedule Day 28,                        !- Name
-  {65bf6a03-1758-4903-8383-db583a09d8f8}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  132,                                    !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  132,                                    !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  132,                                    !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  132,                                    !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  132,                                    !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  132,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  132,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  132,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  132,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  132,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  132,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  132,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  132,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  132,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  132,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  132,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  132,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  132,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  132,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  132,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  132,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  132,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  132,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  132;                                    !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {4e3c646f-10f9-4060-9ec5-941ab46cc490}, !- Handle
+  {e2f4fc85-7d4c-4995-b59c-fefa38ccfaf4}, !- Handle
   Small Office ClgSetp Outage Day 1,      !- Name
   {8334d03b-d787-4c01-a860-2e97c980572e}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {8ec59357-be4f-4d11-a5a7-2082e1a8dc05}, !- Day Schedule Name
+  {8482d0bc-dff9-4b14-b080-3931c06b3a6f}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10826,8 +10244,8 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {8ec59357-be4f-4d11-a5a7-2082e1a8dc05}, !- Handle
-  Schedule Day 29,                        !- Name
+  {8482d0bc-dff9-4b14-b080-3931c06b3a6f}, !- Handle
+  Schedule Day 23,                        !- Name
   {c998de07-a854-476f-88ee-694f57ede232}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -10904,11 +10322,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {e3b0f770-3015-4ec2-aef7-c8b6fc6a9ac7}, !- Handle
+  {fbfc8d2c-e234-46c1-a466-0f58edd9cab7}, !- Handle
   Small Office ClgSetp Outage Day 2,      !- Name
   {8334d03b-d787-4c01-a860-2e97c980572e}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {2b091fe1-4350-4fb4-8234-7e032f8a1bfe}, !- Day Schedule Name
+  {f483466f-9e44-4512-8e5e-3ca8d39ed326}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -10923,8 +10341,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {2b091fe1-4350-4fb4-8234-7e032f8a1bfe}, !- Handle
-  Schedule Day 30,                        !- Name
+  {f483466f-9e44-4512-8e5e-3ca8d39ed326}, !- Handle
+  Schedule Day 24,                        !- Name
   {c998de07-a854-476f-88ee-694f57ede232}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -11001,11 +10419,11 @@ OS:Schedule:Day,
   26.7;                                   !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {273eac2f-f64b-4042-bf13-8b8f987dc6c9}, !- Handle
+  {596f65f6-e672-4508-85c0-558c7dd69a97}, !- Handle
   Office Bldg Equip Outage Day 1,         !- Name
   {d4102340-9627-4371-b8f6-a3790caa5373}, !- Schedule Ruleset Name
   1,                                      !- Rule Order
-  {a374ddb0-4ecd-4535-a42a-bffa9cf344b6}, !- Day Schedule Name
+  {f23c817c-fcec-45e2-a117-b9b0b506d847}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -11020,7 +10438,589 @@ OS:Schedule:Rule,
   1;                                      !- End Day
 
 OS:Schedule:Day,
-  {a374ddb0-4ecd-4535-a42a-bffa9cf344b6}, !- Handle
+  {f23c817c-fcec-45e2-a117-b9b0b506d847}, !- Handle
+  Schedule Day 25,                        !- Name
+  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  0,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  0,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  0,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  0,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  0,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  0,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0,                                      !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0,                                      !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0,                                      !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0,                                      !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0,                                      !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0,                                      !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0,                                      !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0,                                      !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0,                                      !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0,                                      !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0,                                      !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0,                                      !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0,                                      !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0,                                      !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0,                                      !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0,                                      !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  0,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  0;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {2cddf913-27ce-411a-8209-ed1bbb97247b}, !- Handle
+  Office Bldg Equip Outage Day 2,         !- Name
+  {d4102340-9627-4371-b8f6-a3790caa5373}, !- Schedule Ruleset Name
+  0,                                      !- Rule Order
+  {588be201-6589-4f35-add7-5208cb7a8191}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  2,                                      !- Start Day
+  1,                                      !- End Month
+  2;                                      !- End Day
+
+OS:Schedule:Day,
+  {588be201-6589-4f35-add7-5208cb7a8191}, !- Handle
+  Schedule Day 26,                        !- Name
+  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  0.4,                                    !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  0.4,                                    !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  0.4,                                    !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  0.4,                                    !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  0.4,                                    !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  0.4,                                    !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0.4,                                    !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0.4,                                    !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0.9,                                    !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0.9,                                    !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0.9,                                    !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0.9,                                    !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0.8,                                    !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0.9,                                    !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0.9,                                    !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0.9,                                    !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0.9,                                    !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0.8,                                    !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0.6,                                    !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0.6,                                    !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0.5,                                    !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0.5,                                    !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  0.4,                                    !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  0.4;                                    !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {4a43c95c-efe6-41e3-83ae-79bbdde8202a}, !- Handle
+  Large Office Bldg Light Outage Day 1,   !- Name
+  {3ce9efa4-e219-47f8-a14a-7affd9c11d70}, !- Schedule Ruleset Name
+  1,                                      !- Rule Order
+  {6b792b1b-5524-43de-82da-ba65ed9eae70}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  1,                                      !- Start Day
+  1,                                      !- End Month
+  1;                                      !- End Day
+
+OS:Schedule:Day,
+  {6b792b1b-5524-43de-82da-ba65ed9eae70}, !- Handle
+  Schedule Day 27,                        !- Name
+  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  0,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  0,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  0,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  0,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  0,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  0,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0,                                      !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0,                                      !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0,                                      !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0,                                      !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0,                                      !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0,                                      !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0,                                      !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0,                                      !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0,                                      !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0,                                      !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0,                                      !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0,                                      !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0,                                      !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0,                                      !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0,                                      !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0,                                      !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  0,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  0;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {20e00135-48b0-4898-89c9-bd9501884f7c}, !- Handle
+  Large Office Bldg Light Outage Day 2,   !- Name
+  {3ce9efa4-e219-47f8-a14a-7affd9c11d70}, !- Schedule Ruleset Name
+  0,                                      !- Rule Order
+  {c5dbb7f8-94fd-4bb1-87d6-0f021fbae762}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  2,                                      !- Start Day
+  1,                                      !- End Month
+  2;                                      !- End Day
+
+OS:Schedule:Day,
+  {c5dbb7f8-94fd-4bb1-87d6-0f021fbae762}, !- Handle
+  Schedule Day 28,                        !- Name
+  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  0.05,                                   !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  0.05,                                   !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  0.05,                                   !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  0.05,                                   !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  0.05,                                   !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  0.1,                                    !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0.1,                                    !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0.3,                                    !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0.9,                                    !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0.9,                                    !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0.9,                                    !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0.9,                                    !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0.9,                                    !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0.9,                                    !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0.9,                                    !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0.9,                                    !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0.9,                                    !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0.7,                                    !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0.5,                                    !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0.5,                                    !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0.3,                                    !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0.3,                                    !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  0.1,                                    !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  0.05;                                   !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {ec93b9a4-d3c3-425b-bb27-23799d6be2fc}, !- Handle
+  Office Infil Quarter On Outage Day 1,   !- Name
+  {5071fc8f-2a43-420e-b853-89de3fd548e0}, !- Schedule Ruleset Name
+  1,                                      !- Rule Order
+  {be996956-8bc0-4038-92ef-163e3b94844c}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  1,                                      !- Start Day
+  1,                                      !- End Month
+  1;                                      !- End Day
+
+OS:Schedule:Day,
+  {be996956-8bc0-4038-92ef-163e3b94844c}, !- Handle
+  Schedule Day 29,                        !- Name
+  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  1,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  1,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  1,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  1,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  1,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  1,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  1,                                      !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  1,                                      !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  1,                                      !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  1,                                      !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  1,                                      !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  1,                                      !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  1,                                      !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  1,                                      !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  1,                                      !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  1,                                      !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  1,                                      !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  1,                                      !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  1,                                      !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  1,                                      !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  1,                                      !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  1,                                      !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  1,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  1;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {bec35536-8289-4867-8a2e-f619c870c984}, !- Handle
+  Office Infil Quarter On Outage Day 2,   !- Name
+  {5071fc8f-2a43-420e-b853-89de3fd548e0}, !- Schedule Ruleset Name
+  0,                                      !- Rule Order
+  {f3ce644d-98c1-4229-b85d-835e0298dfb2}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  2,                                      !- Start Day
+  1,                                      !- End Month
+  2;                                      !- End Day
+
+OS:Schedule:Day,
+  {f3ce644d-98c1-4229-b85d-835e0298dfb2}, !- Handle
+  Schedule Day 30,                        !- Name
+  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  1,                                      !- Hour 1
+  0,                                      !- Minute 1
+  1,                                      !- Value Until Time 1
+  2,                                      !- Hour 2
+  0,                                      !- Minute 2
+  1,                                      !- Value Until Time 2
+  3,                                      !- Hour 3
+  0,                                      !- Minute 3
+  1,                                      !- Value Until Time 3
+  4,                                      !- Hour 4
+  0,                                      !- Minute 4
+  1,                                      !- Value Until Time 4
+  5,                                      !- Hour 5
+  0,                                      !- Minute 5
+  1,                                      !- Value Until Time 5
+  6,                                      !- Hour 6
+  0,                                      !- Minute 6
+  1,                                      !- Value Until Time 6
+  7,                                      !- Hour 7
+  0,                                      !- Minute 7
+  0.25,                                   !- Value Until Time 7
+  8,                                      !- Hour 8
+  0,                                      !- Minute 8
+  0.25,                                   !- Value Until Time 8
+  9,                                      !- Hour 9
+  0,                                      !- Minute 9
+  0.25,                                   !- Value Until Time 9
+  10,                                     !- Hour 10
+  0,                                      !- Minute 10
+  0.25,                                   !- Value Until Time 10
+  11,                                     !- Hour 11
+  0,                                      !- Minute 11
+  0.25,                                   !- Value Until Time 11
+  12,                                     !- Hour 12
+  0,                                      !- Minute 12
+  0.25,                                   !- Value Until Time 12
+  13,                                     !- Hour 13
+  0,                                      !- Minute 13
+  0.25,                                   !- Value Until Time 13
+  14,                                     !- Hour 14
+  0,                                      !- Minute 14
+  0.25,                                   !- Value Until Time 14
+  15,                                     !- Hour 15
+  0,                                      !- Minute 15
+  0.25,                                   !- Value Until Time 15
+  16,                                     !- Hour 16
+  0,                                      !- Minute 16
+  0.25,                                   !- Value Until Time 16
+  17,                                     !- Hour 17
+  0,                                      !- Minute 17
+  0.25,                                   !- Value Until Time 17
+  18,                                     !- Hour 18
+  0,                                      !- Minute 18
+  0.25,                                   !- Value Until Time 18
+  19,                                     !- Hour 19
+  0,                                      !- Minute 19
+  0.25,                                   !- Value Until Time 19
+  20,                                     !- Hour 20
+  0,                                      !- Minute 20
+  0.25,                                   !- Value Until Time 20
+  21,                                     !- Hour 21
+  0,                                      !- Minute 21
+  0.25,                                   !- Value Until Time 21
+  22,                                     !- Hour 22
+  0,                                      !- Minute 22
+  0.25,                                   !- Value Until Time 22
+  23,                                     !- Hour 23
+  0,                                      !- Minute 23
+  1,                                      !- Value Until Time 23
+  24,                                     !- Hour 24
+  0,                                      !- Minute 24
+  1;                                      !- Value Until Time 24
+
+OS:Schedule:Rule,
+  {48f2f696-6f65-4241-a293-a0acdcd8d8e6}, !- Handle
+  Office Bldg Light Outage Day 1,         !- Name
+  {8a273f29-9e00-4685-a53d-4e9734fa3bef}, !- Schedule Ruleset Name
+  1,                                      !- Rule Order
+  {cae96209-bad8-4e14-8304-6ee1478f796b}, !- Day Schedule Name
+  Yes,                                    !- Apply Sunday
+  Yes,                                    !- Apply Monday
+  Yes,                                    !- Apply Tuesday
+  Yes,                                    !- Apply Wednesday
+  Yes,                                    !- Apply Thursday
+  Yes,                                    !- Apply Friday
+  Yes,                                    !- Apply Saturday
+  DateRange,                              !- Date Specification Type
+  1,                                      !- Start Month
+  1,                                      !- Start Day
+  1,                                      !- End Month
+  1;                                      !- End Day
+
+OS:Schedule:Day,
+  {cae96209-bad8-4e14-8304-6ee1478f796b}, !- Handle
   Schedule Day 31,                        !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
@@ -11098,787 +11098,11 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 24
 
 OS:Schedule:Rule,
-  {9041de84-5cad-456b-b51b-4455cc898566}, !- Handle
-  Office Bldg Equip Outage Day 2,         !- Name
-  {d4102340-9627-4371-b8f6-a3790caa5373}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {8af6a7bb-5683-4988-9eae-ff6d7d23665e}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {8af6a7bb-5683-4988-9eae-ff6d7d23665e}, !- Handle
-  Schedule Day 32,                        !- Name
-  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.4,                                    !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.4,                                    !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.4,                                    !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0.4,                                    !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0.4,                                    !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0.4,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0.4,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0.4,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0.9,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.9,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0.9,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0.9,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0.8,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0.9,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0.9,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0.9,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0.9,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0.8,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0.6,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0.6,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0.5,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0.5,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0.4,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0.4;                                    !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {6b39a25d-c6d1-4f45-85aa-5ef2e025746d}, !- Handle
-  Large Office Bldg Light Outage Day 1,   !- Name
-  {3ce9efa4-e219-47f8-a14a-7affd9c11d70}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {1b4d6e5d-d6c5-4b44-9976-a17088969ab2}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {1b4d6e5d-d6c5-4b44-9976-a17088969ab2}, !- Handle
-  Schedule Day 33,                        !- Name
-  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {5ddb6042-d42d-46f2-9e72-40f7516c1e4f}, !- Handle
-  Large Office Bldg Light Outage Day 2,   !- Name
-  {3ce9efa4-e219-47f8-a14a-7affd9c11d70}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {594362b3-d653-4967-94ae-d16abca3f9ac}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {594362b3-d653-4967-94ae-d16abca3f9ac}, !- Handle
-  Schedule Day 34,                        !- Name
-  {55c44e2f-3c81-40b0-84f7-9b6efa1c1036}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0.05,                                   !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0.05,                                   !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0.05,                                   !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0.05,                                   !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0.05,                                   !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0.1,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0.1,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0.3,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0.9,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.9,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0.9,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0.9,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0.9,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0.9,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0.9,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0.9,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0.9,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0.7,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0.5,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0.5,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0.3,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0.3,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0.1,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0.05;                                   !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {388d49f6-dd31-4b56-8627-0bd2ab062a83}, !- Handle
-  Office Infil Quarter On Outage Day 1,   !- Name
-  {5071fc8f-2a43-420e-b853-89de3fd548e0}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {346fa77e-8a1c-42b5-9146-14ffada4d39a}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {346fa77e-8a1c-42b5-9146-14ffada4d39a}, !- Handle
-  Schedule Day 35,                        !- Name
-  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {a73d5517-1f6c-405c-a373-6fda7ebe3a50}, !- Handle
-  Office Infil Quarter On Outage Day 2,   !- Name
-  {5071fc8f-2a43-420e-b853-89de3fd548e0}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {68ac8a3f-0ad6-4635-879f-92bf9af93c2a}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {68ac8a3f-0ad6-4635-879f-92bf9af93c2a}, !- Handle
-  Schedule Day 36,                        !- Name
-  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  1,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  1,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  1,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  1,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  1,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  1,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0.25,                                   !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0.25,                                   !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0.25,                                   !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0.25,                                   !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0.25,                                   !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0.25,                                   !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0.25,                                   !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0.25,                                   !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0.25,                                   !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0.25,                                   !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0.25,                                   !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0.25,                                   !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0.25,                                   !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0.25,                                   !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0.25,                                   !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0.25,                                   !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  1,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  1;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {ad26adfe-5a61-4988-b794-041593f1f0ae}, !- Handle
-  Large Office Activity Outage Day 1,     !- Name
-  {264acba7-523a-484e-8e51-ae85870ba167}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {b626a8f5-b05d-4be8-abb6-014ab2666bf3}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {b626a8f5-b05d-4be8-abb6-014ab2666bf3}, !- Handle
-  Schedule Day 37,                        !- Name
-  {d29d6f61-dbb6-43a0-8e80-994bfb4a73b2}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {2d5af95d-e6be-43f7-b886-d36dbfc8807b}, !- Handle
-  Large Office Activity Outage Day 2,     !- Name
-  {264acba7-523a-484e-8e51-ae85870ba167}, !- Schedule Ruleset Name
-  0,                                      !- Rule Order
-  {8b0bd4d8-4e9e-442c-8ad6-6cc2e99390e8}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  2,                                      !- Start Day
-  1,                                      !- End Month
-  2;                                      !- End Day
-
-OS:Schedule:Day,
-  {8b0bd4d8-4e9e-442c-8ad6-6cc2e99390e8}, !- Handle
-  Schedule Day 38,                        !- Name
-  {d29d6f61-dbb6-43a0-8e80-994bfb4a73b2}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  120,                                    !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  120,                                    !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  120,                                    !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  120,                                    !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  120,                                    !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  120,                                    !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  120,                                    !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  120,                                    !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  120,                                    !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  120,                                    !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  120,                                    !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  120,                                    !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  120,                                    !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  120,                                    !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  120,                                    !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  120,                                    !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  120,                                    !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  120,                                    !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  120,                                    !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  120,                                    !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  120,                                    !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  120,                                    !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  120,                                    !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  120;                                    !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {2f6cfef3-aa64-4bbf-88d8-fcd75e44b16d}, !- Handle
-  Office Bldg Light Outage Day 1,         !- Name
-  {8a273f29-9e00-4685-a53d-4e9734fa3bef}, !- Schedule Ruleset Name
-  1,                                      !- Rule Order
-  {80123e3e-65eb-43be-8eed-7a4ac81acee5}, !- Day Schedule Name
-  Yes,                                    !- Apply Sunday
-  Yes,                                    !- Apply Monday
-  Yes,                                    !- Apply Tuesday
-  Yes,                                    !- Apply Wednesday
-  Yes,                                    !- Apply Thursday
-  Yes,                                    !- Apply Friday
-  Yes,                                    !- Apply Saturday
-  DateRange,                              !- Date Specification Type
-  1,                                      !- Start Month
-  1,                                      !- Start Day
-  1,                                      !- End Month
-  1;                                      !- End Day
-
-OS:Schedule:Day,
-  {80123e3e-65eb-43be-8eed-7a4ac81acee5}, !- Handle
-  Schedule Day 39,                        !- Name
-  {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
-  ,                                       !- Interpolate to Timestep
-  1,                                      !- Hour 1
-  0,                                      !- Minute 1
-  0,                                      !- Value Until Time 1
-  2,                                      !- Hour 2
-  0,                                      !- Minute 2
-  0,                                      !- Value Until Time 2
-  3,                                      !- Hour 3
-  0,                                      !- Minute 3
-  0,                                      !- Value Until Time 3
-  4,                                      !- Hour 4
-  0,                                      !- Minute 4
-  0,                                      !- Value Until Time 4
-  5,                                      !- Hour 5
-  0,                                      !- Minute 5
-  0,                                      !- Value Until Time 5
-  6,                                      !- Hour 6
-  0,                                      !- Minute 6
-  0,                                      !- Value Until Time 6
-  7,                                      !- Hour 7
-  0,                                      !- Minute 7
-  0,                                      !- Value Until Time 7
-  8,                                      !- Hour 8
-  0,                                      !- Minute 8
-  0,                                      !- Value Until Time 8
-  9,                                      !- Hour 9
-  0,                                      !- Minute 9
-  0,                                      !- Value Until Time 9
-  10,                                     !- Hour 10
-  0,                                      !- Minute 10
-  0,                                      !- Value Until Time 10
-  11,                                     !- Hour 11
-  0,                                      !- Minute 11
-  0,                                      !- Value Until Time 11
-  12,                                     !- Hour 12
-  0,                                      !- Minute 12
-  0,                                      !- Value Until Time 12
-  13,                                     !- Hour 13
-  0,                                      !- Minute 13
-  0,                                      !- Value Until Time 13
-  14,                                     !- Hour 14
-  0,                                      !- Minute 14
-  0,                                      !- Value Until Time 14
-  15,                                     !- Hour 15
-  0,                                      !- Minute 15
-  0,                                      !- Value Until Time 15
-  16,                                     !- Hour 16
-  0,                                      !- Minute 16
-  0,                                      !- Value Until Time 16
-  17,                                     !- Hour 17
-  0,                                      !- Minute 17
-  0,                                      !- Value Until Time 17
-  18,                                     !- Hour 18
-  0,                                      !- Minute 18
-  0,                                      !- Value Until Time 18
-  19,                                     !- Hour 19
-  0,                                      !- Minute 19
-  0,                                      !- Value Until Time 19
-  20,                                     !- Hour 20
-  0,                                      !- Minute 20
-  0,                                      !- Value Until Time 20
-  21,                                     !- Hour 21
-  0,                                      !- Minute 21
-  0,                                      !- Value Until Time 21
-  22,                                     !- Hour 22
-  0,                                      !- Minute 22
-  0,                                      !- Value Until Time 22
-  23,                                     !- Hour 23
-  0,                                      !- Minute 23
-  0,                                      !- Value Until Time 23
-  24,                                     !- Hour 24
-  0,                                      !- Minute 24
-  0;                                      !- Value Until Time 24
-
-OS:Schedule:Rule,
-  {34d7263d-101b-43c2-bbaf-7fa774e7f016}, !- Handle
+  {b7a8ece0-0b85-4954-9c92-1a43bdfe55f8}, !- Handle
   Office Bldg Light Outage Day 2,         !- Name
   {8a273f29-9e00-4685-a53d-4e9734fa3bef}, !- Schedule Ruleset Name
   0,                                      !- Rule Order
-  {f9ca338c-d98b-42b2-b47a-60b8faf972a5}, !- Day Schedule Name
+  {aa10e0b0-7651-449d-bc8b-593f7adbe67b}, !- Day Schedule Name
   Yes,                                    !- Apply Sunday
   Yes,                                    !- Apply Monday
   Yes,                                    !- Apply Tuesday
@@ -11893,8 +11117,8 @@ OS:Schedule:Rule,
   2;                                      !- End Day
 
 OS:Schedule:Day,
-  {f9ca338c-d98b-42b2-b47a-60b8faf972a5}, !- Handle
-  Schedule Day 40,                        !- Name
+  {aa10e0b0-7651-449d-bc8b-593f7adbe67b}, !- Handle
+  Schedule Day 32,                        !- Name
   {af9d9c36-2d5f-4871-8dda-ff179c7ff3db}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
   1,                                      !- Hour 1
@@ -11971,7 +11195,7 @@ OS:Schedule:Day,
   0.05;                                   !- Value Until Time 24
 
 OS:Schedule:FixedInterval,
-  {4572bb67-ba19-4576-a8c4-fea3ddbc2e3e}, !- Handle
+  {9dd0bfae-dab5-4c40-ba68-6481d09695fc}, !- Handle
   Outage Availability Schedule,           !- Name
   ,                                       !- Schedule Type Limits Name
   ,                                       !- Translate to Schedule File
@@ -20742,11 +19966,11 @@ OS:Schedule:FixedInterval,
   1;                                      !- Value 8760
 
 OS:AdditionalProperties,
-  {cd00ebf5-c378-4f27-8518-21a2f292d8fa}, !- Handle
+  {562aec9e-79e1-4865-b1e0-5d44bd8114e3}, !- Handle
   {f73b031c-bb31-4fa0-ad96-2e9846c4d752}; !- Object Name
 
 OS:AdditionalProperties,
-  {a5dfe2a1-f8c1-4339-af4e-debb41980c05}, !- Handle
+  {338ce191-bf93-443d-8153-9098db248fae}, !- Handle
   {b216c53e-5b6b-4973-8442-5822dbdeacee}, !- Object Name
   PowerOutageStartDate,                   !- Feature Name 1
   String,                                 !- Feature Data Type 1
