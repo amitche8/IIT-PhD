@@ -1,0 +1,4 @@
+Case,Heating Demand [kBtu/ft2 yr],Cooling Demand [kBtu/ft2 yr],Heating Load [Btu/hr ft2],Cooling Load [Btu/hr ft2],Source Energy [kWh/person yr],Site Energy [kBtu/ft2 yr]
+Phius Targets,35.2,9.6,22.4,5.1,5525, 0
+As Designed,67.34,8.04,30.2,1.94,4945,58.59
+Phius 2021,29.36,9.52,18.3,3.31,4123,48.84
