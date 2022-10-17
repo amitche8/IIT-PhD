@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrispmkii",
+    "port": "COM7",
+    "sketch": "RobotBartender\\main.ino"
+}
