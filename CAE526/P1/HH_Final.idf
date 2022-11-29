@@ -36330,7 +36330,8 @@ Output:Table:Monthly,
     ValueWhenMaximumOrMinimum;    !- Aggregation Type for Variable or Meter 14
 
 OutputControl:Table:Style,
-    HTML;                     !- Column Separator
+    HTML,                     !- Column Separator
+    InchPound;                 ! Unit Conversion
 
 Output:Variable,
     ,                         !- Key Value

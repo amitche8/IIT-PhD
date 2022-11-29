@@ -1,0 +1,642 @@
+Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.27 15:48,
+   ************* Successfully added path "C:\\Users\\amitc_crl\\OneDrive\\Documents\\GitHub\\IIT-PhD\\CAE526\\P1" to the sys.path in Python
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SAT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SMRDSN", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SUN", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_WNTRDSN", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 92", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 93", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHOOLSECONDARY BLDG_SWH_SCH_SAT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHOOLSECONDARY BLDG_SWH_SCH_SMRDSN", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHOOLSECONDARY BLDG_SWH_SCH_SUN|SAT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHOOLSECONDARY BLDG_SWH_SCH_WKDY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHOOLSECONDARY BLDG_SWH_SCH_WNTRDSN", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="0.05 HOT WATER LATENT FRACTION", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="0.2 HOT WATER SENSIBLE FRACTION", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
+   **   ~~~   ** Found first in surface=AUDITORIUMLOWER_0B49D193..FACE10
+   **   ~~~   ** Defaults, constant throughout the year of (18.0) will be used.
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=3.9E-013, Tilt=90.0, in Surface=BOGPLAY_1_D1F076F9..FACE3, Zone=BOGPLAY_1_D1F076F9
+   **   ~~~   **   Azimuth=1.4E-002, Tilt=90.0, in Surface=OFFICE_4_3DD7EBAB..FACE3, Zone=OFFICE_4_3DD7EBAB
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** CalcSurfaceCentroid: 4 Surfaces have the Z coordinate < 0.
+   **   ~~~   ** ...in any calculations, Wind Speed will be 0.0 for these surfaces.
+   **   ~~~   ** ...in any calculations, Outside temperatures will be the outside temperature + 9.750E-003 for these surfaces.
+   **   ~~~   ** ...that is, these surfaces will have conditions as though at ground level.
+   ** Warning ** GetSurfaceData: There are 6 coincident/collinear vertices; These have been deleted unless the deletion would bring the number of surface sides < 3.
+   **   ~~~   ** For explicit details on each problem surface, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Severe  ** GetSurfaceData: There are 3 degenerate surfaces; Degenerate surfaces are those with number of sides < 3.
+   **   ~~~   ** These surfaces should be deleted.
+   **   ~~~   ** For explicit details on each problem surface, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** CalculateZoneVolume: 4 zones are not fully enclosed. For more details use:  Output:Diagnostics,DisplayExtrawarnings; 
+   ** Warning ** CheckUsedConstructions: There are 27 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** Calculation of reflected solar onto surface=CORRIDOR_1_FA1FE4C1..FACE4 may be inaccurate
+   **   ~~~   ** because it has one or more vertices below ground level.
+   ** Warning ** Calculation of reflected solar onto surface=OFFICE_4_3DD7EBAB..FACE1 may be inaccurate
+   **   ~~~   ** because it has one or more vertices below ground level.
+   ** Warning ** Calculation of reflected solar onto surface=FACE_A685264E may be inaccurate
+   **   ~~~   ** because it has one or more vertices below ground level.
+   ** Warning ** Calculation of reflected solar onto surface=FACE_A685264E_GLZ0 may be inaccurate
+   **   ~~~   ** because it has one or more vertices below ground level.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="BOGPLAY_1_D1F076F9 PRE_1980::LARGEHOTEL::CAFE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="BOGPLAY_2_D145E14C PRE_1980::LARGEHOTEL::CAFE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="STAIR_1_1681051F PRE_1980::MEDIUMOFFICE::STAIR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="STAIR_2_976E6FD5 PRE_1980::MEDIUMOFFICE::STAIR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="STAIR_3_8F089848 PRE_1980::MEDIUMOFFICE::STAIR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="BOGPLAY_1_B863644B PRE_1980::MEDIUMOFFICE::STORAGE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="BOGPLAY_2_4B3AE9FE PRE_1980::MEDIUMOFFICE::STORAGE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="BOGDINING_E25F401A PRE_1980::QUICKSERVICERESTAURANT::DINING_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="KITCHEN_1_55B9A759 PRE_1980::QUICKSERVICERESTAURANT::KITCHEN_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="KITCHEN_2_B940211D PRE_1980::QUICKSERVICERESTAURANT::KITCHEN_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="KITCHEN_3_3E9A0FB8 PRE_1980::QUICKSERVICERESTAURANT::KITCHEN_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="AUDITORIUMLOWER_0B49D193 PRE_1980::SECONDARYSCHOOL::AUDITORIUM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="CLASSROOM_1_90B605A9 PRE_1980::SECONDARYSCHOOL::CLASSROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="CLASSROOM_2_ECCCF8B8 PRE_1980::SECONDARYSCHOOL::CLASSROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="CORRIDOR_2_CFBEC8AA PRE_1980::SECONDARYSCHOOL::CORRIDOR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="CORRIDOR_3_7621FA0C PRE_1980::SECONDARYSCHOOL::CORRIDOR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="CORRIDOR_4_9B747DDD PRE_1980::SECONDARYSCHOOL::CORRIDOR_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="MECH_1_40A96879 PRE_1980::SECONDARYSCHOOL::MECHANICAL_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="MECH_2_C6ABCC9A PRE_1980::SECONDARYSCHOOL::MECHANICAL_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="MECH_3_6E799E0F PRE_1980::SECONDARYSCHOOL::MECHANICAL_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="MECH_4_99985F88 PRE_1980::SECONDARYSCHOOL::MECHANICAL_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="OFFICE_1_B1424685 PRE_1980::SECONDARYSCHOOL::OFFICE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="OFFICE_2_37CC8413 PRE_1980::SECONDARYSCHOOL::OFFICE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="OFFICE_3_93B2C9FF PRE_1980::SECONDARYSCHOOL::OFFICE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="OFFICE_5_682148B2 PRE_1980::SECONDARYSCHOOL::OFFICE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="OFFICE_6_61DD9104 PRE_1980::SECONDARYSCHOOL::OFFICE_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_1_404313B9 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_2_A377B4B3 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_3_C201E5F7 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_4_33BABDA2 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_5_911A78E2 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="RESTROOM_6_A019D741 PRE_1980::SECONDARYSCHOOL::RESTROOM_INFILTRATION", Design Flow Rate Calculation Method specifies Flow per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** Calculated design cooling load for zone=BOGPLAY_1_B863644B is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=BOGPLAY_2_4B3AE9FE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=CLASSROOM_1_90B605A9 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=CLASSROOM_2_ECCCF8B8 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=CORRIDOR_2_CFBEC8AA is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=CORRIDOR_3_7621FA0C is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=CORRIDOR_4_9B747DDD is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=MECH_1_40A96879 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=MECH_2_C6ABCC9A is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=MECH_3_6E799E0F is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=MECH_4_99985F88 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=OFFICE_2_37CC8413 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=OFFICE_3_93B2C9FF is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=OFFICE_4_3DD7EBAB is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=OFFICE_5_682148B2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=OFFICE_6_61DD9104 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=RESTROOM_1_404313B9 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=RESTROOM_2_A377B4B3 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=RESTROOM_3_C201E5F7 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=RESTROOM_5_911A78E2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=RESTROOM_6_A019D741 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=STAIR_1_1681051F is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=STAIR_2_976E6FD5 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=STAIR_3_8F089848 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning System Sizing Calculations
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 100_AUDITORIUM VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 100_AUDITORIUM VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 102_OFFICES VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 102_OFFICES VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 104_STORAGE VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 104_STORAGE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 108 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 108 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 109 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 109 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 112_ARC VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 112_ARC VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 113_CAREER_SERVICES VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 113_CAREER_SERVICES VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 114_OFFICES VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = 114_OFFICES VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = AUDITORIUMLOWER_0B49D193 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = AUDITORIUMLOWER_0B49D193 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = AUDITORIUM_LOBBY VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = AUDITORIUM_LOBBY VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGDINING_E25F401A VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGDINING_E25F401A VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_1_B863644B VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_1_B863644B VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_1_D1F076F9 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_1_D1F076F9 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_2_4B3AE9FE VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_2_4B3AE9FE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_2_D145E14C VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BOGPLAY_2_D145E14C VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CLASSROOM_1_90B605A9 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CLASSROOM_1_90B605A9 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CLASSROOM_2_ECCCF8B8 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CLASSROOM_2_ECCCF8B8 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_1_FA1FE4C1 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_1_FA1FE4C1 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_2_CFBEC8AA VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_2_CFBEC8AA VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_3_7621FA0C VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_3_7621FA0C VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_4_9B747DDD VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = CORRIDOR_4_9B747DDD VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = EAST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = EAST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = EAST_SMALL_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = EAST_SMALL_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_1_55B9A759 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_1_55B9A759 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_2_B940211D VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_2_B940211D VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_3_3E9A0FB8 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = KITCHEN_3_3E9A0FB8 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_1_40A96879 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_1_40A96879 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_2_C6ABCC9A VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_2_C6ABCC9A VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_3_6E799E0F VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_3_6E799E0F VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_4_99985F88 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = MECH_4_99985F88 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = NORTH_HALL VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = NORTH_HALL VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_1_B1424685 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_1_B1424685 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_2_37CC8413 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_2_37CC8413 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_3_93B2C9FF VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_3_93B2C9FF VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_4_3DD7EBAB VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_4_3DD7EBAB VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_5_682148B2 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_5_682148B2 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_6_61DD9104 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = OFFICE_6_61DD9104 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOMS VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOMS VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_1_404313B9 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_1_404313B9 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_2_A377B4B3 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_2_A377B4B3 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_3_C201E5F7 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_3_C201E5F7 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_4_33BABDA2 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_4_33BABDA2 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_5_911A78E2 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_5_911A78E2 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_6_A019D741 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = RESTROOM_6_A019D741 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = ROOM_13_B04291D5 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = ROOM_13_B04291D5 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SE_HALL_PIANO VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SE_HALL_PIANO VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SMALL_WEST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SMALL_WEST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SOUTH_HALL VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = SOUTH_HALL VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_1_1681051F VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_1_1681051F VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_2_976E6FD5 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_2_976E6FD5 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_3_8F089848 VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = STAIR_3_8F089848 VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = UPSTAIRS_OFFICES VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = UPSTAIRS_OFFICES VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = WEST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = WEST_CORRIDOR VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = WEST_OFFICE_BLOCK VAV TERMINAL
+   ** Warning ** Since Damper Heating Action = NORMAL, input for Maximum Flow Fraction During Reheat will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = WEST_OFFICE_BLOCK VAV TERMINAL
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** Output:Meter:MeterFileOnly requested for "Electricity:Facility" (Monthly), already on "Output:Meter". Will report to both eplusout.eso and eplusout.mtr
+   ** Warning ** Output:Meter:MeterFileOnly requested for "Electricity:Facility" (Monthly), already on "Output:Meter". Will report to both eplusout.eso and eplusout.mtr
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'HEATING:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'COOLING:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'INTERIOR LIGHTING:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'EXTERIOR LIGHTING:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'FANS:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'PUMPS:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'HEAT REJECTION:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'HUMIDIFICATION:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'HEAT RECOVERY:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'WATER SYSTEMS:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'REFRIGERATION:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO1' invalid Variable or Meter Name 'GENERATORS:FUELOILNO1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'HEATING:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'COOLING:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'INTERIOR LIGHTING:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'EXTERIOR LIGHTING:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'FANS:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'PUMPS:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'HEAT REJECTION:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'HUMIDIFICATION:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'HEAT RECOVERY:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'WATER SYSTEMS:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'REFRIGERATION:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - FUELOILNO2' invalid Variable or Meter Name 'GENERATORS:FUELOILNO2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'HEATING:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'COOLING:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'INTERIOR LIGHTING:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'EXTERIOR LIGHTING:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'FANS:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'PUMPS:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'HEAT REJECTION:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'HUMIDIFICATION:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'HEAT RECOVERY:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'WATER SYSTEMS:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'REFRIGERATION:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - PROPANEGAS' invalid Variable or Meter Name 'GENERATORS:PROPANEGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'HEATING:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'COOLING:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'INTERIOR LIGHTING:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'EXTERIOR LIGHTING:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'FANS:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'PUMPS:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'HEAT REJECTION:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'HUMIDIFICATION:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'HEAT RECOVERY:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'WATER SYSTEMS:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'REFRIGERATION:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - COAL' invalid Variable or Meter Name 'GENERATORS:COAL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'HEATING:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'COOLING:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'INTERIOR LIGHTING:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'EXTERIOR LIGHTING:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'FANS:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'PUMPS:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'HEAT REJECTION:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'HUMIDIFICATION:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'HEAT RECOVERY:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'WATER SYSTEMS:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'REFRIGERATION:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DIESEL' invalid Variable or Meter Name 'GENERATORS:DIESEL'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'HEATING:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'COOLING:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'INTERIOR LIGHTING:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'EXTERIOR LIGHTING:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'FANS:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'PUMPS:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'HEAT REJECTION:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'HUMIDIFICATION:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'HEAT RECOVERY:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'WATER SYSTEMS:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'REFRIGERATION:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - GASOLINE' invalid Variable or Meter Name 'GENERATORS:GASOLINE'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'HEATING:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'COOLING:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'INTERIOR LIGHTING:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'EXTERIOR LIGHTING:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'FANS:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'PUMPS:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'HEAT REJECTION:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'HUMIDIFICATION:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'HEAT RECOVERY:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'WATER SYSTEMS:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'REFRIGERATION:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL1' invalid Variable or Meter Name 'GENERATORS:OTHERFUEL1'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'HEATING:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'COOLING:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'INTERIOR LIGHTING:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'EXTERIOR LIGHTING:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'INTERIOR EQUIPMENT:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'EXTERIOR EQUIPMENT:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'FANS:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'PUMPS:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'HEAT REJECTION:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'HUMIDIFICATION:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'HEAT RECOVERY:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'WATER SYSTEMS:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'REFRIGERATION:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - OTHERFUEL2' invalid Variable or Meter Name 'GENERATORS:OTHERFUEL2'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'EXTERIORLIGHTS:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'HEATING:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'COOLING:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'HEATREJECTION:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'HUMIDIFIER:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'HEATRECOVERY:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'WATERSYSTEMS:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'COGENERATION:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY' invalid Variable or Meter Name 'REFRIGERATION:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS' invalid Variable or Meter Name 'HEATING:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS' invalid Variable or Meter Name 'COOLING:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS' invalid Variable or Meter Name 'WATERSYSTEMS:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS' invalid Variable or Meter Name 'COGENERATION:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'INTERIORLIGHTS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'EXTERIORLIGHTS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'INTERIOREQUIPMENT:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'FANS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'PUMPS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'COOLING:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'HEATREJECTION:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'HUMIDIFIER:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'HEATRECOVERY:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING' invalid Variable or Meter Name 'COGENERATION:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'INTERIORLIGHTS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'EXTERIORLIGHTS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'INTERIOREQUIPMENT:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'FANS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'PUMPS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'HEATING:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'HEATREJECTION:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'HUMIDIFIER:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'HEATRECOVERY:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'WATERSYSTEMS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING' invalid Variable or Meter Name 'COGENERATION:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'EXTERIORLIGHTS:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'HEATING:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'COOLING:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'HEATREJECTION:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'HUMIDIFIER:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'HEATRECOVERY:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'WATERSYSTEMS:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - ELECTRICITY PEAK DEMAND' invalid Variable or Meter Name 'COGENERATION:ELECTRICITY'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS PEAK DEMAND' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS PEAK DEMAND' invalid Variable or Meter Name 'HEATING:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS PEAK DEMAND' invalid Variable or Meter Name 'COOLING:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS PEAK DEMAND' invalid Variable or Meter Name 'WATERSYSTEMS:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - NATURAL GAS PEAK DEMAND' invalid Variable or Meter Name 'COGENERATION:NATURALGAS'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'INTERIORLIGHTS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'EXTERIORLIGHTS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'INTERIOREQUIPMENT:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'FANS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'PUMPS:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'COOLING:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'HEATREJECTION:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'HUMIDIFIER:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'HEATRECOVERY:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT HEATING PEAK DEMAND' invalid Variable or Meter Name 'COGENERATION:DISTRICTHEATING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'INTERIORLIGHTS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'EXTERIORLIGHTS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'INTERIOREQUIPMENT:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'EXTERIOREQUIPMENT:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'FANS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'PUMPS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'HEATING:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'HEATREJECTION:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'HUMIDIFIER:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'HEATRECOVERY:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'WATERSYSTEMS:DISTRICTCOOLING'
+   ** Warning ** In Output:Table:Monthly 'BUILDING ENERGY PERFORMANCE - DISTRICT COOLING PEAK DEMAND' invalid Variable or Meter Name 'COGENERATION:DISTRICTCOOLING'
+   ** Warning ** Processing Monthly Tabular Reports: Variable names not valid for this simulation
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 02/10 15:25 - 15:30
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on each max iteration exceeded.
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:00 - 15:10
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:04 - 15:06
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:07 - 15:09
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:09 - 15:10
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:10 - 15:20
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:15 - 15:20
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/03 15:20 - 15:30
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/24 15:00 - 15:10
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/24 15:06 - 15:07
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 03/24 15:10 - 15:15
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 04/24 14:30 - 14:40
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 04/24 14:30 - 14:35
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** SimHVAC: Maximum iterations (20) exceeded for all HVAC loops, at RUN PERIOD 1, 04/24 14:35 - 14:40
+   **   ~~~   ** The solution for one or more of the Air Loop HVAC systems did not appear to converge
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-DISTILLATE OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-RESIDUAL OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-NATURAL GAS" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-COAL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=BASEBOARD ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=EVAPORATIVE COOLER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=HEATING COIL ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=HEATING COIL NATURALGAS ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=HEATING COIL TOTAL HEATING ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=HOT_WATER_LOOP_CENTRAL_AIR_SOURCE_HEAT_PUMP ELECTRICITY CONSUMPTION, Frequency=Hourly
+   ************* Key=*, VarName=HUMIDIFIER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=BOILER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=VRF HEAT PUMP COOLING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=VRF HEAT PUMP CRANKCASE HEATER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=VRF HEAT PUMP DEFROST ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=VRF HEAT PUMP HEATING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=WATER HEATER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=WATER HEATER NATURALGAS ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL COOLING ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=BOILER NATURALGAS ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL HEATING ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE OTHER EQUIPMENT LOST HEAT ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE OTHER EQUIPMENT TOTAL HEATING ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE VRF AIR TERMINAL COOLING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE VRF AIR TERMINAL HEATING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=ZONE VENTILATION FAN ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=CHILLER ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=CHILLER HEATER SYSTEM COOLING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=CHILLER HEATER SYSTEM HEATING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=COOLING COIL ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=COOLING COIL WATER HEATING ELECTRICITY ENERGY, Frequency=Hourly
+   ************* Key=*, VarName=COOLING TOWER FAN ELECTRICITY ENERGY, Frequency=Hourly
+   ************* There are 15 unused schedules in input.
+   ************* There are 43 unused week schedules in input.
+   ************* There are 239 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** SimHVAC: Exceeding Maximum iterations for all HVAC loops, during RUN PERIOD 1 continues
+   *************  **   ~~~   **   This error occurred 9 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* InterZone Surface Azimuths -- mismatch
+   ************* ..The azimuths (outward facing angle) of two interzone surfaces should not be the same.
+   ************* ..Normally, the absolute difference between the two azimuths will be 180 degrees.
+   ************* ..You can turn on the report: Output:Surfaces:List,Details; to inspect your surfaces.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 188 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 413 Warning; 3 Severe Errors; Elapsed Time=00hr 01min 23.37sec
