@@ -1,4 +1,4 @@
-!- Windows Line endings 
+!- Windows Line endings
 
 Version,
     22.1;                     !- Version Identifier
@@ -36551,3 +36551,8 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Electricity:Facility,     !- Key Name
     Monthly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,
+    Schedule Value,
+    hourly;

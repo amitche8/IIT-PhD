@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.27 15:48,
+Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.29 20:03,
    ************* Successfully added path "C:\\Users\\amitc_crl\\OneDrive\\Documents\\GitHub\\IIT-PhD\\CAE526\\P1" to the sys.path in Python
    ************* Beginning Zone Sizing Calculations
    ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SAT", Blank Schedule Type Limits Name input -- will not be validated.
@@ -639,4 +639,4 @@ Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.27 15:48,
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 188 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 413 Warning; 3 Severe Errors; Elapsed Time=00hr 01min 23.37sec
+   ************* EnergyPlus Completed Successfully-- 413 Warning; 3 Severe Errors; Elapsed Time=00hr 01min  6.38sec
