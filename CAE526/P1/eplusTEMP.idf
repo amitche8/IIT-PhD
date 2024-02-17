@@ -25297,7 +25297,7 @@ People,
     QuickServiceRestaurant Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.894934e-02,             !- People per Floor Area
+    0.08894934,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25333,7 +25333,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.656236e-01,             !- People per Floor Area
+    0.1656236,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25345,7 +25345,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.654457e-02,             !- People per Floor Area
+    0.01654457,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25357,7 +25357,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272290e-02,             !- People per Floor Area
+    0.0827229,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25369,7 +25369,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.652679e-01,             !- People per Floor Area
+    0.1652679,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25393,7 +25393,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    4.130806e-01,             !- People per Floor Area
+    0.4130806,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25405,7 +25405,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.656236e-01,             !- People per Floor Area
+    0.1656236,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25417,7 +25417,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.656236e-01,             !- People per Floor Area
+    0.1656236,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25429,7 +25429,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.656236e-01,             !- People per Floor Area
+    0.1656236,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25441,7 +25441,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.656236e-01,             !- People per Floor Area
+    0.1656236,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25453,7 +25453,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.654457e-02,             !- People per Floor Area
+    0.01654457,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25465,7 +25465,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.654457e-02,             !- People per Floor Area
+    0.01654457,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25477,7 +25477,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272285e-02,             !- People per Floor Area
+    0.08272285,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25489,7 +25489,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272285e-02,             !- People per Floor Area
+    0.08272285,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25501,7 +25501,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272285e-02,             !- People per Floor Area
+    0.08272285,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25513,7 +25513,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272285e-02,             !- People per Floor Area
+    0.08272285,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25525,7 +25525,7 @@ People,
     SecondarySchool Office Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    8.272285e-02,             !- People per Floor Area
+    0.08272285,               !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -25537,7 +25537,7 @@ People,
     SecondarySchool Bldg Occ,    !- Number of People Schedule Name
     People/Area,              !- Number of People Calculation Method
     ,                         !- Number of People
-    1.652679e-01,             !- People per Floor Area
+    0.1652679,                !- People per Floor Area
     ,                         !- Floor Area per Person
     0.3,                      !- Fraction Radiant
     ,                         !- Sensible Heat Fraction
@@ -26374,7 +26374,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26388,7 +26388,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26402,7 +26402,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26416,7 +26416,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.031291e-04,             !- Flow per Exterior Surface Area
+    0.0006031291,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26430,7 +26430,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.031291e-04,             !- Flow per Exterior Surface Area
+    0.0006031291,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26444,7 +26444,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26458,7 +26458,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26472,7 +26472,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26486,7 +26486,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26500,7 +26500,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient
@@ -26514,7 +26514,7 @@ ZoneInfiltration:DesignFlowRate,
     Flow/ExteriorArea,        !- Design Flow Rate Calculation Method
     ,                         !- Design Flow Rate
     ,                         !- Flow per Zone Floor Area
-    6.036701e-04,             !- Flow per Exterior Surface Area
+    0.0006036701,             !- Flow per Exterior Surface Area
     ,                         !- Air Changes per Hour
     1,                        !- Constant Term Coefficient
     0,                        !- Temperature Term Coefficient

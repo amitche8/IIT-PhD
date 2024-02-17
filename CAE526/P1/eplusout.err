@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.17 16:35,
+Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.12.12 23:10,
    ************* Beginning Zone Sizing Calculations
    ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SAT", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="QUICKSERVICERESTAURANT BLDG SWH_SMRDSN", Blank Schedule Type Limits Name input -- will not be validated.
@@ -638,4 +638,4 @@ Program Version,EnergyPlus, Version 22.1.0-ed759b17ee, YMD=2022.11.17 16:35,
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 188 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 413 Warning; 3 Severe Errors; Elapsed Time=00hr 01min 23.40sec
+   ************* EnergyPlus Completed Successfully-- 413 Warning; 3 Severe Errors; Elapsed Time=00hr 01min 12.87sec
