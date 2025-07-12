@@ -4,8 +4,11 @@ import matplotlib.dates as mdates
 import matplotlib.ticker as ticker
 
 # File paths
-data_set_1 = "/Users/mohammad/Documents/GitHub/IIT-PhD/Field Study/data/All heatflux data-Pi 5.csv"
-data_set_2 = "/Users/mohammad/Documents/GitHub/IIT-PhD/Field Study/data/All temperature data-Pi 5.csv"
+# data_set_1 = "data/All heatflux data-Pi 5.csv"
+# data_set_2 = "data/All temperature data-Pi 5.csv"
+
+data_set_1 = 'D:/GitHub/IIT-PhD/.git/Field Study/data/All heatflux data-Pi 5.csv'
+data_set_2 = 'D:/GitHub/IIT-PhD/.git/Field Study/data/All temperature data-Pi 5.csv'
 
 # Load data
 heatflux_df = pd.read_csv(data_set_1, parse_dates=['Time'])
