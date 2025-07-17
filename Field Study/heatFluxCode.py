@@ -118,36 +118,136 @@ houseA_indices = [i for i, col in enumerate(hf_cols) if "Pi 1" in col]
 plot_signals(heatflux_df, hf_cols, houseA_indices, "Heat Flux vs. Time (House A)", "Heat Flux [W/m²]", (-50, 50))
 plot_signals(temperature_df, temp_cols, houseA_indices, "Temperature vs. Time (House A)", "Temperature [°C]", (18, 28))
 
-plt.figure(figsize=(10, 4))
 
-plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
-plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
-plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
+# Plot slab and below grade which are common for all homes in one figure with subplots or separately 
+subplot_slab = "Yes" # options Yes or No 
 
-plt.title("Heat Flux - Slab (All Houses)")
-plt.xlabel("Time")
-plt.ylabel("Heat Flux [W/m²]")
-plt.ylim(-10, 30)
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+if subplot_slab == "Yes":
 
-plt.figure(figsize=(10, 4))
+    fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
 
-plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
-plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
-plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
+    # Subplot 1: Slab Heat Flux
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
+    axs[0].set_title("Heat Flux - Slab (All Houses)")
+    axs[0].set_ylabel("Heat Flux [W/m²]")
+    axs[0].set_ylim(-15, 35)
+    axs[0].legend()
+    axs[0].grid(True)
+
+    # Subplot 2: Below Grade Wall Heat Flux
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='o', markevery=100)
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markevery=100)
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='^', markevery=100)
+    axs[1].set_title("Heat Flux - Below Grade Wall (All Houses)")
+    axs[1].set_xlabel("Time")
+    axs[1].set_ylabel("Heat Flux [W/m²]")
+    axs[1].set_ylim(-15, 35)
+    axs[1].legend()
+    axs[1].grid(True)
+
+    plt.tight_layout()
+    plt.show()
+
+    fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
+
+    # Subplot 1: Slab Temperature
+    axs[0].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
+    axs[0].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
+    axs[0].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
+    axs[0].set_title("Temperature - Slab (All Houses)")
+    axs[0].set_ylabel("Temperature [°C]")
+    axs[0].set_ylim(16, 24)
+    axs[0].legend()
+    axs[0].grid(True)
+
+    # Subplot 2: Below Grade Wall Temperature
+    axs[1].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='o', markevery=100)
+    axs[1].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markevery=100)
+    axs[1].plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='^', markevery=100)
+    axs[1].set_title("Temperature - Below Grade Wall (All Houses)")
+    axs[1].set_xlabel("Time")
+    axs[1].set_ylabel("Temperature [°C]")
+    axs[1].set_ylim(16, 24)
+    axs[1].legend()
+    axs[1].grid(True)
+
+    plt.tight_layout()
+    plt.show()
+
+else:
+    #
+    # Slab readings for all houses
+    #
+
+    plt.figure(figsize=(10, 4))
+
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
+
+    plt.title("Heat Flux - Slab (All Houses)")
+    plt.xlabel("Time")
+    plt.ylabel("Heat Flux [W/m²]")
+    plt.ylim(-10, 30)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+    plt.figure(figsize=(10, 4))
+
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
 
 
-plt.title("Temperature - Slab (All Houses)")
-plt.xlabel("Time")
-plt.ylabel("Temperature [°C]")
-plt.ylim(16, 24)
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+    plt.title("Temperature - Slab (All Houses)")
+    plt.xlabel("Time")
+    plt.ylabel("Temperature [°C]")
+    plt.ylim(16, 24)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+    #
+    # Wall below grade readings for all houses
+    #
+
+
+    plt.figure(figsize=(10, 4))
+
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='o', markevery=100)
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markevery=100)
+    plt.plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='^', markevery=100)
+
+    plt.title("Heat Flux - Below Grade Wall (All Houses)")
+    plt.xlabel("Time")
+    plt.ylabel("Heat Flux [W/m²]")
+    plt.ylim(-10, 30)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+    plt.figure(figsize=(10, 4))
+
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='o', markevery=100)
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markevery=100)
+    plt.plot(temperature_df['Time'].to_numpy(), temperature_df["Temperature - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='^', markevery=100)
+
+
+    plt.title("Temperature - Below Grade Wall (All Houses)")
+    plt.xlabel("Time")
+    plt.ylabel("Temperature [°C]")
+    plt.ylim(16, 24)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
 
 
 # Load simulation data with fixed format
