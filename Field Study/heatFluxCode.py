@@ -127,20 +127,20 @@ if subplot_slab == "Yes":
     fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
 
     # Subplot 1: Slab Heat Flux
-    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='o', markevery=100)
-    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markevery=100)
-    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='^', markevery=100)
-    axs[0].set_title("Heat Flux - Slab (All Houses)")
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 3"].to_numpy(), label="House A - Slab", marker='D', markersize=8, markevery=100)
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 1"].to_numpy(), label="House T - Slab", marker='s', markersize=8, markevery=100)
+    axs[0].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 2"].to_numpy(), label="House R - Slab", marker='x', markersize=8, markevery=100)
+    axs[0].set_title("(a): Slab Heat Flux for the Three Houses")
     axs[0].set_ylabel("Heat Flux [W/m²]")
     axs[0].set_ylim(-15, 35)
     axs[0].legend()
     axs[0].grid(True)
 
     # Subplot 2: Below Grade Wall Heat Flux
-    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='o', markevery=100)
-    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markevery=100)
-    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='^', markevery=100)
-    axs[1].set_title("Heat Flux - Below Grade Wall (All Houses)")
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 1 - Channel 2"].to_numpy(), label="House A - Below Grade Wall", marker='D', markersize=8, markevery=100)
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 2 - Channel 2"].to_numpy(), label="House T - Below Grade Wall", marker='s', markersize=8, markevery=100)
+    axs[1].plot(heatflux_df['Time'].to_numpy(), heatflux_df["Heatflux - Pi 5 - Channel 1"].to_numpy(), label="House R - Below Grade Wall", marker='x', markersize=8, markevery=100)
+    axs[1].set_title("(b): Below Grade Wall Heat Flux for the Three Houses)")
     axs[1].set_xlabel("Time")
     axs[1].set_ylabel("Heat Flux [W/m²]")
     axs[1].set_ylim(-15, 35)
@@ -313,4 +313,59 @@ plt.ylabel("Heat Flux [W/m²]")
 plt.title("House T Slab vs. Simulated Columns")
 plt.ylim(-10, 10)
 plt.tight_layout()
+plt.show()
+
+
+
+
+# Plot Simulation Results
+
+# Load simulation data with fixed format
+sim_df2 = pd.read_csv("data/SimulationSlab.csv")
+
+# Clean and prepend year to Time string
+sim_df2['Time'] = '2025/' + sim_df2['Time'].str.strip()  # becomes e.g. "2025/03/17 07:00:00"
+
+# Parse datetime explicitly
+sim_df2['Time'] = pd.to_datetime(sim_df2['Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+
+# Determine overlapping time window
+common_start = pd.to_datetime("2025-01-01 01:00:00")
+common_end = pd.to_datetime("2025-03-31 01:00:00")
+
+
+plt.figure(figsize=(10, 5))
+
+plt.plot(
+    sim_df2['Time'].to_numpy(),
+    sim_df2['Slab Unins'].to_numpy(),
+    label="Uninsulated Basement Conductive Heat Flux",
+    linestyle='--', marker='s', markevery=5, linewidth=2
+)
+
+plt.plot(
+    sim_df2['Time'].to_numpy(),
+    sim_df2['Slab Insulated'].to_numpy(),
+    label="Insulated Basement Conductive Heat Flux",
+    linestyle='-.', marker='^', markevery=5, linewidth=2
+)
+
+# Apply time range limit to x-axis
+plt.xlim([common_start, common_end])
+
+plt.grid(True, which='both', linestyle=':', linewidth=0.7)
+plt.legend(fontsize=10)
+plt.xlim([common_start, common_end])
+
+# Set ticks explicitly to include start and end
+xticks = pd.date_range(start=common_start, end=common_end, periods=6)  # or use freq='MS' for monthly ticks
+plt.xticks(xticks, [dt.strftime('%Y-%m-%d') for dt in xticks])
+
+plt.xlabel("Date", fontsize=14)
+plt.ylabel("Heat Flux [W/m²]", fontsize=14)
+plt.title("Simulated Basement Conductive Heat Flux for House T")
+plt.ylim(-30, 30)
+plt.yticks(range(-30, 31, 10))  # from -25 to 25, step 5
+plt.tight_layout()
+plt.legend(fontsize=14)
 plt.show()
